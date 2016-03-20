@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #NN LIB
-for benchmark in LPS SCP CONS RAY JPEG BlackScholes 
+for benchmark in SCP RAY JPEG
 do
 	    cd  CUDA/$benchmark/
  	    qsub pbs_$benchmark.pbs
