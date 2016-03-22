@@ -3,6 +3,7 @@ swl2
 swl4
 swl8
 swl16
+swl24
 gto
 twolevel601
 lrr
