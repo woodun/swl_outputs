@@ -1,0 +1,577 @@
+
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             248        3        0     13     .text._Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii
+   7               0               0        3        0     15     .nv.info._Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii
+   8               0               0        3        0     16     .nv.info
+   9               0              16        3        0     10     .text._Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii
+  10               0               0        3        0     12     .nv.info._Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii
+  11               0            1584        3        0      7     .text._Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii
+  12               0               0        3        0      9     .nv.info._Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii
+  13               0             328        3        0      4     .text._Z11MapperCountPcS_P4int4PiS2_S2_iii
+  14               0               0        3        0      6     .nv.info._Z11MapperCountPcS_P4int4PiS2_S2_iii
+  15               0               0        3        0      8     .nv.constant0._Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii
+  16               0               0        3        0     14     .nv.constant0._Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii
+  17               0               0        3        0      5     .nv.constant0._Z11MapperCountPcS_P4int4PiS2_S2_iii
+  18               0               0        3        0     11     .nv.constant0._Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii
+  19               0             248       12       10     13     _Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii
+  20               0              16       12       10     10     _Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii
+  21               0            1584       12       10      7     _Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii
+  22               0             328       12       10      4     _Z11MapperCountPcS_P4int4PiS2_S2_iii
+
+
+.nv.constant0._Z11MapperCountPcS_P4int4PiS2_S2_iii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  
+
+
+.nv.constant0._Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+
+
+
+.nv.constant0._Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+
+
+
+.nv.constant0._Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  
+
+
+.text._Z11MapperCountPcS_P4int4PiS2_S2_iii	PROGBITS
+bar = 0	reg = 10	lmem=0	smem=0
+0x00005de4  0x28004404  0x98009c04  0x2c000000  
+0x94001c04  0x2c000000  0x8400dc04  0x2c000000  
+0x60001c03  0x20044000  0x20021c03  0x20064000  
+0x50809ca3  0x50004001  0x4021dc23  0x188e4001  
+0x000021e7  0x80000000  0x50009de4  0x28004001  
+0x0400dc03  0x4800c000  0x50001ca3  0x50004001  
+0x20209c03  0x50004000  0x0c20dc03  0x50000000  
+0x84009c04  0x2c000000  0x4031dc23  0x1a0e4001  
+0x20001c03  0x20044000  0x40325c04  0x20104001  
+0x2401dc23  0x1b0e0000  0x000001e7  0x80000000  
+0x10019de2  0x18000000  0x1081dce3  0x5000c000  
+0xe0809ca3  0x200d8000  0xf070dc43  0x48004000  
+0x00811ca3  0x200d8001  0x10715c43  0x48004001  
+0x20819ca3  0x200d8001  0x3071dc43  0x48004001  
+0x00221c85  0x84000000  0x20001c03  0x48004000  
+0x0091dc23  0x1a0e0000  0x10821c03  0x4800c000  
+0x00221c85  0x94000000  0x00421c85  0x84000000  
+0x20821c03  0x4800c000  0x00421c85  0x94000000  
+0x00621c85  0x84000000  0x04821c03  0x4800c000  
+0x00621c85  0x94000000  0x800001e7  0x4003fffe  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z11MapperCountPcS_P4int4PiS2_S2_iii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 0x28 0x30 0x34 0x38 
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x11 0x3c0020 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x3c
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x8	Offset  : 0x38	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x7	Offset  : 0x34	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x6	Offset  : 0x30	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x5	Offset  : 0x28	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xb>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xc>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xd>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x200180 0x20 
+
+
+.text._Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii	PROGBITS
+bar = 1	reg = 41	lmem=0	smem=0
+0x00005de4  0x28004404  0x98009c04  0x2c000000  
+0x94001c04  0x2c000000  0x84021c04  0x2c000000  
+0x60001c03  0x20044000  0x20025c03  0x20104000  
+0xf0909ca3  0x50004001  0xe021dc23  0x188e4001  
+0x000021e7  0x80000000  0x08929e03  0x6000c000  
+0x1092dce3  0x5000c000  0xa0009de4  0x28004001  
+0xf0031de4  0x28004001  0x20a49c03  0x48014001  
+0x04035c03  0x4800c000  0x20c31c03  0x50004000  
+0x30b4dc43  0x48004001  0x00a51c03  0x48014001  
+0x34c35c03  0x50000000  0x0120dc85  0x84000000  
+0x10b55c43  0x48004001  0xe0a59c03  0x48014000  
+0xf0001ca3  0x50004001  0x01419c85  0x84000000  
+0xf0b5dc43  0x48004000  0x84031c04  0x2c000000  
+0xe0d1dc23  0x1a0e4001  0x01611c85  0x84000000  
+0x20001c03  0x20184000  0xe0d71c04  0x20104001  
+0x7c931c23  0x7000c004  0x01c1dc23  0x198e0000  
+0x40309ca3  0x2005c000  0x4030dce3  0x5000c000  
+0xb030dc43  0x48004001  0x10215c85  0x84000000  
+0x3021dc85  0x84000000  0x00211cc5  0x94000000  
+0x000001e7  0x80000000  0xc0a41c03  0x48014001  
+0x14809c03  0x5000c000  0x00011de4  0x28004000  
+0x7490dc03  0x5800c000  0xd0b45c43  0x48004001  
+0x10239c03  0x2009c000  0x10209c43  0x5000c000  
+0x40019de4  0x28004001  0x0cc11c63  0x40000000  
+0x0bf3dc43  0x48000000  0x20931c03  0x200dc000  
+0x40009de2  0x18000000  0x20015de4  0x28004000  
+0x50435c43  0x48004001  0x4000dce3  0x5000c000  
+0xc0009ca3  0x20058000  0x40579c43  0x5000c000  
+0x10575e03  0x6000c000  0xd030dc43  0x48004000  
+0x20211c85  0x84000000  0x00215c85  0x84000000  
+0x60000007  0x60000005  0x7c419c23  0x7000c004  
+0xa0429c03  0x48014000  0x7c511c23  0x7000c004  
+0xb062dc43  0x48004000  0x80521c03  0x48014000  
+0x00a7dc85  0x84000000  0x90425c43  0x48004000  
+0x30a85c85  0x84000000  0x10a81c85  0x84000000  
+0x00819ca5  0x84000000  0x20811ca5  0x84000000  
+0x85f21ca3  0x50000000  0x0a189c23  0x5800c000  
+0x10891ca3  0x200dc000  0x10819ce3  0x5000c000  
+0x86021ca3  0x50000000  0xfe21dc23  0x198e0000  
+0x18795c43  0x48000000  0x10899ca3  0x2009c000  
+0x10811ce3  0x5000c000  0x1059dc43  0x48000000  
+0x800001e7  0x40000002  0x90061de4  0x28000000  
+0x94065de4  0x28000000  0x98069de4  0x28000000  
+0x9c06dde4  0x28000000  0xfc0a1de4  0x28000000  
+0xfc08dde4  0x28000000  0x01821cc5  0x84000000  
+0x01a11cc5  0x84000000  0x068a1c03  0x4800c000  
+0x41a69c03  0x4801c000  0xa221dc23  0x1a8e0000  
+0xfdb6dc43  0x48000000  0x41861c03  0x4801c000  
+0xfd965c43  0x48000000  0x1088dc00  0x30460000  
+0x14911c00  0x30460000  0x18a11c00  0x30080000  
+0x1cb8dc00  0x30080000  0x600001e7  0x4003fffe  
+0x00001df4  0x40000000  0xfc08ddf4  0x28000000  
+0x0e125c03  0x6800c000  0x60000007  0x60000002  
+0xfc91dc23  0x198e0000  0x000001e7  0x40000002  
+0x42211ca3  0x2049c000  0x4221dce3  0x5000c000  
+0xfc021de4  0x28000000  0x94715c43  0x48000000  
+0x42219ca3  0x204dc000  0x9c71dc43  0x48000000  
+0x0042dc85  0x84000000  0x00629c85  0x84000000  
+0x04821c03  0x4800c000  0x10619c03  0x4801c000  
+0x2091dc23  0x1a8e0000  0xfc71dc43  0x48000000  
+0x10411c03  0x4801c000  0xfc515c43  0x48000000  
+0x28b8dc00  0x30460000  0xc00001e7  0x4003fffe  
+0x00001df4  0x40000000  0x00e8dc85  0x94000000  
+0x341fdc03  0x20200000  0x10e7dc85  0x94000000  
+0x20e81c85  0x94000000  0xfd1fdc03  0x207e0000  
+0xffffdc04  0x50ee0000  0x01619c85  0x84000000  
+0x00c11ca5  0x84000000  0x00e21c25  0x84000000  
+0x01429c85  0x84000000  0x7c625c23  0x7000c004  
+0x60619c03  0x48014001  0x7c41dc23  0x7000c004  
+0x7ca2dc23  0x7000c004  0x70925c43  0x48004001  
+0x18419c03  0x48010000  0x10411c03  0x4800c000  
+0x2471dc43  0x48000000  0x80a61c03  0x48014001  
+0x7c529c23  0x7000c004  0x00621c25  0x94000000  
+0x04e25c25  0x84000000  0x04625c25  0x94000000  
+0x08e21c25  0x84000000  0x08621c25  0x94000000  
+0x0ce25c25  0x84000000  0x0c625c25  0x94000000  
+0x10e21c25  0x84000000  0x90b1dc43  0x48004001  
+0x60519c03  0x48010000  0x20515c03  0x4800c000  
+0xa002dde4  0x28004001  0x1ca1dc43  0x48000000  
+0x00621c25  0x94000000  0x14e25c25  0x84000000  
+0x04625c25  0x94000000  0x18e21c25  0x84000000  
+0x08621c25  0x94000000  0x1ce25c25  0x84000000  
+0x0c625c25  0x94000000  0x20e21c25  0x84000000  
+0x10621c25  0x94000000  0x24e25c25  0x84000000  
+0x14625c25  0x94000000  0x28e21c25  0x84000000  
+0x18621c25  0x94000000  0x2ce25c25  0x84000000  
+0x1c625c25  0x94000000  0x00c11ca5  0x94000000  
+0x01029c85  0x84000000  0x01221c85  0x84000000  
+0xfca1dc23  0x190e0000  0x20a11c03  0x48000000  
+0x40421ca3  0x2017c000  0x40411ce3  0x5000c000  
+0xb0425c43  0x48004001  0x00811c85  0x84000000  
+0x20819c85  0x84000000  0x600081e7  0x40000000  
+0xc08120c5  0x87ffffff  0x14412003  0x48000000  
+0x1c61a003  0x48000000  0x20001c03  0x48004000  
+0x2001dde2  0x18000000  0x10015de2  0x18000000  
+0x04a29c03  0x4800c000  0x09d09c03  0x48010000  
+0x01c1dc23  0x1a0e0000  0x00811cc5  0x94000000  
+0x0de0dc43  0x48000000  0x01029c85  0x94000000  
+0xa00001e7  0x4003ffee  0x00001de7  0x80000000  
+
+
+
+.nv.info._Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 0x28 0x30 0x38 0x40 0x48 0x50 0x58 0x5c 0x60 
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0xf 0x640020 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x64
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xd	Offset  : 0x60	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xc	Offset  : 0x5c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xb	Offset  : 0x58	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xa	Offset  : 0x50	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x9	Offset  : 0x48	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x8	Offset  : 0x40	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x7	Offset  : 0x38	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xb>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x6	Offset  : 0x30	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xc>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x5	Offset  : 0x28	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xd>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xe>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xf>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x10>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x11>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x12>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x21018c 0x20 
+
+
+.text._Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii	PROGBITS
+bar = 0	reg = 2	lmem=0	smem=0
+0x00005de4  0x28004404  0x00001de7  0x80000000  
+
+
+
+.nv.info._Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 0x28 0x30 0x38 0x3c 0x40 
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x12 0x440020 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x44
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x9	Offset  : 0x40	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x8	Offset  : 0x3c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x7	Offset  : 0x38	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x6	Offset  : 0x30	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x5	Offset  : 0x28	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xb>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xc>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xd>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+
+
+.text._Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii	PROGBITS
+bar = 0	reg = 12	lmem=0	smem=0
+0x00005de4  0x28004404  0x98009c04  0x2c000000  
+0x94001c04  0x2c000000  0x8400dc04  0x2c000000  
+0x60001c03  0x20044000  0x20001c03  0x20064000  
+0x10009ca3  0x50004002  0x0021dc23  0x188e4002  
+0x000021e7  0x80000000  0x10029de2  0x18000000  
+0x1001dce3  0x5000c000  0xa002dde4  0x28004001  
+0x40009ca3  0x20158001  0x5070dc43  0x48004001  
+0x00021ca3  0x20158001  0x00211c85  0x84000000  
+0x10725c43  0x48004001  0x00819c85  0x84000000  
+0x40415ce3  0x5000c000  0x40411ca3  0x2017c000  
+0xb0515c43  0x48004001  0x20021ca3  0x20158001  
+0x00419c85  0x94000000  0x00209c85  0x84000000  
+0x30725c43  0x48004001  0x00801c85  0x84000000  
+0x40211ca3  0x2017c000  0x40209ce3  0x5000c000  
+0xb0215c43  0x48004001  0x20401c85  0x94000000  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 0x28 0x30 0x38 0x40 0x48 0x50 0x58 0x60 0x64 0x68 
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x10 0x6c0020 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x6c
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xe	Offset  : 0x68	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xd	Offset  : 0x64	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xc	Offset  : 0x60	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xb	Offset  : 0x58	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0xa	Offset  : 0x50	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x9	Offset  : 0x48	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x8	Offset  : 0x40	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xb>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x7	Offset  : 0x38	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xc>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x6	Offset  : 0x30	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xd>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x5	Offset  : 0x28	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xe>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xf>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x10>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x11>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x12>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x13>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x1000c 0x1 
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z11MapperCountPcS_P4int4PiS2_S2_iii(0x16)	min stack size: 0x0
+	<0x2>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z11MapperCountPcS_P4int4PiS2_S2_iii(0x16)	frame size: 0x0
+	<0x3>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii(0x15)	min stack size: 0x0
+	<0x4>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z6MapperPcS_P4int4PiS2_S2_P4int2S_S_S1_S2_iii(0x15)	frame size: 0x0
+	<0x5>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii(0x14)	min stack size: 0x0
+	<0x6>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z12ReducerCountPcS_P4int4P4int2PiS4_S4_iii(0x14)	frame size: 0x0
+	<0x7>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii(0x13)	min stack size: 0x0
+	<0x8>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z7ReducerPcS_P4int4P4int2PiS4_S4_S_S_S1_S3_S4_iii(0x13)	frame size: 0x0
+

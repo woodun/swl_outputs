@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/shoc/mainscript_Scan: line 1: 53323 Segmentation fault      (core dumped) ./Scan > output_Scan.txt

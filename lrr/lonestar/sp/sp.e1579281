@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/lonestar/mainscript_sp: line 1: 51468 Segmentation fault      (core dumped) ./sp 0 4200000 1000000 3 > output_sp.txt

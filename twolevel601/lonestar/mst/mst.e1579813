@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/lonestar/mainscript_mst: line 1: 43107 Segmentation fault      (core dumped) ./mst ./inputs/USA-road-d.FLA.gr > output_mst.txt

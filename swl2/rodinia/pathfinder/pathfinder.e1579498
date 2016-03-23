@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_pathfinder: line 1: 42181 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__pathfinder 100000 100 20 > output_pathfinder.txt

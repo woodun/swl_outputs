@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/shoc/mainscript_QTC: line 1: 28019 Segmentation fault      (core dumped) ./QTC > output_QTC.txt

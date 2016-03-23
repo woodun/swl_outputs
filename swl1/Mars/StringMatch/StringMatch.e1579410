@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/mars/mainscript_StringMatch: line 1: 28805 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__StringMatch data org > output_SSM.txt

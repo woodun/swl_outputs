@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_backprop: line 1: 24995 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__backprop 65536 > output_backprop.txt

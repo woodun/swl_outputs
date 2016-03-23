@@ -1,0 +1,145 @@
+
+	.version 1.4
+	.target sm_13
+	// compiled with /sciclone/data20/adwait/software/cuda/open64/lib//be
+	// nvopencc 4.0 built on 2011-05-12
+
+	//-----------------------------------------------------------
+	// Compiling /tmp/tmpxft_00009b50_00000000-7_ex_particle_CUDA_naive_seq.cpp3.i (/local/scr/adwait/TMPDIR/ccBI#.jOcw0k)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_13, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"<command-line>"
+	.file	2	"/tmp/tmpxft_00009b50_00000000-6_ex_particle_CUDA_naive_seq.cudafe2.gpu"
+	.file	3	"/usr/lib/gcc/x86_64-redhat-linux/4.4.6/include/stddef.h"
+	.file	4	"/sciclone/data20/adwait/software/cuda/include/crt/device_runtime.h"
+	.file	5	"/sciclone/data20/adwait/software/cuda/include/host_defines.h"
+	.file	6	"/sciclone/data20/adwait/software/cuda/include/builtin_types.h"
+	.file	7	"/sciclone/data20/adwait/software/cuda/include/device_types.h"
+	.file	8	"/sciclone/data20/adwait/software/cuda/include/driver_types.h"
+	.file	9	"/sciclone/data20/adwait/software/cuda/include/surface_types.h"
+	.file	10	"/sciclone/data20/adwait/software/cuda/include/texture_types.h"
+	.file	11	"/sciclone/data20/adwait/software/cuda/include/vector_types.h"
+	.file	12	"/sciclone/data20/adwait/software/cuda/include/device_launch_parameters.h"
+	.file	13	"/sciclone/data20/adwait/software/cuda/include/crt/storage_class.h"
+	.file	14	"/usr/include/bits/types.h"
+	.file	15	"/usr/include/time.h"
+	.file	16	"ex_particle_CUDA_naive_seq.cu"
+	.file	17	"/sciclone/data20/adwait/software/cuda/include/common_functions.h"
+	.file	18	"/sciclone/data20/adwait/software/cuda/include/math_functions.h"
+	.file	19	"/sciclone/data20/adwait/software/cuda/include/math_constants.h"
+	.file	20	"/sciclone/data20/adwait/software/cuda/include/device_functions.h"
+	.file	21	"/sciclone/data20/adwait/software/cuda/include/sm_11_atomic_functions.h"
+	.file	22	"/sciclone/data20/adwait/software/cuda/include/sm_12_atomic_functions.h"
+	.file	23	"/sciclone/data20/adwait/software/cuda/include/sm_13_double_functions.h"
+	.file	24	"/sciclone/data20/adwait/software/cuda/include/sm_20_atomic_functions.h"
+	.file	25	"/sciclone/data20/adwait/software/cuda/include/sm_20_intrinsics.h"
+	.file	26	"/sciclone/data20/adwait/software/cuda/include/surface_functions.h"
+	.file	27	"/sciclone/data20/adwait/software/cuda/include/texture_fetch_functions.h"
+	.file	28	"/sciclone/data20/adwait/software/cuda/include/math_functions_dbl_ptx3.h"
+
+
+	.entry _Z6kernelPdS_S_S_S_S_i (
+		.param .u64 __cudaparm__Z6kernelPdS_S_S_S_S_i_arrayX,
+		.param .u64 __cudaparm__Z6kernelPdS_S_S_S_S_i_arrayY,
+		.param .u64 __cudaparm__Z6kernelPdS_S_S_S_S_i_CDF,
+		.param .u64 __cudaparm__Z6kernelPdS_S_S_S_S_i_u,
+		.param .u64 __cudaparm__Z6kernelPdS_S_S_S_S_i_xj,
+		.param .u64 __cudaparm__Z6kernelPdS_S_S_S_S_i_yj,
+		.param .s32 __cudaparm__Z6kernelPdS_S_S_S_S_i_Nparticles)
+	{
+	.reg .u16 %rh<4>;
+	.reg .u32 %r<15>;
+	.reg .u64 %rd<21>;
+	.reg .f64 %fd<6>;
+	.reg .pred %p<7>;
+	.loc	16	113	0
+$LDWbegin__Z6kernelPdS_S_S_S_S_i:
+	cvt.s32.u16 	%r1, %ctaid.x;
+	cvt.u16.u32 	%rh1, %r1;
+	mov.u16 	%rh2, %ntid.x;
+	mul.wide.u16 	%r2, %rh1, %rh2;
+	cvt.u32.u16 	%r3, %tid.x;
+	add.u32 	%r4, %r3, %r2;
+	ld.param.s32 	%r5, [__cudaparm__Z6kernelPdS_S_S_S_S_i_Nparticles];
+	setp.le.s32 	%p1, %r5, %r4;
+	@%p1 bra 	$Lt_0_3842;
+	mov.u32 	%r6, 0;
+	ld.param.s32 	%r5, [__cudaparm__Z6kernelPdS_S_S_S_S_i_Nparticles];
+	setp.le.s32 	%p2, %r5, %r6;
+	@%p2 bra 	$Lt_0_5890;
+	ld.param.s32 	%r5, [__cudaparm__Z6kernelPdS_S_S_S_S_i_Nparticles];
+	mov.s32 	%r7, %r5;
+	cvt.s64.s32 	%rd1, %r4;
+	mul.wide.s32 	%rd2, %r4, 8;
+	ld.param.u64 	%rd3, [__cudaparm__Z6kernelPdS_S_S_S_S_i_u];
+	add.u64 	%rd4, %rd3, %rd2;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.u64 	%rd5, [__cudaparm__Z6kernelPdS_S_S_S_S_i_CDF];
+	mov.s32 	%r8, 0;
+	mov.s32 	%r9, %r7;
+$Lt_0_4866:
+ //<loop> Loop body line 113, nesting depth: 1, estimated iterations: unknown
+	cvt.s64.s32 	%rd6, %r8;
+	mul.wide.s32 	%rd7, %r8, 8;
+	ld.param.u64 	%rd5, [__cudaparm__Z6kernelPdS_S_S_S_S_i_CDF];
+	add.u64 	%rd8, %rd5, %rd7;
+	ld.global.f64 	%fd2, [%rd8+0];
+	setp.ge.f64 	%p3, %fd2, %fd1;
+	@!%p3 bra 	$Lt_0_5122;
+	.loc	16	124	0
+	mov.s32 	%r10, %r8;
+	.loc	16	125	0
+	bra.uni 	$Lt_0_258;
+$Lt_0_5122:
+	.loc	16	122	0
+	add.s32 	%r8, %r8, 1;
+	.loc	16	113	0
+	ld.param.s32 	%r5, [__cudaparm__Z6kernelPdS_S_S_S_S_i_Nparticles];
+	.loc	16	122	0
+	setp.ne.s32 	%p4, %r8, %r5;
+	@%p4 bra 	$Lt_0_4866;
+	bra.uni 	$Lt_0_4354;
+$Lt_0_5890:
+	cvt.s64.s32 	%rd9, %r4;
+	mul.wide.s32 	%rd2, %r4, 8;
+$Lt_0_4354:
+	mov.s32 	%r10, -1;
+$Lt_0_258:
+	.loc	16	113	0
+	ld.param.s32 	%r5, [__cudaparm__Z6kernelPdS_S_S_S_S_i_Nparticles];
+	.loc	16	132	0
+	sub.s32 	%r11, %r5, 1;
+	mov.s32 	%r12, -1;
+	setp.eq.s32 	%p5, %r10, %r12;
+	selp.s32 	%r13, %r11, %r10, %p5;
+	cvt.s64.s32 	%rd10, %r13;
+	mul.wide.s32 	%rd11, %r13, 8;
+	ld.param.u64 	%rd12, [__cudaparm__Z6kernelPdS_S_S_S_S_i_arrayX];
+	add.u64 	%rd13, %rd12, %rd11;
+	ld.global.f64 	%fd3, [%rd13+0];
+	ld.param.u64 	%rd14, [__cudaparm__Z6kernelPdS_S_S_S_S_i_xj];
+	add.u64 	%rd15, %rd14, %rd2;
+	st.global.f64 	[%rd15+0], %fd3;
+	.loc	16	133	0
+	ld.param.u64 	%rd16, [__cudaparm__Z6kernelPdS_S_S_S_S_i_arrayY];
+	add.u64 	%rd17, %rd16, %rd11;
+	ld.global.f64 	%fd4, [%rd17+0];
+	ld.param.u64 	%rd18, [__cudaparm__Z6kernelPdS_S_S_S_S_i_yj];
+	add.u64 	%rd19, %rd18, %rd2;
+	st.global.f64 	[%rd19+0], %fd4;
+$Lt_0_3842:
+	.loc	16	136	0
+	exit;
+$LDWend__Z6kernelPdS_S_S_S_S_i:
+	} // _Z6kernelPdS_S_S_S_S_i
+
+

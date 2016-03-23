@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_pf_naive: line 1: 31374 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__particlefilter_naive -x 128 -y 128 -z 10 -np 10000 > output_pf_naive.txt

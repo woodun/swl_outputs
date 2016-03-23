@@ -1,0 +1,49 @@
+
+	.version 1.4
+	.target sm_13
+	// compiled with /sciclone/data20/adwait/software/cuda/open64/lib//be
+	// nvopencc 4.0 built on 2011-05-12
+
+	//-----------------------------------------------------------
+	// Compiling /tmp/tmpxft_000099a3_00000000-7_lud.cpp3.i (/local/scr/adwait/TMPDIR/ccBI#.YWsrHX)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_13, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"<command-line>"
+	.file	2	"/tmp/tmpxft_000099a3_00000000-6_lud.cudafe2.gpu"
+	.file	3	"/usr/lib/gcc/x86_64-redhat-linux/4.4.6/include/stddef.h"
+	.file	4	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/device_runtime.h"
+	.file	5	"/sciclone/data20/adwait/software/cuda/bin/../include/host_defines.h"
+	.file	6	"/sciclone/data20/adwait/software/cuda/bin/../include/builtin_types.h"
+	.file	7	"/sciclone/data20/adwait/software/cuda/bin/../include/device_types.h"
+	.file	8	"/sciclone/data20/adwait/software/cuda/bin/../include/driver_types.h"
+	.file	9	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_types.h"
+	.file	10	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_types.h"
+	.file	11	"/sciclone/data20/adwait/software/cuda/bin/../include/vector_types.h"
+	.file	12	"/sciclone/data20/adwait/software/cuda/bin/../include/device_launch_parameters.h"
+	.file	13	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/storage_class.h"
+	.file	14	"/usr/include/bits/types.h"
+	.file	15	"/usr/include/time.h"
+	.file	16	"/sciclone/data20/adwait/software/cuda/bin/../include/common_functions.h"
+	.file	17	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions.h"
+	.file	18	"/sciclone/data20/adwait/software/cuda/bin/../include/math_constants.h"
+	.file	19	"/sciclone/data20/adwait/software/cuda/bin/../include/device_functions.h"
+	.file	20	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_11_atomic_functions.h"
+	.file	21	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_12_atomic_functions.h"
+	.file	22	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_13_double_functions.h"
+	.file	23	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_atomic_functions.h"
+	.file	24	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_intrinsics.h"
+	.file	25	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_functions.h"
+	.file	26	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_fetch_functions.h"
+	.file	27	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions_dbl_ptx3.h"
+
+
+

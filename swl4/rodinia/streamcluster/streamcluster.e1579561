@@ -1,0 +1,3 @@
+tput: No value for $TERM and no -T specified
+read 65536 points
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_streamcluster: line 1: 29948 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__streamcluster 10 20 256 65536 65536 1000 none output.txt 1 > output_streamcluster.txt

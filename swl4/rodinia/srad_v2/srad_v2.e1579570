@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_srad_v2: line 1: 28658 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__srad 2048 2048 0 127 0 127 0.5 2 > output_srad_v2.txt

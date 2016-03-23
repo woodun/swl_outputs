@@ -1,0 +1,52 @@
+ptxas info    : Compiling entry function '_Z18dfindcompminatomicPf5Graph14ComponentSpacePjS2_S2_S2_Pbi' for 'sm_20'
+ptxas info    : Function properties for _Z18dfindcompminatomicPf5Graph14ComponentSpacePjS2_S2_S2_Pbi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 220 bytes cmem[0], 80 bytes cmem[14], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z16dfindcompminlockPf5Graph14ComponentSpacePjS2_S2_S2_Pbi' for 'sm_20'
+ptxas info    : Function properties for _Z16dfindcompminlockPf5Graph14ComponentSpacePjS2_S2_S2_Pbi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, 220 bytes cmem[0], 80 bytes cmem[14], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z22dfindcompminundirectedPf5Graph14ComponentSpacePjS2_S2_S2_Pb' for 'sm_20'
+ptxas info    : Function properties for _Z22dfindcompminundirectedPf5Graph14ComponentSpacePjS2_S2_S2_Pb
+    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 216 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z15dfindcompmintwoPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j' for 'sm_20'
+ptxas info    : Function properties for _Z15dfindcompmintwoPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, 228 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z12dfindcompminPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j' for 'sm_20'
+ptxas info    : Function properties for _Z12dfindcompminPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 228 bytes cmem[0], 80 bytes cmem[14], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11dfindeleminPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j' for 'sm_20'
+ptxas info    : Function properties for _Z11dfindeleminPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j
+    112 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 228 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z5dinitPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j' for 'sm_20'
+ptxas info    : Function properties for _Z5dinitPf5Graph14ComponentSpacePjS2_S2_S2_PbS2_j
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, 228 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z7dinitcsjPjS_' for 'sm_20'
+ptxas info    : Function properties for _Z7dinitcsjPjS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 56 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z8print1x114ComponentSpace' for 'sm_20'
+ptxas info    : Function properties for _Z8print1x114ComponentSpace
+    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 64 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z9dprint1x15Graph' for 'sm_20'
+ptxas info    : Function properties for _Z9dprint1x15Graph
+    128 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 27 registers, 136 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z11dinitlevels5Graph' for 'sm_20'
+ptxas info    : Function properties for _Z11dinitlevels5Graph
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 6 registers, 136 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z14dcomputelevels5GraphPb' for 'sm_20'
+ptxas info    : Function properties for _Z14dcomputelevels5GraphPb
+    80 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, 144 bytes cmem[0], 80 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z11dprintstats5Graph' for 'sm_20'
+ptxas info    : Function properties for _Z11dprintstats5Graph
+    56 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 136 bytes cmem[0], 80 bytes cmem[14], 4 bytes cmem[16]

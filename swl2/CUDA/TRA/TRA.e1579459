@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/CUDA/mainscript_TRA: line 1: 29146 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__TRA > output_TRA.txt

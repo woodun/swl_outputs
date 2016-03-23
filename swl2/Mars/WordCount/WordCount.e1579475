@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/mars/mainscript_WordCount: line 1: 17478 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__WordCount data > output_WC.txt

@@ -1,0 +1,988 @@
+
+	.version 2.3
+	.target sm_20
+	.address_size 64
+	// compiled with /sciclone/data20/adwait/software/cuda/open64/lib//be
+	// nvopencc 4.0 built on 2011-05-12
+
+	.visible .func _Z10__gpu_synci (.param .s32 __cudaparmf1__Z10__gpu_synci)
+
+	//-----------------------------------------------------------
+	// Compiling /tmp/tmpxft_0000bee1_00000000-15_bfs_kernel.compute_20.cpp3.i (/local/scr/adwait/TMPDIR/ccBI#.blkX1i)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_20, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"<command-line>"
+	.file	2	"/tmp/tmpxft_0000bee1_00000000-14_bfs_kernel.compute_20.cudafe2.gpu"
+	.file	3	"/usr/lib/gcc/x86_64-redhat-linux/4.4.6/include/stddef.h"
+	.file	4	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/device_runtime.h"
+	.file	5	"/sciclone/data20/adwait/software/cuda/bin/../include/host_defines.h"
+	.file	6	"/sciclone/data20/adwait/software/cuda/bin/../include/builtin_types.h"
+	.file	7	"/sciclone/data20/adwait/software/cuda/bin/../include/device_types.h"
+	.file	8	"/sciclone/data20/adwait/software/cuda/bin/../include/driver_types.h"
+	.file	9	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_types.h"
+	.file	10	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_types.h"
+	.file	11	"/sciclone/data20/adwait/software/cuda/bin/../include/vector_types.h"
+	.file	12	"/sciclone/data20/adwait/software/cuda/bin/../include/device_launch_parameters.h"
+	.file	13	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/storage_class.h"
+	.file	14	"/usr/include/bits/types.h"
+	.file	15	"/usr/include/time.h"
+	.file	16	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_11_atomic_functions.h"
+	.file	17	"bfs_kernel.cu"
+	.file	18	"/sciclone/data20/adwait/software/cuda/bin/../include/common_functions.h"
+	.file	19	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions.h"
+	.file	20	"/sciclone/data20/adwait/software/cuda/bin/../include/math_constants.h"
+	.file	21	"/sciclone/data20/adwait/software/cuda/bin/../include/device_functions.h"
+	.file	22	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_12_atomic_functions.h"
+	.file	23	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_13_double_functions.h"
+	.file	24	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_atomic_functions.h"
+	.file	25	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_intrinsics.h"
+	.file	26	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_functions.h"
+	.file	27	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_fetch_functions.h"
+	.file	28	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions_dbl_ptx3.h"
+
+	.global .s32 g_mutex = 0;
+
+	.visible .func _Z10__gpu_synci (.param .s32 __cudaparmf1__Z10__gpu_synci)
+	{
+	.reg .u32 %r<10>;
+	.reg .u64 %rd<3>;
+	.reg .pred %p<5>;
+	.loc	17	107	0
+$LDWbegin__Z10__gpu_synci:
+	ld.param.u32 	%r1, [__cudaparmf1__Z10__gpu_synci];
+	mov.s32 	%r2, %r1;
+	.loc	17	109	0
+	cvt.s32.u32 	%r3, %tid.x;
+	mov.u32 	%r4, 0;
+	setp.ne.s32 	%p1, %r3, %r4;
+	@%p1 bra 	$Lt_0_2050;
+	.loc	16	118	0
+	mov.u64 	%rd1, g_mutex;
+	mov.s32 	%r5, 1;
+	atom.global.add.s32 	%r6, [%rd1], %r5;
+	ld.volatile.global.s32 	%r7, [g_mutex];
+	setp.ge.s32 	%p2, %r7, %r2;
+	@%p2 bra 	$Lt_0_2562;
+$Lt_0_3074:
+	ld.volatile.global.s32 	%r8, [g_mutex];
+	setp.lt.s32 	%p3, %r8, %r2;
+	@%p3 bra 	$Lt_0_3074;
+$Lt_0_2562:
+$Lt_0_2050:
+	.loc	17	123	0
+	ret;
+$LDWend__Z10__gpu_synci:
+	} // _Z10__gpu_synci
+
+	.entry _Z15BFS_kernel_warpPjS_S_iijiPi (
+		.param .u64 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_levels,
+		.param .u64 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_edgeArray,
+		.param .u64 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_edgeArrayAux,
+		.param .s32 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_W_SZ,
+		.param .s32 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_CHUNK_SZ,
+		.param .u32 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_numVertices,
+		.param .s32 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_curr,
+		.param .u64 __cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_flag)
+	{
+	.reg .u32 %r<36>;
+	.reg .u64 %rd<16>;
+	.reg .pred %p<10>;
+	.loc	17	45	0
+$LDWbegin__Z15BFS_kernel_warpPjS_S_iijiPi:
+	.loc	17	52	0
+	ld.param.s32 	%r1, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_CHUNK_SZ];
+	add.s32 	%r2, %r1, 1;
+	mov.u32 	%r3, %ctaid.x;
+	mov.u32 	%r4, %ntid.x;
+	mul.lo.u32 	%r5, %r3, %r4;
+	mov.u32 	%r6, %tid.x;
+	add.u32 	%r7, %r6, %r5;
+	ld.param.s32 	%r8, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_W_SZ];
+	div.s32 	%r9, %r7, %r8;
+	mul.lo.s32 	%r10, %r9, %r1;
+	ld.param.u32 	%r11, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_numVertices];
+	add.s32 	%r12, %r10, %r1;
+	setp.gt.u32 	%p1, %r11, %r12;
+	@%p1 bra 	$Lt_1_5378;
+	.loc	17	56	0
+	sub.u32 	%r13, %r11, %r10;
+	add.s32 	%r14, %r13, 1;
+	mov.s32 	%r15, 0;
+	mov.s32 	%r16, 0;
+	setp.lt.s32 	%p2, %r14, %r16;
+	selp.s32 	%r2, %r15, %r14, %p2;
+$Lt_1_5378:
+	.loc	17	61	0
+	mov.s32 	%r17, %r10;
+	add.s32 	%r18, %r10, %r2;
+	sub.s32 	%r19, %r18, 1;
+	setp.le.s32 	%p3, %r19, %r10;
+	@%p3 bra 	$Lt_1_5890;
+	rem.s32 	%r20, %r7, %r8;
+	sub.s32 	%r21, %r2, 1;
+	cvt.s64.s32 	%rd1, %r10;
+	mul.wide.s32 	%rd2, %r10, 4;
+	ld.param.s32 	%r22, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_curr];
+	ld.param.u64 	%rd3, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_levels];
+	mov.s32 	%r23, %r21;
+$Lt_1_6402:
+ //<loop> Loop body line 61, nesting depth: 1, estimated iterations: unknown
+	add.u64 	%rd4, %rd2, %rd3;
+	ld.global.u32 	%r24, [%rd4+0];
+	setp.ne.u32 	%p4, %r22, %r24;
+	@%p4 bra 	$Lt_1_6658;
+	.loc	17	65	0
+	ld.param.u64 	%rd5, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_edgeArray];
+	add.u64 	%rd6, %rd5, %rd2;
+	ld.global.u32 	%r25, [%rd6+4];
+	ld.global.u32 	%r26, [%rd6+0];
+	sub.u32 	%r27, %r25, %r26;
+	.loc	17	67	0
+	mov.s32 	%r28, %r20;
+	setp.ge.u32 	%p5, %r20, %r27;
+	@%p5 bra 	$Lt_1_7170;
+	add.u32 	%r29, %r20, %r26;
+	ld.param.u64 	%rd7, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_edgeArrayAux];
+$Lt_1_7682:
+ //<loop> Loop body line 67, nesting depth: 2, estimated iterations: unknown
+	.loc	17	69	0
+	cvt.u64.u32 	%rd8, %r29;
+	mul.wide.u32 	%rd9, %r29, 4;
+	add.u64 	%rd10, %rd7, %rd9;
+	ld.global.u32 	%r30, [%rd10+0];
+	cvt.s64.s32 	%rd11, %r30;
+	mul.wide.s32 	%rd12, %r30, 4;
+	add.u64 	%rd13, %rd3, %rd12;
+	ld.global.u32 	%r31, [%rd13+0];
+	mov.u32 	%r32, -1;
+	setp.ne.u32 	%p6, %r31, %r32;
+	@%p6 bra 	$Lt_1_7938;
+	.loc	17	72	0
+	add.u32 	%r33, %r22, 1;
+	st.global.u32 	[%rd13+0], %r33;
+	.loc	17	73	0
+	mov.s32 	%r34, 1;
+	ld.param.u64 	%rd14, [__cudaparm__Z15BFS_kernel_warpPjS_S_iijiPi_flag];
+	st.global.s32 	[%rd14+0], %r34;
+$Lt_1_7938:
+	add.s32 	%r28, %r28, %r8;
+	add.u32 	%r29, %r8, %r29;
+	setp.lt.u32 	%p7, %r28, %r27;
+	@%p7 bra 	$Lt_1_7682;
+$Lt_1_7170:
+$Lt_1_6658:
+	add.s32 	%r17, %r17, 1;
+	add.u64 	%rd2, %rd2, 4;
+	setp.ne.s32 	%p8, %r19, %r17;
+	@%p8 bra 	$Lt_1_6402;
+$Lt_1_5890:
+	.loc	17	78	0
+	exit;
+$LDWend__Z15BFS_kernel_warpPjS_S_iijiPi:
+	} // _Z15BFS_kernel_warpPjS_S_iijiPi
+	.global .s32 g_mutex2 = 0;
+	.global .align 4 .b8 g_q_offsets[4] = {0,0,0,0};
+	.global .align 4 .b8 g_q_size[4] = {0,0,0,0};
+
+	.entry _Z23Reset_kernel_parametersPj (
+		.param .u64 __cudaparm__Z23Reset_kernel_parametersPj_frontier_length)
+	{
+	.reg .u32 %r<7>;
+	.reg .u64 %rd<3>;
+	.loc	17	148	0
+$LDWbegin__Z23Reset_kernel_parametersPj:
+	.loc	17	150	0
+	mov.s32 	%r1, 0;
+	st.volatile.global.s32 	[g_mutex], %r1;
+	.loc	17	151	0
+	mov.s32 	%r2, 0;
+	st.volatile.global.s32 	[g_mutex2], %r2;
+	.loc	17	152	0
+	mov.u32 	%r3, 0;
+	ld.param.u64 	%rd1, [__cudaparm__Z23Reset_kernel_parametersPj_frontier_length];
+	st.global.u32 	[%rd1+0], %r3;
+	.loc	17	153	0
+	mov.s32 	%r4, 0;
+	st.volatile.global.s32 	[g_q_offsets+0], %r4;
+	.loc	17	154	0
+	mov.s32 	%r5, 0;
+	st.volatile.global.s32 	[g_q_size+0], %r5;
+	.loc	17	155	0
+	exit;
+$LDWend__Z23Reset_kernel_parametersPj:
+	} // _Z23Reset_kernel_parametersPj
+
+	.entry _Z13Frontier_copyPjS_S_ (
+		.param .u64 __cudaparm__Z13Frontier_copyPjS_S__frontier,
+		.param .u64 __cudaparm__Z13Frontier_copyPjS_S__frontier2,
+		.param .u64 __cudaparm__Z13Frontier_copyPjS_S__frontier_length)
+	{
+	.reg .u32 %r<14>;
+	.reg .u64 %rd<9>;
+	.reg .pred %p<4>;
+	.loc	17	179	0
+$LDWbegin__Z13Frontier_copyPjS_S_:
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.u64 	%rd1, [__cudaparm__Z13Frontier_copyPjS_S__frontier_length];
+	ldu.global.u32 	%r6, [%rd1+0];
+	setp.le.u32 	%p1, %r6, %r5;
+	@%p1 bra 	$Lt_3_1794;
+	.loc	17	185	0
+	cvt.u64.u32 	%rd2, %r5;
+	mul.wide.u32 	%rd3, %r5, 4;
+	ld.param.u64 	%rd4, [__cudaparm__Z13Frontier_copyPjS_S__frontier2];
+	add.u64 	%rd5, %rd4, %rd3;
+	ld.global.u32 	%r7, [%rd5+0];
+	ld.param.u64 	%rd6, [__cudaparm__Z13Frontier_copyPjS_S__frontier];
+	add.u64 	%rd7, %rd6, %rd3;
+	st.global.u32 	[%rd7+0], %r7;
+$Lt_3_1794:
+	mov.u32 	%r8, 0;
+	setp.ne.u32 	%p2, %r5, %r8;
+	@%p2 bra 	$Lt_3_2306;
+	.loc	17	189	0
+	mov.s32 	%r9, 0;
+	st.volatile.global.s32 	[g_mutex], %r9;
+	.loc	17	190	0
+	mov.s32 	%r10, 0;
+	st.volatile.global.s32 	[g_mutex2], %r10;
+	.loc	17	191	0
+	mov.s32 	%r11, 0;
+	st.volatile.global.s32 	[g_q_offsets+0], %r11;
+	.loc	17	192	0
+	mov.s32 	%r12, 0;
+	st.volatile.global.s32 	[g_q_size+0], %r12;
+$Lt_3_2306:
+	.loc	17	194	0
+	exit;
+$LDWend__Z13Frontier_copyPjS_S_:
+	} // _Z13Frontier_copyPjS_S_
+	.extern	.shared .align 4 .b8 s_mem[];
+
+	.entry _Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j (
+		.param .u64 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier,
+		.param .u32 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier_len,
+		.param .u64 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_cost,
+		.param .u64 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_visited,
+		.param .u64 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_edgeArray,
+		.param .u64 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_edgeArrayAux,
+		.param .u32 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_numVertices,
+		.param .u32 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_numEdges,
+		.param .u64 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier_length,
+		.param .u32 __cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_max_local_mem)
+	{
+	.reg .u32 %r<48>;
+	.reg .u64 %rd<54>;
+	.reg .pred %p<15>;
+	.shared .align 4 .b8 __cuda___cuda_local_var_39950_51_non_const_b_q_length0[4];
+	.shared .align 4 .b8 __cuda___cuda_local_var_39949_51_non_const_b_offset4[4];
+	.loc	17	239	0
+$LDWbegin__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j:
+	ld.param.u32 	%r1, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier_len];
+	mov.u32 	%r2, %tid.x;
+	setp.le.u32 	%p1, %r1, %r2;
+	@%p1 bra 	$Lt_4_12290;
+	.loc	17	255	0
+	mov.u64 	%rd1, s_mem;
+	cvt.u64.u32 	%rd2, %r2;
+	mul.wide.u32 	%rd3, %r2, 4;
+	ld.param.u64 	%rd4, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier];
+	add.u64 	%rd5, %rd4, %rd3;
+	ld.volatile.global.u32 	%r3, [%rd5+0];
+	add.u64 	%rd6, %rd3, %rd1;
+	st.shared.u32 	[%rd6+0], %r3;
+$Lt_4_12290:
+	mov.u64 	%rd1, s_mem;
+	.loc	17	258	0
+	mov.s32 	%r4, %r1;
+	mov.u32 	%r5, 0;
+	setp.eq.u32 	%p2, %r2, %r5;
+	ld.param.u32 	%r6, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_max_local_mem];
+	cvt.u64.u32 	%rd7, %r6;
+	cvt.u32.u64 	%r7, %rd7;
+	setp.gt.u32 	%p3, %r7, %r2;
+	mov.u64 	%rd8, __cuda___cuda_local_var_39950_51_non_const_b_q_length0;
+	mov.u64 	%rd9, __cuda___cuda_local_var_39949_51_non_const_b_offset4;
+$Lt_4_7938:
+	.loc	17	259	0
+	@!%p2 bra 	$Lt_4_12802;
+	.loc	17	264	0
+	mov.u32 	%r8, 0;
+	st.volatile.shared.u32 	[__cuda___cuda_local_var_39950_51_non_const_b_q_length0+0], %r8;
+	.loc	17	265	0
+	mov.u32 	%r9, 0;
+	st.volatile.shared.u32 	[__cuda___cuda_local_var_39949_51_non_const_b_offset4+0], %r9;
+$Lt_4_12802:
+	.loc	17	267	0
+	bar.sync 	0;
+	setp.le.u32 	%p4, %r4, %r2;
+	@%p4 bra 	$Lt_4_13826;
+	.loc	17	271	0
+	cvt.u64.u32 	%rd10, %r2;
+	mul.wide.u32 	%rd11, %r2, 4;
+	add.u64 	%rd12, %rd1, %rd11;
+	ld.volatile.shared.u32 	%r10, [%rd12+0];
+	.loc	17	273	0
+	cvt.u64.u32 	%rd13, %r10;
+	mul.wide.u32 	%rd14, %r10, 4;
+	ld.param.u64 	%rd15, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_visited];
+	mov.s32 	%r11, 0;
+	add.u64 	%rd16, %rd14, %rd15;
+	st.volatile.global.s32 	[%rd16+0], %r11;
+	.loc	17	276	0
+	ld.param.u64 	%rd17, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_edgeArray];
+	add.u64 	%rd18, %rd17, %rd14;
+	ld.global.u32 	%r12, [%rd18+4];
+	ld.global.u32 	%r13, [%rd18+0];
+	setp.le.u32 	%p5, %r12, %r13;
+	@%p5 bra 	$Lt_4_13826;
+	sub.u32 	%r14, %r12, %r13;
+	ld.param.u64 	%rd19, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_cost];
+	add.u64 	%rd20, %rd14, %rd19;
+	ld.param.u64 	%rd21, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_edgeArrayAux];
+	cvt.u64.u32 	%rd22, %r13;
+	mul.wide.u32 	%rd23, %r13, 4;
+	add.u64 	%rd24, %rd21, %rd23;
+	mov.s32 	%r15, %r14;
+$Lt_4_14338:
+ //<loop> Loop body line 276, nesting depth: 1, estimated iterations: unknown
+	.loc	17	282	0
+	ld.global.u32 	%r16, [%rd24+0];
+	.loc	17	284	0
+	ld.volatile.global.u32 	%r17, [%rd20+0];
+	add.u32 	%r18, %r17, 1;
+	cvt.u64.u32 	%rd25, %r16;
+	mul.wide.u32 	%rd26, %r16, 4;
+	add.u64 	%rd27, %rd26, %rd19;
+	atom.global.min.u32 	%r19, [%rd27], %r18;
+	mov.s32 	%r20, %r19;
+	ld.volatile.global.u32 	%r21, [%rd20+0];
+	add.u32 	%r22, %r21, 1;
+	setp.le.u32 	%p6, %r20, %r22;
+	@%p6 bra 	$Lt_4_15618;
+	.loc	17	289	0
+	add.u64 	%rd28, %rd26, %rd15;
+	mov.s32 	%r23, 1;
+	atom.global.exch.b32 	%r24, [%rd28], %r23;
+	mov.s32 	%r25, %r24;
+	mov.u32 	%r26, 0;
+	setp.ne.s32 	%p7, %r25, %r26;
+	@%p7 bra 	$Lt_4_15618;
+	.loc	17	294	0
+	mov.u32 	%r27, 1;
+	atom.shared.add.u32 	%r28, [%rd8], %r27;
+	mov.s32 	%r29, %r28;
+	setp.ge.u32 	%p8, %r29, %r7;
+	@%p8 bra 	$Lt_4_15874;
+	.loc	17	298	0
+	mul.lo.u64 	%rd29, %rd7, 4;
+	add.u64 	%rd30, %rd1, %rd29;
+	cvt.u64.u32 	%rd31, %r29;
+	mul.wide.u32 	%rd32, %r29, 4;
+	add.u64 	%rd33, %rd30, %rd32;
+	st.shared.u32 	[%rd33+0], %r16;
+	bra.uni 	$Lt_4_15618;
+$Lt_4_15874:
+	.loc	17	303	0
+	mov.u32 	%r30, 1;
+	atom.shared.add.u32 	%r31, [%rd9], %r30;
+	mov.s32 	%r32, %r31;
+	.loc	17	305	0
+	ld.param.u64 	%rd34, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier];
+	cvt.s64.s32 	%rd35, %r32;
+	mul.wide.s32 	%rd36, %r32, 4;
+	add.u64 	%rd37, %rd34, %rd36;
+	st.volatile.global.u32 	[%rd37+0], %r16;
+$Lt_4_15618:
+$Lt_4_15106:
+$Lt_4_14594:
+	add.u32 	%r13, %r13, 1;
+	add.u64 	%rd24, %rd24, 4;
+	setp.ne.u32 	%p9, %r12, %r13;
+	@%p9 bra 	$Lt_4_14338;
+$Lt_4_13826:
+$Lt_4_13314:
+	.loc	17	312	0
+	bar.sync 	0;
+	@!%p3 bra 	$Lt_4_16386;
+	.loc	17	315	0
+	cvt.u64.u32 	%rd38, %r2;
+	mul.wide.u32 	%rd39, %r2, 4;
+	mul.lo.u64 	%rd40, %rd7, 4;
+	add.u64 	%rd41, %rd1, %rd40;
+	add.u64 	%rd42, %rd39, %rd41;
+	ld.volatile.shared.u32 	%r33, [%rd42+0];
+	add.u64 	%rd43, %rd39, %rd1;
+	st.shared.u32 	[%rd43+0], %r33;
+$Lt_4_16386:
+	.loc	17	317	0
+	bar.sync 	0;
+	ld.volatile.shared.u32 	%r34, [__cuda___cuda_local_var_39950_51_non_const_b_q_length0+0];
+	mov.u32 	%r35, 0;
+	setp.ne.u32 	%p10, %r34, %r35;
+	@%p10 bra 	$Lt_4_17154;
+	@!%p2 bra 	$LBB30__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j;
+	.loc	17	322	0
+	mov.u32 	%r36, 0;
+	ld.param.u64 	%rd44, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier_length];
+	st.volatile.global.u32 	[%rd44+0], %r36;
+	bra.uni 	$LBB30__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j;
+$Lt_4_17154:
+	.loc	17	327	0
+	ld.volatile.shared.u32 	%r37, [__cuda___cuda_local_var_39950_51_non_const_b_q_length0+0];
+	mov.u32 	%r38, %ntid.x;
+	setp.gt.u32 	%p11, %r37, %r38;
+	@%p11 bra 	$L_4_12034;
+	ld.volatile.shared.u32 	%r39, [__cuda___cuda_local_var_39950_51_non_const_b_q_length0+0];
+	setp.le.u32 	%p12, %r39, %r7;
+	@%p12 bra 	$Lt_4_16898;
+$L_4_12034:
+	ld.volatile.shared.u32 	%r40, [__cuda___cuda_local_var_39950_51_non_const_b_q_length0+0];
+	ld.volatile.shared.u32 	%r41, [__cuda___cuda_local_var_39949_51_non_const_b_offset4+0];
+	sub.u32 	%r42, %r40, %r41;
+	setp.ge.u32 	%p13, %r2, %r42;
+	@%p13 bra 	$Lt_4_17922;
+	.loc	17	330	0
+	cvt.u64.u32 	%rd45, %r2;
+	mul.wide.u32 	%rd46, %r2, 4;
+	add.u64 	%rd47, %rd1, %rd46;
+	ld.volatile.shared.u32 	%r43, [%rd47+0];
+	ld.param.u64 	%rd48, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier];
+	ld.volatile.shared.u32 	%r44, [__cuda___cuda_local_var_39949_51_non_const_b_offset4+0];
+	add.u32 	%r45, %r44, %r2;
+	cvt.u64.u32 	%rd49, %r45;
+	mul.wide.u32 	%rd50, %r45, 4;
+	add.u64 	%rd51, %rd48, %rd50;
+	st.volatile.global.u32 	[%rd51+0], %r43;
+$Lt_4_17922:
+	@!%p2 bra 	$LBB30__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j;
+	.loc	17	333	0
+	ld.volatile.shared.u32 	%r46, [__cuda___cuda_local_var_39950_51_non_const_b_q_length0+0];
+	ld.param.u64 	%rd52, [__cudaparm__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j_frontier_length];
+	st.volatile.global.u32 	[%rd52+0], %r46;
+$LBB30__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j:
+	.loc	17	335	0
+	exit;
+$Lt_4_16898:
+	.loc	17	337	0
+	ld.volatile.shared.u32 	%r4, [__cuda___cuda_local_var_39950_51_non_const_b_q_length0+0];
+	.loc	17	338	0
+	bar.sync 	0;
+	.loc	17	337	0
+	bra.uni 	$Lt_4_7938;
+$LDWend__Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j:
+	} // _Z26BFS_kernel_one_block_spillPVjjS0_PViPjS3_jjS0_j
+	.extern	.shared .align 4 .b8 b_q[];
+
+	.entry _Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j (
+		.param .u64 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier,
+		.param .u64 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2,
+		.param .u32 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_len,
+		.param .u64 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_cost,
+		.param .u64 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_visited,
+		.param .u64 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArray,
+		.param .u64 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArrayAux,
+		.param .u32 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_numVertices,
+		.param .u32 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_numEdges,
+		.param .u64 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_length,
+		.param .u32 __cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_max_local_mem)
+	{
+	.reg .u32 %r<84>;
+	.reg .u64 %rd<59>;
+	.reg .pred %p<25>;
+	.shared .align 4 .b8 __cuda___cuda_local_var_40087_51_non_const_b_q_length8[4];
+	.shared .align 4 .b8 __cuda_local_var_40088_51_non_const_b_offset[4];
+	.loc	17	382	0
+$LDWbegin__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j:
+	.loc	17	394	0
+	ld.volatile.global.s32 	%r1, [g_mutex2];
+	.loc	17	395	0
+	ld.param.u32 	%r2, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_len];
+	mov.u32 	%r3, %tid.x;
+	mov.u32 	%r4, 0;
+	setp.eq.u32 	%p1, %r3, %r4;
+	mov.u32 	%r5, %ntid.x;
+	mov.u32 	%r6, %ctaid.x;
+	mul.lo.u32 	%r7, %r6, %r5;
+	cvt.s32.u32 	%r8, %tid.x;
+	mov.s32 	%r9, 0;
+	setp.eq.s32 	%p2, %r8, %r9;
+	add.u32 	%r10, %r7, %r3;
+	mov.u32 	%r11, 0;
+	setp.eq.u32 	%p3, %r10, %r11;
+	mov.u32 	%r12, %nctaid.x;
+	mov.s32 	%r13, 0;
+	mov.u64 	%rd1, b_q;
+	mov.u64 	%rd2, __cuda___cuda_local_var_40087_51_non_const_b_q_length8;
+$Lt_5_11778:
+	.loc	17	396	0
+	@!%p1 bra 	$Lt_5_19202;
+	.loc	17	401	0
+	mov.u32 	%r14, 0;
+	st.volatile.shared.u32 	[__cuda___cuda_local_var_40087_51_non_const_b_q_length8+0], %r14;
+	.loc	17	402	0
+	mov.u32 	%r15, 0;
+	st.volatile.shared.u32 	[__cuda_local_var_40088_51_non_const_b_offset+0], %r15;
+$Lt_5_19202:
+	.loc	17	404	0
+	bar.sync 	0;
+	setp.ge.u32 	%p4, %r10, %r2;
+	@%p4 bra 	$Lt_5_19714;
+	mov.s32 	%r16, 0;
+	setp.eq.s32 	%p5, %r13, %r16;
+	cvt.u64.u32 	%rd3, %r10;
+	mul.wide.u32 	%rd4, %r10, 4;
+	@!%p5 bra 	$Lt_5_20482;
+	.loc	17	412	0
+	ld.param.u64 	%rd5, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier];
+	add.u64 	%rd6, %rd5, %rd4;
+	ld.volatile.global.u32 	%r17, [%rd6+0];
+	bra.uni 	$Lt_5_20226;
+$Lt_5_20482:
+	.loc	17	414	0
+	ld.param.u64 	%rd7, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2];
+	add.u64 	%rd8, %rd7, %rd4;
+	ld.volatile.global.u32 	%r17, [%rd8+0];
+$Lt_5_20226:
+	.loc	17	417	0
+	cvt.u64.u32 	%rd9, %r17;
+	mul.wide.u32 	%rd10, %r17, 4;
+	ld.param.u64 	%rd11, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_visited];
+	mov.s32 	%r18, 0;
+	add.u64 	%rd12, %rd10, %rd11;
+	st.volatile.global.s32 	[%rd12+0], %r18;
+	.loc	17	420	0
+	ld.param.u64 	%rd13, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArray];
+	add.u64 	%rd14, %rd13, %rd10;
+	ld.global.u32 	%r19, [%rd14+4];
+	ld.global.u32 	%r20, [%rd14+0];
+	setp.le.u32 	%p6, %r19, %r20;
+	@%p6 bra 	$Lt_5_20738;
+	sub.u32 	%r21, %r19, %r20;
+	ld.param.u64 	%rd15, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_cost];
+	add.u64 	%rd16, %rd10, %rd15;
+	ld.param.u64 	%rd17, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArrayAux];
+	cvt.u64.u32 	%rd18, %r20;
+	mul.wide.u32 	%rd19, %r20, 4;
+	add.u64 	%rd20, %rd17, %rd19;
+	mov.s32 	%r22, %r21;
+$Lt_5_21250:
+ //<loop> Loop body line 420, nesting depth: 1, estimated iterations: unknown
+	.loc	17	426	0
+	ld.global.u32 	%r23, [%rd20+0];
+	.loc	17	428	0
+	ld.volatile.global.u32 	%r24, [%rd16+0];
+	add.u32 	%r25, %r24, 1;
+	cvt.u64.u32 	%rd21, %r23;
+	mul.wide.u32 	%rd22, %r23, 4;
+	add.u64 	%rd23, %rd22, %rd15;
+	atom.global.min.u32 	%r26, [%rd23], %r25;
+	mov.s32 	%r27, %r26;
+	ld.volatile.global.u32 	%r28, [%rd16+0];
+	add.u32 	%r29, %r28, 1;
+	setp.le.u32 	%p7, %r27, %r29;
+	@%p7 bra 	$Lt_5_21506;
+	.loc	17	433	0
+	add.u64 	%rd24, %rd22, %rd11;
+	mov.s32 	%r30, 1;
+	atom.global.exch.b32 	%r31, [%rd24], %r30;
+	mov.s32 	%r32, %r31;
+	mov.u32 	%r33, 0;
+	setp.ne.s32 	%p8, %r32, %r33;
+	@%p8 bra 	$Lt_5_22018;
+	.loc	17	438	0
+	mov.u32 	%r34, 1;
+	atom.shared.add.u32 	%r35, [%rd2], %r34;
+	mov.s32 	%r36, %r35;
+	ld.param.u32 	%r37, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_max_local_mem];
+	setp.le.u32 	%p9, %r37, %r36;
+	@%p9 bra 	$Lt_5_22786;
+	.loc	17	442	0
+	cvt.u64.u32 	%rd25, %r36;
+	mul.wide.u32 	%rd26, %r36, 4;
+	add.u64 	%rd27, %rd1, %rd26;
+	st.volatile.shared.u32 	[%rd27+0], %r23;
+	bra.uni 	$Lt_5_22530;
+$Lt_5_22786:
+	.loc	17	447	0
+	mov.u64 	%rd28, g_q_offsets;
+	mov.u32 	%r38, 1;
+	atom.global.add.u32 	%r39, [%rd28], %r38;
+	mov.s32 	%r40, %r39;
+	cvt.s64.s32 	%rd29, %r40;
+	mul.wide.s32 	%rd30, %r40, 4;
+	@!%p5 bra 	$Lt_5_23298;
+	.loc	17	449	0
+	ld.param.u64 	%rd31, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2];
+	add.u64 	%rd32, %rd31, %rd30;
+	st.volatile.global.u32 	[%rd32+0], %r23;
+	bra.uni 	$Lt_5_23042;
+$Lt_5_23298:
+	.loc	17	451	0
+	ld.param.u64 	%rd33, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier];
+	add.u64 	%rd34, %rd33, %rd30;
+	st.volatile.global.u32 	[%rd34+0], %r23;
+$Lt_5_23042:
+$Lt_5_22530:
+$Lt_5_22018:
+$Lt_5_21506:
+	add.u32 	%r20, %r20, 1;
+	add.u64 	%rd20, %rd20, 4;
+	setp.ne.u32 	%p10, %r19, %r20;
+	@%p10 bra 	$Lt_5_21250;
+$Lt_5_20738:
+$Lt_5_19714:
+	.loc	17	459	0
+	bar.sync 	0;
+	@!%p1 bra 	$Lt_5_23810;
+	ld.param.u32 	%r41, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_max_local_mem];
+	ld.volatile.shared.u32 	%r42, [__cuda___cuda_local_var_40087_51_non_const_b_q_length8+0];
+	setp.le.u32 	%p11, %r42, %r41;
+	@%p11 bra 	$Lt_5_24322;
+	.loc	17	464	0
+	st.volatile.shared.u32 	[__cuda___cuda_local_var_40087_51_non_const_b_q_length8+0], %r41;
+$Lt_5_24322:
+	.loc	17	466	0
+	ld.volatile.shared.u32 	%r43, [__cuda___cuda_local_var_40087_51_non_const_b_q_length8+0];
+	mov.u64 	%rd35, g_q_offsets;
+	atom.global.add.u32 	%r44, [%rd35], %r43;
+	mov.s32 	%r45, %r44;
+	st.volatile.shared.u32 	[__cuda_local_var_40088_51_non_const_b_offset+0], %r45;
+$Lt_5_23810:
+	.loc	17	470	0
+	add.u32 	%r1, %r1, %r12;
+	.loc	17	109	0
+	bar.sync 	0;
+	@!%p2 bra 	$Lt_5_24834;
+	.loc	16	118	0
+	mov.u64 	%rd36, g_mutex;
+	mov.s32 	%r46, 1;
+	atom.global.add.s32 	%r47, [%rd36], %r46;
+	ld.volatile.global.s32 	%r48, [g_mutex];
+	setp.ge.s32 	%p12, %r48, %r1;
+	@%p12 bra 	$Lt_5_25346;
+$Lt_5_25858:
+	ld.volatile.global.s32 	%r49, [g_mutex];
+	setp.lt.s32 	%p13, %r49, %r1;
+	@%p13 bra 	$Lt_5_25858;
+$Lt_5_25346:
+$Lt_5_24834:
+	.loc	17	122	0
+	bar.sync 	0;
+	.loc	17	471	0
+	@!%p3 bra 	$Lt_5_26370;
+	.loc	17	476	0
+	ld.volatile.global.s32 	%r50, [g_q_offsets+0];
+	st.volatile.global.s32 	[g_q_size+0], %r50;
+	.loc	17	477	0
+	mov.s32 	%r51, 0;
+	st.volatile.global.s32 	[g_q_offsets+0], %r51;
+$Lt_5_26370:
+	ld.volatile.shared.u32 	%r52, [__cuda___cuda_local_var_40087_51_non_const_b_q_length8+0];
+	setp.le.u32 	%p14, %r52, %r3;
+	@%p14 bra 	$Lt_5_26882;
+	cvt.u64.u32 	%rd37, %r3;
+	mul.wide.u32 	%rd38, %r3, 4;
+	add.u64 	%rd39, %rd1, %rd38;
+	mov.u32 	%r53, 0;
+	setp.ne.s32 	%p15, %r13, %r53;
+	@%p15 bra 	$Lt_5_27650;
+	.loc	17	484	0
+	ld.volatile.shared.u32 	%r54, [%rd39+0];
+	ld.param.u64 	%rd40, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2];
+	ld.volatile.shared.u32 	%r55, [__cuda_local_var_40088_51_non_const_b_offset+0];
+	add.u32 	%r56, %r55, %r3;
+	cvt.u64.u32 	%rd41, %r56;
+	mul.wide.u32 	%rd42, %r56, 4;
+	add.u64 	%rd43, %rd40, %rd42;
+	st.volatile.global.u32 	[%rd43+0], %r54;
+	bra.uni 	$Lt_5_27394;
+$Lt_5_27650:
+	.loc	17	486	0
+	ld.volatile.shared.u32 	%r57, [%rd39+0];
+	ld.param.u64 	%rd44, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier];
+	ld.volatile.shared.u32 	%r58, [__cuda_local_var_40088_51_non_const_b_offset+0];
+	add.u32 	%r59, %r58, %r3;
+	cvt.u64.u32 	%rd45, %r59;
+	mul.wide.u32 	%rd46, %r59, 4;
+	add.u64 	%rd47, %rd44, %rd46;
+	st.volatile.global.u32 	[%rd47+0], %r57;
+$Lt_5_27394:
+$Lt_5_26882:
+	.loc	17	489	0
+	add.u32 	%r1, %r1, %r12;
+	.loc	17	109	0
+	bar.sync 	0;
+	@!%p2 bra 	$Lt_5_27906;
+	.loc	16	118	0
+	mov.u64 	%rd48, g_mutex;
+	mov.s32 	%r60, 1;
+	atom.global.add.s32 	%r61, [%rd48], %r60;
+	ld.volatile.global.s32 	%r62, [g_mutex];
+	setp.ge.s32 	%p16, %r62, %r1;
+	@%p16 bra 	$Lt_5_28418;
+$Lt_5_28930:
+	ld.volatile.global.s32 	%r63, [g_mutex];
+	setp.lt.s32 	%p17, %r63, %r1;
+	@%p17 bra 	$Lt_5_28930;
+$Lt_5_28418:
+$Lt_5_27906:
+	.loc	17	122	0
+	bar.sync 	0;
+	.loc	17	498	0
+	ld.volatile.global.s32 	%r64, [g_q_size+0];
+	setp.lt.u32 	%p18, %r64, %r5;
+	@%p18 bra 	$L_5_18946;
+	ld.volatile.global.s32 	%r65, [g_q_size+0];
+	mul.lo.u32 	%r66, %r12, %r5;
+	setp.le.u32 	%p19, %r65, %r66;
+	@%p19 bra 	$L_5_18690;
+$L_5_18946:
+	mov.s32 	%r67, 1;
+	bra.uni 	$L_5_18434;
+$L_5_18690:
+	mov.s32 	%r67, 0;
+$L_5_18434:
+	mov.u32 	%r68, 0;
+	setp.ne.s32 	%p20, %r67, %r68;
+	@%p20 bra 	$LDWendi__Z9atomicAddPii_186_1;
+	.loc	17	500	0
+	add.s32 	%r69, %r13, 1;
+	shr.s32 	%r70, %r69, 31;
+	mov.s32 	%r71, 1;
+	and.b32 	%r72, %r70, %r71;
+	add.s32 	%r73, %r72, %r69;
+	shr.s32 	%r74, %r73, 1;
+	mul.lo.s32 	%r75, %r74, 2;
+	sub.s32 	%r13, %r69, %r75;
+	.loc	17	502	0
+	ld.volatile.global.s32 	%r2, [g_q_size+0];
+	.loc	17	500	0
+	bra.uni 	$Lt_5_11778;
+$LDWendi__Z9atomicAddPii_186_1:
+	.loc	17	503	0
+	mov.u32 	%r76, 0;
+	setp.ne.s32 	%p21, %r13, %r76;
+	@%p21 bra 	$Lt_5_29442;
+	.loc	17	507	0
+	mov.s32 	%r77, %r10;
+	ld.volatile.global.s32 	%r78, [g_q_size+0];
+	setp.le.s32 	%p22, %r78, %r10;
+	@%p22 bra 	$Lt_5_29954;
+	mul.lo.u32 	%r79, %r12, %r5;
+	cvt.s64.s32 	%rd49, %r10;
+	mul.wide.s32 	%rd50, %r10, 4;
+	cvt.s64.u32 	%rd51, %r79;
+	ld.param.u64 	%rd52, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2];
+	add.u64 	%rd53, %rd52, %rd50;
+	mul.wide.u32 	%rd54, %r79, 4;
+	ld.param.u64 	%rd55, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier];
+	add.u64 	%rd56, %rd55, %rd50;
+$Lt_5_30466:
+	.loc	17	508	0
+	ld.volatile.global.u32 	%r80, [%rd53+0];
+	st.volatile.global.u32 	[%rd56+0], %r80;
+	.loc	17	507	0
+	add.u32 	%r77, %r77, %r79;
+	add.u64 	%rd56, %rd56, %rd54;
+	add.u64 	%rd53, %rd53, %rd54;
+	ld.volatile.global.s32 	%r81, [g_q_size+0];
+	setp.gt.s32 	%p23, %r81, %r77;
+	@%p23 bra 	$Lt_5_30466;
+$Lt_5_29954:
+$Lt_5_29442:
+	@!%p3 bra 	$Lt_5_30978;
+	.loc	17	513	0
+	ld.volatile.global.s32 	%r82, [g_q_size+0];
+	ld.param.u64 	%rd57, [__cudaparm__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_length];
+	st.volatile.global.u32 	[%rd57+0], %r82;
+$Lt_5_30978:
+	.loc	17	515	0
+	exit;
+$LDWend__Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j:
+	} // _Z25BFS_kernel_SM_block_spillPVjS0_jS0_PViPjS3_jjS0_j
+
+	.entry _Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j (
+		.param .u64 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier,
+		.param .u64 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2,
+		.param .u32 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_len,
+		.param .u64 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_cost,
+		.param .u64 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_visited,
+		.param .u64 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArray,
+		.param .u64 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArrayAux,
+		.param .u32 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_numVertices,
+		.param .u32 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_numEdges,
+		.param .u64 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_length,
+		.param .u32 __cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_max_local_mem)
+	{
+	.reg .u32 %r<44>;
+	.reg .u64 %rd<40>;
+	.reg .pred %p<11>;
+	.shared .align 4 .b8 __cuda___cuda_local_var_40264_51_non_const_b_q_length16[4];
+	.shared .align 4 .b8 __cuda_local_var_40265_51_non_const_b_offset[4];
+	.loc	17	558	0
+$LDWbegin__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j:
+	mov.u32 	%r1, %tid.x;
+	mov.u32 	%r2, 0;
+	setp.eq.u32 	%p1, %r1, %r2;
+	@!%p1 bra 	$Lt_6_7426;
+	.loc	17	572	0
+	mov.u32 	%r3, 0;
+	st.volatile.shared.u32 	[__cuda___cuda_local_var_40264_51_non_const_b_q_length16+0], %r3;
+	.loc	17	573	0
+	mov.u32 	%r4, 0;
+	st.volatile.shared.u32 	[__cuda_local_var_40265_51_non_const_b_offset+0], %r4;
+$Lt_6_7426:
+	.loc	17	576	0
+	bar.sync 	0;
+	mov.u32 	%r5, %ctaid.x;
+	mov.u32 	%r6, %ntid.x;
+	mul.lo.u32 	%r7, %r5, %r6;
+	add.u32 	%r8, %r7, %r1;
+	ld.param.u32 	%r9, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_len];
+	setp.le.u32 	%p2, %r9, %r8;
+	@%p2 bra 	$Lt_6_7938;
+	.loc	17	581	0
+	ld.param.u64 	%rd1, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier];
+	cvt.u64.u32 	%rd2, %r8;
+	mul.wide.u32 	%rd3, %r8, 4;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.volatile.global.u32 	%r10, [%rd4+0];
+	.loc	17	582	0
+	cvt.u64.u32 	%rd5, %r10;
+	mul.wide.u32 	%rd6, %r10, 4;
+	ld.param.u64 	%rd7, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_visited];
+	mov.s32 	%r11, 0;
+	add.u64 	%rd8, %rd6, %rd7;
+	st.volatile.global.s32 	[%rd8+0], %r11;
+	.loc	17	585	0
+	ld.param.u64 	%rd9, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArray];
+	add.u64 	%rd10, %rd9, %rd6;
+	ld.global.u32 	%r12, [%rd10+4];
+	ld.global.u32 	%r13, [%rd10+0];
+	setp.le.u32 	%p3, %r12, %r13;
+	@%p3 bra 	$Lt_6_8450;
+	sub.u32 	%r14, %r12, %r13;
+	ld.param.u64 	%rd11, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_cost];
+	add.u64 	%rd12, %rd6, %rd11;
+	ld.param.u64 	%rd13, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_edgeArrayAux];
+	cvt.u64.u32 	%rd14, %r13;
+	mul.wide.u32 	%rd15, %r13, 4;
+	add.u64 	%rd16, %rd13, %rd15;
+	mov.u64 	%rd17, b_q;
+	mov.u64 	%rd18, __cuda___cuda_local_var_40264_51_non_const_b_q_length16;
+	mov.s32 	%r15, %r14;
+$Lt_6_8962:
+ //<loop> Loop body line 585, nesting depth: 1, estimated iterations: unknown
+	.loc	17	591	0
+	ld.global.u32 	%r16, [%rd16+0];
+	.loc	17	593	0
+	ld.volatile.global.u32 	%r17, [%rd12+0];
+	add.u32 	%r18, %r17, 1;
+	cvt.u64.u32 	%rd19, %r16;
+	mul.wide.u32 	%rd20, %r16, 4;
+	add.u64 	%rd21, %rd20, %rd11;
+	atom.global.min.u32 	%r19, [%rd21], %r18;
+	mov.s32 	%r20, %r19;
+	ld.volatile.global.u32 	%r21, [%rd12+0];
+	add.u32 	%r22, %r21, 1;
+	setp.le.u32 	%p4, %r20, %r22;
+	@%p4 bra 	$Lt_6_9218;
+	.loc	17	598	0
+	add.u64 	%rd22, %rd20, %rd7;
+	mov.s32 	%r23, 1;
+	atom.global.exch.b32 	%r24, [%rd22], %r23;
+	mov.s32 	%r25, %r24;
+	mov.u32 	%r26, 0;
+	setp.ne.s32 	%p5, %r25, %r26;
+	@%p5 bra 	$Lt_6_9730;
+	.loc	17	603	0
+	mov.u32 	%r27, 1;
+	atom.shared.add.u32 	%r28, [%rd18], %r27;
+	mov.s32 	%r29, %r28;
+	ld.param.u32 	%r30, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_max_local_mem];
+	setp.le.u32 	%p6, %r30, %r29;
+	@%p6 bra 	$Lt_6_10498;
+	.loc	17	607	0
+	cvt.u64.u32 	%rd23, %r29;
+	mul.wide.u32 	%rd24, %r29, 4;
+	add.u64 	%rd25, %rd17, %rd24;
+	st.volatile.shared.u32 	[%rd25+0], %r16;
+	bra.uni 	$Lt_6_10242;
+$Lt_6_10498:
+	.loc	17	612	0
+	ld.param.u64 	%rd26, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_length];
+	mov.u32 	%r31, 1;
+	atom.global.add.u32 	%r32, [%rd26], %r31;
+	mov.s32 	%r33, %r32;
+	.loc	17	614	0
+	ld.param.u64 	%rd27, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2];
+	cvt.s64.s32 	%rd28, %r33;
+	mul.wide.s32 	%rd29, %r33, 4;
+	add.u64 	%rd30, %rd27, %rd29;
+	st.volatile.global.u32 	[%rd30+0], %r16;
+$Lt_6_10242:
+$Lt_6_9730:
+$Lt_6_9218:
+	add.u32 	%r13, %r13, 1;
+	add.u64 	%rd16, %rd16, 4;
+	setp.ne.u32 	%p7, %r12, %r13;
+	@%p7 bra 	$Lt_6_8962;
+$Lt_6_8450:
+	mov.u64 	%rd17, b_q;
+$Lt_6_7938:
+	mov.u64 	%rd17, b_q;
+	.loc	17	622	0
+	bar.sync 	0;
+	@!%p1 bra 	$Lt_6_11010;
+	ld.param.u32 	%r34, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_max_local_mem];
+	ld.volatile.shared.u32 	%r35, [__cuda___cuda_local_var_40264_51_non_const_b_q_length16+0];
+	setp.le.u32 	%p8, %r35, %r34;
+	@%p8 bra 	$Lt_6_11522;
+	.loc	17	629	0
+	st.volatile.shared.u32 	[__cuda___cuda_local_var_40264_51_non_const_b_q_length16+0], %r34;
+$Lt_6_11522:
+	.loc	17	631	0
+	ld.volatile.shared.u32 	%r36, [__cuda___cuda_local_var_40264_51_non_const_b_q_length16+0];
+	ld.param.u64 	%rd31, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier_length];
+	atom.global.add.u32 	%r37, [%rd31], %r36;
+	mov.s32 	%r38, %r37;
+	st.volatile.shared.u32 	[__cuda_local_var_40265_51_non_const_b_offset+0], %r38;
+$Lt_6_11010:
+	.loc	17	633	0
+	bar.sync 	0;
+	ld.volatile.shared.u32 	%r39, [__cuda___cuda_local_var_40264_51_non_const_b_q_length16+0];
+	setp.le.u32 	%p9, %r39, %r1;
+	@%p9 bra 	$Lt_6_12034;
+	.loc	17	637	0
+	cvt.u64.u32 	%rd32, %r1;
+	mul.wide.u32 	%rd33, %r1, 4;
+	add.u64 	%rd34, %rd17, %rd33;
+	ld.volatile.shared.u32 	%r40, [%rd34+0];
+	ld.param.u64 	%rd35, [__cudaparm__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j_frontier2];
+	ld.volatile.shared.u32 	%r41, [__cuda_local_var_40265_51_non_const_b_offset+0];
+	add.u32 	%r42, %r41, %r1;
+	cvt.u64.u32 	%rd36, %r42;
+	mul.wide.u32 	%rd37, %r42, 4;
+	add.u64 	%rd38, %rd35, %rd37;
+	st.volatile.global.u32 	[%rd38+0], %r40;
+$Lt_6_12034:
+	.loc	17	638	0
+	exit;
+$LDWend__Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j:
+	} // _Z28BFS_kernel_multi_block_spillPVjS0_jS0_PViPjS3_jjS0_j
+
+

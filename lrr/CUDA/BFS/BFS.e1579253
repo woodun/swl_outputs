@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/CUDA/mainscript_BFS: line 1: 34671 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__BFS ./data/graph65536.txt > output_BFS.txt

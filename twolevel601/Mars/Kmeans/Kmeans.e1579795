@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/mars/mainscript_Kmeans: line 1:  6978 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__Kmeans 30000 3 24 > output_Kmeans.txt

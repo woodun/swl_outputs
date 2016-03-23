@@ -1,0 +1,230 @@
+
+	.version 1.4
+	.target sm_10, map_f64_to_f32
+	// compiled with /i3c/hpcl/axj936/software/elastic/cuda/open64/lib//be
+	// nvopencc 4.0 built on 2011-05-13
+
+	//-----------------------------------------------------------
+	// Compiling /tmp/tmpxft_00003274_00000000-7_pathfinder.cpp3.i (/tmp/ccBI#.RaQqqR)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_10, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"<command-line>"
+	.file	2	"/tmp/tmpxft_00003274_00000000-6_pathfinder.cudafe2.gpu"
+	.file	3	"/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h"
+	.file	4	"/i3c/hpcl/axj936/software/elastic/cuda/include/crt/device_runtime.h"
+	.file	5	"/i3c/hpcl/axj936/software/elastic/cuda/include/host_defines.h"
+	.file	6	"/i3c/hpcl/axj936/software/elastic/cuda/include/builtin_types.h"
+	.file	7	"/i3c/hpcl/axj936/software/elastic/cuda/include/device_types.h"
+	.file	8	"/i3c/hpcl/axj936/software/elastic/cuda/include/driver_types.h"
+	.file	9	"/i3c/hpcl/axj936/software/elastic/cuda/include/surface_types.h"
+	.file	10	"/i3c/hpcl/axj936/software/elastic/cuda/include/texture_types.h"
+	.file	11	"/i3c/hpcl/axj936/software/elastic/cuda/include/vector_types.h"
+	.file	12	"/i3c/hpcl/axj936/software/elastic/cuda/include/device_launch_parameters.h"
+	.file	13	"/i3c/hpcl/axj936/software/elastic/cuda/include/crt/storage_class.h"
+	.file	14	"/usr/include/bits/types.h"
+	.file	15	"/usr/include/time.h"
+	.file	16	"pathfinder.cu"
+	.file	17	"/i3c/hpcl/axj936/software/elastic/cuda/include/common_functions.h"
+	.file	18	"/i3c/hpcl/axj936/software/elastic/cuda/include/math_functions.h"
+	.file	19	"/i3c/hpcl/axj936/software/elastic/cuda/include/math_constants.h"
+	.file	20	"/i3c/hpcl/axj936/software/elastic/cuda/include/device_functions.h"
+	.file	21	"/i3c/hpcl/axj936/software/elastic/cuda/include/sm_11_atomic_functions.h"
+	.file	22	"/i3c/hpcl/axj936/software/elastic/cuda/include/sm_12_atomic_functions.h"
+	.file	23	"/i3c/hpcl/axj936/software/elastic/cuda/include/sm_13_double_functions.h"
+	.file	24	"/i3c/hpcl/axj936/software/elastic/cuda/include/sm_20_atomic_functions.h"
+	.file	25	"/i3c/hpcl/axj936/software/elastic/cuda/include/sm_20_intrinsics.h"
+	.file	26	"/i3c/hpcl/axj936/software/elastic/cuda/include/surface_functions.h"
+	.file	27	"/i3c/hpcl/axj936/software/elastic/cuda/include/texture_fetch_functions.h"
+	.file	28	"/i3c/hpcl/axj936/software/elastic/cuda/include/math_functions_dbl_ptx1.h"
+
+
+	.entry _Z14dynproc_kerneliPiS_S_iiii (
+		.param .s32 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_iteration,
+		.param .u64 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_gpuWall,
+		.param .u64 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_gpuSrc,
+		.param .u64 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_gpuResults,
+		.param .s32 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_cols,
+		.param .s32 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_rows,
+		.param .s32 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_startStep,
+		.param .s32 __cudaparm__Z14dynproc_kerneliPiS_S_iiii_border)
+	{
+	.reg .u16 %rh<3>;
+	.reg .u32 %r<71>;
+	.reg .u64 %rd<36>;
+	.reg .pred %p<15>;
+	.shared .align 4 .b8 __cuda___cuda_local_var_29788_37_non_const_prev48[1024];
+	.shared .align 4 .b8 __cuda___cuda_local_var_29789_37_non_const_result1072[1024];
+	.loc	16	111	0
+$LDWbegin__Z14dynproc_kerneliPiS_S_iiii:
+	ld.param.s32 	%r1, [__cudaparm__Z14dynproc_kerneliPiS_S_iiii_iteration];
+	mul.lo.s32 	%r2, %r1, 2;
+	ld.param.s32 	%r3, [__cudaparm__Z14dynproc_kerneliPiS_S_iiii_cols];
+	sub.s32 	%r4, %r3, 1;
+	mov.s32 	%r5, 256;
+	sub.s32 	%r6, %r5, %r2;
+	cvt.s32.u16 	%r7, %ctaid.x;
+	mul.lo.s32 	%r8, %r7, %r6;
+	ld.param.s32 	%r9, [__cudaparm__Z14dynproc_kerneliPiS_S_iiii_border];
+	sub.s32 	%r10, %r8, %r9;
+	cvt.s32.u16 	%r11, %tid.x;
+	add.s32 	%r12, %r10, %r11;
+	set.ge.u32.s32 	%r13, %r4, %r12;
+	neg.s32 	%r14, %r13;
+	mov.s32 	%r15, 0;
+	set.ge.u32.s32 	%r16, %r12, %r15;
+	neg.s32 	%r17, %r16;
+	and.b32 	%r18, %r14, %r17;
+	mov.u32 	%r19, 0;
+	setp.eq.s32 	%p1, %r18, %r19;
+	@%p1 bra 	$Lt_0_7938;
+	.loc	16	151	0
+	mov.u64 	%rd1, __cuda___cuda_local_var_29788_37_non_const_prev48;
+	ld.param.u64 	%rd2, [__cudaparm__Z14dynproc_kerneliPiS_S_iiii_gpuSrc];
+	cvt.s64.s32 	%rd3, %r12;
+	mul.wide.s32 	%rd4, %r12, 4;
+	add.u64 	%rd5, %rd2, %rd4;
+	ld.global.s32 	%r20, [%rd5+0];
+	cvt.s64.s32 	%rd6, %r11;
+	mul.wide.s32 	%rd7, %r11, 4;
+	add.u64 	%rd8, %rd1, %rd7;
+	st.shared.s32 	[%rd8+0], %r20;
+$Lt_0_7938:
+	mov.u64 	%rd1, __cuda___cuda_local_var_29788_37_non_const_prev48;
+	.loc	16	153	0
+	bar.sync 	0;
+	mov.u32 	%r21, 0;
+	setp.le.s32 	%p2, %r1, %r21;
+	@%p2 bra 	$Lt_0_11010;
+	sub.s32 	%r22, %r11, 1;
+	mov.s32 	%r23, 0;
+	setp.lt.s32 	%p3, %r10, %r23;
+	neg.s32 	%r24, %r10;
+	mov.s32 	%r25, 0;
+	selp.s32 	%r26, %r24, %r25, %p3;
+	max.s32 	%r27, %r22, %r26;
+	add.s32 	%r28, %r11, 1;
+	add.s32 	%r29, %r10, 255;
+	sub.s32 	%r30, %r3, %r10;
+	setp.lt.s32 	%p4, %r4, %r29;
+	sub.s32 	%r31, %r30, 1;
+	mov.s32 	%r32, 255;
+	selp.s32 	%r33, %r31, %r32, %p4;
+	min.s32 	%r34, %r28, %r33;
+	mov.s32 	%r35, %r1;
+	sub.s32 	%r36, %r1, 1;
+	setp.le.s32 	%p5, %r26, %r11;
+	selp.s32 	%r37, 1, 0, %p5;
+	setp.ge.s32 	%p6, %r33, %r11;
+	selp.s32 	%r38, 1, 0, %p6;
+	and.b32 	%r39, %r37, %r38;
+	mov.s32 	%r40, 0;
+	mov.u64 	%rd9, __cuda___cuda_local_var_29789_37_non_const_result1072;
+	mov.s32 	%r41, %r35;
+$Lt_0_8962:
+ //<loop> Loop body line 153, nesting depth: 1, estimated iterations: unknown
+	.loc	16	156	0
+	mov.s32 	%r42, 0;
+	add.s32 	%r43, %r40, 1;
+	set.le.u32.s32 	%r44, %r43, %r11;
+	neg.s32 	%r45, %r44;
+	mov.s32 	%r46, 254;
+	sub.s32 	%r47, %r46, %r40;
+	set.le.u32.s32 	%r48, %r11, %r47;
+	neg.s32 	%r49, %r48;
+	and.b32 	%r50, %r45, %r49;
+	and.b32 	%r51, %r39, %r50;
+	mov.u32 	%r52, 0;
+	setp.eq.s32 	%p7, %r51, %r52;
+	@%p7 bra 	$Lt_0_9218;
+	.loc	16	159	0
+	mov.s32 	%r42, 1;
+	.loc	16	166	0
+	cvt.s64.s32 	%rd10, %r11;
+	mul.wide.s32 	%rd11, %r11, 4;
+	ld.param.u64 	%rd12, [__cudaparm__Z14dynproc_kerneliPiS_S_iiii_gpuWall];
+	ld.param.s32 	%r53, [__cudaparm__Z14dynproc_kerneliPiS_S_iiii_startStep];
+	add.s32 	%r54, %r53, %r40;
+	mul.lo.s32 	%r55, %r3, %r54;
+	add.s32 	%r56, %r12, %r55;
+	cvt.s64.s32 	%rd13, %r56;
+	mul.wide.s32 	%rd14, %r56, 4;
+	add.u64 	%rd15, %rd12, %rd14;
+	ld.global.s32 	%r57, [%rd15+0];
+	cvt.s64.s32 	%rd16, %r34;
+	mul.wide.s32 	%rd17, %r34, 4;
+	add.u64 	%rd18, %rd1, %rd17;
+	ld.shared.s32 	%r58, [%rd18+0];
+	add.u64 	%rd19, %rd11, %rd1;
+	ld.shared.s32 	%r59, [%rd19+0];
+	cvt.s64.s32 	%rd20, %r27;
+	mul.wide.s32 	%rd21, %r27, 4;
+	add.u64 	%rd22, %rd1, %rd21;
+	ld.shared.s32 	%r60, [%rd22+0];
+	min.s32 	%r61, %r59, %r60;
+	min.s32 	%r62, %r58, %r61;
+	add.s32 	%r63, %r57, %r62;
+	add.u64 	%rd23, %rd11, %rd9;
+	st.shared.s32 	[%rd23+0], %r63;
+$Lt_0_9218:
+	.loc	16	169	0
+	bar.sync 	0;
+	.loc	16	171	0
+	setp.eq.s32 	%p8, %r36, %r40;
+	@%p8 bra 	$Lt_0_11266;
+	mov.s32 	%r64, 0;
+	setp.ne.s32 	%p9, %r42, %r64;
+	mov.pred 	%p10, %p9;
+	mov.pred 	%p11, %p12;
+	@!%p9 bra 	$Lt_0_9730;
+	.loc	16	173	0
+	cvt.s64.s32 	%rd24, %r11;
+	mul.wide.s32 	%rd25, %r11, 4;
+	add.u64 	%rd26, %rd25, %rd9;
+	ld.shared.s32 	%r65, [%rd26+0];
+	add.u64 	%rd27, %rd25, %rd1;
+	st.shared.s32 	[%rd27+0], %r65;
+$Lt_0_9730:
+	.loc	16	174	0
+	bar.sync 	0;
+	.loc	16	155	0
+	mov.s32 	%r40, %r43;
+	setp.ne.s32 	%p13, %r43, %r1;
+	@%p13 bra 	$Lt_0_8962;
+	bra.uni 	$Lt_0_258;
+$Lt_0_11010:
+	cvt.s32.s8 	%r66, %rh1;
+	mov.s32 	%r67, 0;
+	setp.ne.s32 	%p10, %r66, %r67;
+	mov.u64 	%rd9, __cuda___cuda_local_var_29789_37_non_const_result1072;
+	bra.uni 	$Lt_0_258;
+$Lt_0_11266:
+	mov.s32 	%r68, 0;
+	setp.ne.s32 	%p10, %r42, %r68;
+$Lt_0_258:
+	.loc	16	175	0
+	@!%p10 bra 	$Lt_0_10498;
+	.loc	16	181	0
+	cvt.s64.s32 	%rd28, %r11;
+	mul.wide.s32 	%rd29, %r11, 4;
+	add.u64 	%rd30, %rd9, %rd29;
+	ld.shared.s32 	%r69, [%rd30+0];
+	ld.param.u64 	%rd31, [__cudaparm__Z14dynproc_kerneliPiS_S_iiii_gpuResults];
+	cvt.s64.s32 	%rd32, %r12;
+	mul.wide.s32 	%rd33, %r12, 4;
+	add.u64 	%rd34, %rd31, %rd33;
+	st.global.s32 	[%rd34+0], %r69;
+$Lt_0_10498:
+	.loc	16	183	0
+	exit;
+$LDWend__Z14dynproc_kerneliPiS_S_iiii:
+	} // _Z14dynproc_kerneliPiS_S_iiii
+

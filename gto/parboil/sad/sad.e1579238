@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/parboil/mainscript_sad: line 1: /benchmarks/sad/build/cuda_default/sad: No such file or directory

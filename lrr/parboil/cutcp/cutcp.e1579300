@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/parboil/mainscript_cutcp: line 1: /benchmarks/cutcp/build/cuda_default/cutcp: No such file or directory

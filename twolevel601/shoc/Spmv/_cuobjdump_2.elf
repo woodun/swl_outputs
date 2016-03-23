@@ -1,0 +1,833 @@
+
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             408        3        0     27     .text._Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+   7               0               0        3        0     29     .nv.info._Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+   8               0               0        3        0     30     .nv.info
+   9               0            1272        3        0     23     .text._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  10               0               0        3        0     25     .nv.info._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  11               0              96        3        0     20     .text._Z4zeroIdEvPT_i
+  12               0               0        3        0     22     .nv.info._Z4zeroIdEvPT_i
+  13               0             376        3        0     17     .text._Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  14               0               0        3        0     19     .nv.info._Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  15               0             320        3        0     14     .text._Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  16               0               0        3        0     16     .nv.info._Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  17               0            1192        3        0     10     .text._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  18               0               0        3        0     12     .nv.info._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  19               0              96        3        0      7     .text._Z4zeroIfEvPT_i
+  20               0               0        3        0      9     .nv.info._Z4zeroIfEvPT_i
+  21               0             312        3        0      4     .text._Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  22               0               0        3        0      6     .nv.info._Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  23               0               0        3        0      5     .nv.constant0._Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  24               0               0        3        0     18     .nv.constant0._Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  25               0               0        3        0      8     .nv.constant0._Z4zeroIfEvPT_i
+  26               0               0        3        0     21     .nv.constant0._Z4zeroIdEvPT_i
+  27               0               0        3        0     13     .nv.shared._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  28               0               0        3        0     11     .nv.constant0._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  29               0               0        3        0     26     .nv.shared._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  30               0               0        3        0     24     .nv.constant0._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  31               0               0        3        0     15     .nv.constant0._Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  32               0               0        3        0     28     .nv.constant0._Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  33               0             408       12       10     27     _Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  34               0            1272       12       10     23     _Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  35               0              96       12       10     20     _Z4zeroIdEvPT_i
+  36               0             376       12       10     17     _Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+  37               0             320       12       10     14     _Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  38               0            1192       12       10     10     _Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  39               0              96       12       10      7     _Z4zeroIfEvPT_i
+  40               0             312       12       10      4     _Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+  41               0               0       1a        0      0     vecTex
+  42               0               0       1a        0      0     vecTexD
+
+
+.nv.constant0._Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  
+
+
+.nv.constant0._Z4zeroIfEvPT_i	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  
+
+
+.nv.constant0._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  
+
+
+.nv.shared._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	NOBITS
+   No data to be dumped. 
+
+
+.nv.constant0._Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  
+
+
+.nv.constant0._Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  
+
+
+.nv.constant0._Z4zeroIdEvPT_i	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  
+
+
+.nv.constant0._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  
+
+
+.nv.shared._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	NOBITS
+   No data to be dumped. 
+
+
+.nv.constant0._Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  
+
+
+.text._Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+bar = 0	reg = 12	lmem=0	smem=0
+0x00005de4  0x28004404  0x94001c04  0x2c000000  
+0x84009c04  0x2c000000  0x20001c03  0x20044000  
+0xe001dc23  0x1b0e4000  0x000001e7  0x80000000  
+0x08021e03  0x6000c000  0x10025ce3  0x5000c000  
+0x40000007  0x60000003  0xc0809c03  0x48014000  
+0xd090dc43  0x48004000  0x00201c85  0x84000000  
+0x1021dc85  0x84000000  0x1c01dc23  0x1b0e0000  
+0x600001e7  0x40000002  0x10011de2  0x18000000  
+0x10015ce3  0x5000c000  0xfc019de4  0x28000000  
+0xa0009ca3  0x20098000  0xb050dc43  0x48004000  
+0x80011ca3  0x20098000  0x90515c43  0x48004000  
+0x00229c85  0x84000000  0xfca2dc86  0x90004000  
+0x00429c85  0x84000000  0x04001c03  0x4800c000  
+0x10411c03  0x4801c000  0x0071dc23  0x1a8e0000  
+0xfc515c43  0x48000000  0x10209c03  0x4801c000  
+0xfc30dc43  0x48000000  0x2ca19c00  0x300c0000  
+0xa00001e7  0x4003fffe  0x00001df4  0x40000000  
+0xfc019df4  0x28000000  0x00809c03  0x48014001  
+0x1090dc43  0x48004001  0x00219c85  0x94000000  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 
+	<0x2>
+	Attribute:	EIATTR_IMAGE_SLOT
+	Format:	EIFMT_SVAL
+	Value:	0x29 0x0 
+	<0x3>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x17 0x280020 
+	<0x4>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x28
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x21018c 0x20 
+
+
+.text._Z4zeroIfEvPT_i	PROGBITS
+bar = 0	reg = 6	lmem=0	smem=0
+0x00005de4  0x28004404  0x84001c04  0x2c000000  
+0x94009c04  0x2c000000  0x20201c03  0x20004000  
+0xa001dc23  0x1b0e4000  0x000001e7  0x80000000  
+0x80011de4  0x28004000  0x10009ce3  0x5000c000  
+0x10011ca3  0x2009c000  0x90215c43  0x48004000  
+0x004fdc85  0x94000000  0x00001de7  0x80000000  
+
+
+
+.nv.info._Z4zeroIfEvPT_i	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x19 0xc0020 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0xc
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x1000c 0x1 
+
+
+.text._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+bar = 0	reg = 22	lmem=0	smem=512
+0x00005de4  0x28004404  0x81209ec4  0x1c00c000  
+0x8402dc04  0x2c000000  0x01215f84  0x1c00fff8  
+0xc0019de2  0x181fffff  0x09201c04  0x18040000  
+0x2d211ec4  0x1c000000  0x10001c00  0xc8000000  
+0xf8001c02  0x083fffff  0x01201c04  0x14860000  
+0x0020dc03  0x50000000  0x0d20df84  0x1c000000  
+0x0c001c43  0x20000000  0x1850dc43  0x200c0000  
+0x10001c43  0x50000000  0x20319c43  0x50004000  
+0x0020de03  0x20080000  0x20615ca3  0x41004000  
+0x80b11c83  0x6800c000  0x0c21dc03  0x198e0000  
+0x8055dc03  0x1b0ec000  0xfc43dc23  0x1b0e0000  
+0x0830c103  0x48000000  0x04000003  0x4800c000  
+0x80514803  0x4800ffff  0x0831dc03  0x1b0e0000  
+0x04618803  0x4800c000  0x8055dc03  0x1b0ec000  
+0x04000003  0x4800c000  0x94009c04  0x2c000000  
+0x04618803  0x4800c000  0x01202784  0x1c000000  
+0x18201c03  0x20000000  0xe001dc23  0x1b0e4000  
+0x000001e7  0x80000000  0x08035e03  0x6000c000  
+0x10039ce3  0x5000c000  0x7cb3dc03  0x6800c000  
+0xe0000007  0x60000008  0xc0d09c03  0x48014000  
+0xd0e0dc43  0x48004000  0x00201c85  0x84000000  
+0x10231c85  0x84000000  0x00f01c03  0x48000000  
+0x3001dc23  0x1b0e0000  0xe00001e7  0x40000007  
+0x1001dde2  0x18000000  0x10015ce3  0x5000c000  
+0x80019c03  0x4800c001  0xfc029de4  0x28000000  
+0xa0009ca3  0x200f8000  0x18c1dc23  0x1a0e0000  
+0x80741ce3  0x5000c000  0xb050dc43  0x48004000  
+0x80011ca3  0x200f8000  0x90515c43  0x48004000  
+0x000021e7  0x40000005  0xc0000007  0x60000004  
+0x00245c85  0x84000000  0x00219c03  0x4801c002  
+0x0d01dc43  0x48000000  0x00621c03  0x4801c002  
+0x00649c85  0x84000000  0x1d025c43  0x48000000  
+0x00809c03  0x4801c002  0x00819c85  0x84000000  
+0x2500dc43  0x48000000  0x0021dc85  0x84000000  
+0xfd14dc86  0x90004000  0xfd251c86  0x90004000  
+0xfc649c86  0x90004000  0xfc745c86  0x90004000  
+0x00419c03  0x4801c002  0x00455c85  0x84000000  
+0x00001c03  0x4800c002  0x1501dc43  0x48000000  
+0x00621c03  0x4801c002  0x00c1dc23  0x1a0e0000  
+0x00619c85  0x84000000  0x1d025c43  0x48000000  
+0x00811c03  0x4801c002  0x00821c85  0x84000000  
+0x25015c43  0x48000000  0x0041dc85  0x84000000  
+0x00411c03  0x4801c002  0x15015c43  0x48000000  
+0x00209c03  0x4801c002  0x0d00dc43  0x48000000  
+0x4d525c00  0x30140000  0x50625c00  0x30120000  
+0x80019c03  0x4800c001  0x18c1dc23  0x1a000000  
+0x48821c00  0x30120000  0x44729c00  0x30100000  
+0x600001e7  0x4003fffb  0x00c1dc33  0x1a0e0000  
+0x000021f4  0x40000000  0x00219c85  0x84000000  
+0xfc61dc86  0x90004000  0x00419c85  0x84000000  
+0x80001c03  0x4800c000  0x00411c03  0x4801c002  
+0x00c1dc23  0x1a0e0000  0x15015c43  0x48000000  
+0x00209c03  0x4801c002  0x0d00dc43  0x48000000  
+0x1c629c00  0x30140000  0xa00001e7  0x4003fffe  
+0x00001df4  0x40000000  0xfc029df4  0x28000000  
+0x08b01e03  0x6000c000  0x3cf1dc23  0x1a0ec000  
+0x00029c85  0xc9000000  0x800081e7  0x40000000  
+0x0000e085  0xc1000000  0x0000a085  0xc1000001  
+0x0830a000  0x50000000  0x0000a085  0xc9000000  
+0x1cf1dc23  0x1a0ec000  0x800081e7  0x40000000  
+0x0000e085  0xc1000000  0x8000a085  0xc1000000  
+0x0830a000  0x50000000  0x0000a085  0xc9000000  
+0x0cf1dc23  0x1a0ec000  0x800081e7  0x40000000  
+0x0000e085  0xc1000000  0x4000a085  0xc1000000  
+0x0830a000  0x50000000  0x0000a085  0xc9000000  
+0x04f1dc23  0x1a0ec000  0x800081e7  0x40000000  
+0x0000e085  0xc1000000  0x2000a085  0xc1000000  
+0x0830a000  0x50000000  0x0000a085  0xc9000000  
+0xfcf1dc23  0x1a0e0000  0x800081e7  0x40000000  
+0x0000e085  0xc1000000  0x1000a085  0xc1000000  
+0x0830a000  0x50000000  0x0000a085  0xc9000000  
+0xfcf1dc23  0x1a8e0000  0x000001e7  0x80000000  
+0x00d09c03  0x48014001  0x00001c85  0xc1000000  
+0x10e0dc43  0x48004001  0x00201c85  0x94000000  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 
+	<0x2>
+	Attribute:	EIATTR_IMAGE_SLOT
+	Format:	EIFMT_SVAL
+	Value:	0x29 0x0 
+	<0x3>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x1c 0x280020 
+	<0x4>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x28
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x220198 0x20 
+
+
+.text._Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+bar = 0	reg = 14	lmem=0	smem=0
+0x00005de4  0x28004404  0x94001c04  0x2c000000  
+0x84009c04  0x2c000000  0x20001c03  0x20044000  
+0xe001dc23  0x1b0e4000  0x000001e7  0x80000000  
+0x08021e03  0x6000c000  0x10025ce3  0x5000c000  
+0x60000007  0x60000003  0xc0809c03  0x48014000  
+0xd090dc43  0x48004000  0x0021dc85  0x84000000  
+0xfc71dc23  0x198e0000  0xa00001e7  0x40000002  
+0xa0809c03  0x48014000  0xe0015de4  0x28004000  
+0xfc001de4  0x28000000  0xfc019de4  0x28000000  
+0xb090dc43  0x48004000  0x80811c03  0x48014000  
+0x1052dce3  0x5000c000  0x08529e03  0x6000c000  
+0x90915c43  0x48004000  0x00231c85  0x84000000  
+0xfcc35c86  0x90004000  0x00431c85  0x84000000  
+0x04001c03  0x4800c000  0x10a11c03  0x48010000  
+0x0071dc23  0x1a8e0000  0x14b15c43  0x48000000  
+0x08a09c03  0x48010000  0x0cb0dc43  0x48000000  
+0x34c19c00  0x300c0000  0xa00001e7  0x4003fffe  
+0x00001df4  0x40000000  0xfc019df4  0x28000000  
+0x00809c03  0x48014001  0x1090dc43  0x48004001  
+0x00219c85  0x94000000  0x00001de7  0x80000000  
+
+
+
+.nv.info._Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 
+	<0x2>
+	Attribute:	EIATTR_IMAGE_SLOT
+	Format:	EIFMT_SVAL
+	Value:	0x29 0x0 
+	<0x3>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x1f 0x280020 
+	<0x4>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x28
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x21018c 0x20 
+
+
+.text._Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+bar = 0	reg = 15	lmem=0	smem=0
+0x00005de4  0x28004404  0x94001c04  0x2c000000  
+0x84009c04  0x2c000000  0x20001c03  0x20044000  
+0xe001dc23  0x1b0e4000  0x000001e7  0x80000000  
+0xc000dde4  0x28004000  0x10009ce3  0x5000c000  
+0x7c035c23  0x7000c004  0xc0000007  0x60000003  
+0x10011ca3  0x2007c000  0xd0215c43  0x48004000  
+0x00431c85  0x84000000  0x10439c85  0x84000000  
+0x38c1dc23  0x1b0e0000  0xc00001e7  0x40000002  
+0xa000dde4  0x28004000  0x10c09ce3  0x5000c000  
+0x80019de4  0x28004000  0xfc021de4  0x28000000  
+0x10c11ca3  0x2007c000  0x20c0dce3  0x5000c000  
+0xfc025de4  0x28000000  0xb0215c43  0x48004000  
+0x20c19ca3  0x200dc000  0x9031dc43  0x48004000  
+0x00409c85  0x84000000  0xfc209c86  0x9000c000  
+0x00629ca5  0x84000000  0x04c31c03  0x4800c000  
+0x20619c03  0x4801c000  0x30e1dc23  0x1a8e0000  
+0xfc71dc43  0x48000000  0x10411c03  0x4801c000  
+0xfc515c43  0x48000000  0x08a21c01  0x20100000  
+0xa00001e7  0x4003fffe  0x00001df4  0x40000000  
+0xfc021de4  0x28000000  0xfc025df4  0x28000000  
+0x74009c03  0x5800c000  0x00011de4  0x28004001  
+0x08d0dc63  0x40000000  0x20009c03  0x2009c000  
+0x1030dc43  0x48004001  0x00221ca5  0x94000000  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 
+	<0x2>
+	Attribute:	EIATTR_IMAGE_SLOT
+	Format:	EIFMT_SVAL
+	Value:	0x2a 0x0 
+	<0x3>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x18 0x280020 
+	<0x4>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x28
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x21018c 0x20 
+
+
+.text._Z4zeroIdEvPT_i	PROGBITS
+bar = 0	reg = 6	lmem=0	smem=0
+0x00005de4  0x28004404  0x84001c04  0x2c000000  
+0x94009c04  0x2c000000  0x20201c03  0x20004000  
+0xa001dc23  0x1b0e4000  0x000001e7  0x80000000  
+0x8000dde4  0x28004000  0x20009ce3  0x5000c000  
+0x20011ca3  0x2007c000  0x90215c43  0x48004000  
+0x004fdca5  0x94000000  0x00001de7  0x80000000  
+
+
+
+.nv.info._Z4zeroIdEvPT_i	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x1a 0xc0020 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0xc
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x1000c 0x1 
+
+
+.text._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+bar = 0	reg = 33	lmem=0	smem=1024
+0x00005de4  0x28004404  0x81209ec4  0x1c00c000  
+0x84069c04  0x2c000000  0x01215f84  0x1c00fff8  
+0xc0019de2  0x181fffff  0x09201c04  0x18040000  
+0x69211ec4  0x1c000000  0x10001c00  0xc8000000  
+0xf8001c02  0x083fffff  0x01201c04  0x14860000  
+0x0020dc03  0x50000000  0x0d20df84  0x1c000000  
+0x0c001c43  0x20000000  0x1850dc43  0x200c0000  
+0x10001c43  0x50000000  0x20319c43  0x50004000  
+0x0020de03  0x20080000  0x20615ca3  0x41004000  
+0x81a11c83  0x6800c000  0x0c21dc03  0x198e0000  
+0x8055dc03  0x1b0ec000  0xfc43dc23  0x1b0e0000  
+0x0830c103  0x48000000  0x04000003  0x4800c000  
+0x80514803  0x4800ffff  0x0831dc03  0x1b0e0000  
+0x04618803  0x4800c000  0x8055dc03  0x1b0ec000  
+0x04000003  0x4800c000  0x94009c04  0x2c000000  
+0x04618803  0x4800c000  0x01202784  0x1c000000  
+0x1826dc03  0x20000000  0xe1b1dc23  0x1b0e4000  
+0x000001e7  0x80000000  0xc0009de4  0x28004000  
+0x11b01ce3  0x5000c000  0x7da75c03  0x6800c000  
+0x7db81c23  0x7000c004  0x11b09ca3  0x2005c000  
+0x80000007  0x60000009  0xd000dc43  0x48004000  
+0x00201c85  0x84000000  0x10271c85  0x84000000  
+0x01d01c03  0x48000000  0x7001dc23  0x1b0e0000  
+0x800001e7  0x40000008  0x10019de2  0x18000000  
+0x10009ce3  0x5000c000  0x80011c03  0x4800c001  
+0x2001dde2  0x18000000  0xa0029ca3  0x200d8000  
+0x80015de2  0x18000000  0x2000dce3  0x5000c000  
+0xb022dc43  0x48004000  0x11c1dc23  0x1a0e0000  
+0x80051ca3  0x200f8000  0xfc041de4  0x28000000  
+0xfc045de4  0x28000000  0x10579ce3  0x5000c000  
+0x2057dce3  0x5000c000  0x90355c43  0x48004000  
+0x000021e7  0x40000005  0xc0000007  0x60000004  
+0x00a19c85  0x84000000  0x00a09c03  0x4801c002  
+0x2de0dc43  0x48000000  0x00211c03  0x4801c002  
+0x0021dc85  0x84000000  0x0de15c43  0x48000000  
+0x00459c03  0x4801c002  0x00421c85  0x84000000  
+0x15e5dc43  0x48000000  0x01611c85  0x84000000  
+0xfc639c86  0x9000c000  0xfc709c86  0x9000c000  
+0xfc821c86  0x9000c000  0xfc411c86  0x9000c000  
+0x01449c03  0x4801c004  0x01431ca5  0x84000000  
+0x00001c03  0x4800c002  0x55f4dc43  0x48000000  
+0x01261c03  0x4801c004  0x01c1dc23  0x1a0e0000  
+0x01229ca5  0x84000000  0x4df65c43  0x48000000  
+0x01851c03  0x4801c004  0x01819ca5  0x84000000  
+0x65f55c43  0x48000000  0x01449ca5  0x84000000  
+0x01451c03  0x4801c004  0x55f55c43  0x48000000  
+0x38c31c01  0x20200000  0x80039c03  0x4800c001  
+0x39c1dc23  0x1a000000  0x08a09c01  0x20180000  
+0x01629c03  0x4801c002  0x5de2dc43  0x48000000  
+0x20609c01  0x20040000  0x11241c01  0x20040000  
+0x600001e7  0x4003fffb  0x01c1dc33  0x1a0e0000  
+0x000021f4  0x40000000  0x00a09c85  0x84000000  
+0xfc209c86  0x9000c000  0x01411ca5  0x84000000  
+0x80001c03  0x4800c000  0x01451c03  0x4801c004  
+0x01c1dc23  0x1a0e0000  0x55f55c43  0x48000000  
+0x00a29c03  0x4801c002  0x2de2dc43  0x48000000  
+0x08441c01  0x20200000  0xa00001e7  0x4003fffe  
+0x00001df4  0x40000000  0xfc041de4  0x28000000  
+0xfc045df4  0x28000000  0x0da01e03  0x6000c000  
+0x3dd1dc23  0x1a0ec000  0x00041ca5  0xc9000000  
+0x800081e7  0x40000000  0x000120a5  0xc1000000  
+0x0000a0a5  0xc1000002  0x0840a001  0x48000000  
+0x0000a0a5  0xc9000000  0x1dd1dc23  0x1a0ec000  
+0x800081e7  0x40000000  0x000120a5  0xc1000000  
+0x0000a0a5  0xc1000001  0x0840a001  0x48000000  
+0x0000a0a5  0xc9000000  0x0dd1dc23  0x1a0ec000  
+0x800081e7  0x40000000  0x000120a5  0xc1000000  
+0x8000a0a5  0xc1000000  0x0840a001  0x48000000  
+0x0000a0a5  0xc9000000  0x05d1dc23  0x1a0ec000  
+0x800081e7  0x40000000  0x000120a5  0xc1000000  
+0x4000a0a5  0xc1000000  0x0840a001  0x48000000  
+0x0000a0a5  0xc9000000  0xfdd1dc23  0x1a0e0000  
+0x800081e7  0x40000000  0x000120a5  0xc1000000  
+0x2000a0a5  0xc1000000  0x0840a001  0x48000000  
+0x0000a0a5  0xc9000000  0xfdd1dc23  0x1a8e0000  
+0x000001e7  0x80000000  0x75b09c03  0x5800c000  
+0x0000dde4  0x28004001  0x0a015c63  0x40000000  
+0x21b11c03  0x2007c000  0x00009ca5  0xc1000000  
+0x10515c43  0x48004001  0x00409ca5  0x94000000  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 
+	<0x2>
+	Attribute:	EIATTR_IMAGE_SLOT
+	Format:	EIFMT_SVAL
+	Value:	0x2a 0x0 
+	<0x3>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x1e 0x280020 
+	<0x4>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x28
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x220198 0x20 
+
+
+.text._Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+bar = 0	reg = 19	lmem=0	smem=0
+0x00005de4  0x28004404  0x94001c04  0x2c000000  
+0x84009c04  0x2c000000  0x20031c03  0x20044000  
+0xe0c1dc23  0x1b0e4000  0x000001e7  0x80000000  
+0x08c09e03  0x6000c000  0x10c0dce3  0x5000c000  
+0x7cc35c23  0x7000c004  0x40000007  0x60000004  
+0xc0211c03  0x48014000  0xd0315c43  0x48004000  
+0x00401c85  0x84000000  0xfc01dc23  0x198e0000  
+0x600001e7  0x40000003  0xa0211c03  0x48014000  
+0x20019de2  0x18000000  0x74c09c03  0x5800c000  
+0xe001dde4  0x28004000  0xb0315c43  0x48004000  
+0x08d09c63  0x40000000  0x80c19c03  0x200d8000  
+0x10749ce3  0x5000c000  0x08745e03  0x6000c000  
+0x20741ce3  0x5000c000  0x0c73de03  0x6000c000  
+0xfc039de4  0x28000000  0xfc021de4  0x28000000  
+0xfc025de4  0x28000000  0x9021dc43  0x48004000  
+0x00409c85  0x84000000  0xfc209c86  0x9000c000  
+0x00629ca5  0x84000000  0x04e39c03  0x4800c000  
+0x18f19c03  0x48010000  0x3801dc23  0x1a8e0000  
+0x1d01dc43  0x48000000  0x11111c03  0x48010000  
+0x15215c43  0x48000000  0x08a21c01  0x20100000  
+0xa00001e7  0x4003fffe  0x00001df4  0x40000000  
+0xfc021de4  0x28000000  0xfc025df4  0x28000000  
+0x74c01c03  0x5800c000  0x00009de4  0x28004001  
+0x00d01c63  0x40000000  0x20c09c03  0x2005c000  
+0x1000dc43  0x48004001  0x00221ca5  0x94000000  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_CBANK_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 
+	<0x2>
+	Attribute:	EIATTR_IMAGE_SLOT
+	Format:	EIFMT_SVAL
+	Value:	0x2a 0x0 
+	<0x3>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x20 0x280020 
+	<0x4>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x28
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0xa>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x21018c 0x20 
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_IMAGE_SIZE
+	Format:	EIFMT_SVAL
+	Value:	0x2a 0xffffffff 0xffffffff 0xffffffff 
+	<0x2>
+	Attribute:	EIATTR_IMAGE_SIZE
+	Format:	EIFMT_SVAL
+	Value:	0x29 0xffffffff 0xffffffff 0xffffffff 
+	<0x3>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_(0x28)	min stack size: 0x0
+	<0x4>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_(0x28)	frame size: 0x0
+	<0x5>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z4zeroIfEvPT_i(0x27)	min stack size: 0x0
+	<0x6>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z4zeroIfEvPT_i(0x27)	frame size: 0x0
+	<0x7>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_(0x26)	min stack size: 0x0
+	<0x8>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_(0x26)	frame size: 0x0
+	<0x9>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_(0x25)	min stack size: 0x0
+	<0xa>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_(0x25)	frame size: 0x0
+	<0xb>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_(0x24)	min stack size: 0x0
+	<0xc>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_(0x24)	frame size: 0x0
+	<0xd>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z4zeroIdEvPT_i(0x23)	min stack size: 0x0
+	<0xe>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z4zeroIdEvPT_i(0x23)	frame size: 0x0
+	<0xf>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_(0x22)	min stack size: 0x0
+	<0x10>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_(0x22)	frame size: 0x0
+	<0x11>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_(0x21)	min stack size: 0x0
+	<0x12>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_(0x21)	frame size: 0x0
+

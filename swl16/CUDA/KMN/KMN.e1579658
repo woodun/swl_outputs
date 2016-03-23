@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/cache_sense/mainscript_KMN: line 1: 29122 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__KMN -o -r -i data/28k_4x_features.txt > output_KMN.txt

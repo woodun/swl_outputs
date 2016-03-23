@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/cache_sense/mainscript_BFS2: line 1: 21270 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__BFS2 ./data/graph32k500kedges_SV.txt > output_BFS2S.txt

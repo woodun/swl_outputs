@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/shoc/mainscript_Stencil2D: line 1: 30050 Segmentation fault      (core dumped) ./Stencil2D > output_Stencil2D.txt

@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_bfs: line 1: 25584 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__bfs ../data/bfs/graph1MW_6.txt > output_bfs.txt

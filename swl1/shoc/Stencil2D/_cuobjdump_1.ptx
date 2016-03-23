@@ -1,0 +1,617 @@
+
+	.version 2.3
+	.target sm_20
+	.address_size 64
+	// compiled with /sciclone/data20/adwait/software/cuda/open64/lib//be
+	// nvopencc 4.0 built on 2011-05-12
+
+	.visible .func (.param .s32 __cudaretf__Z11ToGlobalRowiii) _Z11ToGlobalRowiii (.param .s32 __cudaparmf1__Z11ToGlobalRowiii, .param .s32 __cudaparmf2__Z11ToGlobalRowiii, .param .s32 __cudaparmf3__Z11ToGlobalRowiii)
+
+	.visible .func (.param .s32 __cudaretf__Z11ToGlobalColiii) _Z11ToGlobalColiii (.param .s32 __cudaparmf1__Z11ToGlobalColiii, .param .s32 __cudaparmf2__Z11ToGlobalColiii, .param .s32 __cudaparmf3__Z11ToGlobalColiii)
+
+	.visible .func (.param .s32 __cudaretf__Z9ToFlatIdxiii) _Z9ToFlatIdxiii (.param .s32 __cudaparmf1__Z9ToFlatIdxiii, .param .s32 __cudaparmf2__Z9ToFlatIdxiii, .param .s32 __cudaparmf3__Z9ToFlatIdxiii)
+
+	//-----------------------------------------------------------
+	// Compiling /tmp/tmpxft_0000c11d_00000000-15_CUDAStencilKernel.compute_20.cpp3.i (/local/scr/adwait/TMPDIR/ccBI#.w1RJeH)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_20, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"<command-line>"
+	.file	2	"/tmp/tmpxft_0000c11d_00000000-14_CUDAStencilKernel.compute_20.cudafe2.gpu"
+	.file	3	"/usr/lib/gcc/x86_64-redhat-linux/4.4.6/include/stddef.h"
+	.file	4	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/device_runtime.h"
+	.file	5	"/sciclone/data20/adwait/software/cuda/bin/../include/host_defines.h"
+	.file	6	"/sciclone/data20/adwait/software/cuda/bin/../include/builtin_types.h"
+	.file	7	"/sciclone/data20/adwait/software/cuda/bin/../include/device_types.h"
+	.file	8	"/sciclone/data20/adwait/software/cuda/bin/../include/driver_types.h"
+	.file	9	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_types.h"
+	.file	10	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_types.h"
+	.file	11	"/sciclone/data20/adwait/software/cuda/bin/../include/vector_types.h"
+	.file	12	"/sciclone/data20/adwait/software/cuda/bin/../include/device_launch_parameters.h"
+	.file	13	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/storage_class.h"
+	.file	14	"/usr/include/bits/types.h"
+	.file	15	"/usr/include/time.h"
+	.file	16	"CUDAStencilKernel.cu"
+	.file	17	"/sciclone/data20/adwait/software/cuda/bin/../include/common_functions.h"
+	.file	18	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions.h"
+	.file	19	"/sciclone/data20/adwait/software/cuda/bin/../include/math_constants.h"
+	.file	20	"/sciclone/data20/adwait/software/cuda/bin/../include/device_functions.h"
+	.file	21	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_11_atomic_functions.h"
+	.file	22	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_12_atomic_functions.h"
+	.file	23	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_13_double_functions.h"
+	.file	24	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_atomic_functions.h"
+	.file	25	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_intrinsics.h"
+	.file	26	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_functions.h"
+	.file	27	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_fetch_functions.h"
+	.file	28	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions_dbl_ptx3.h"
+
+
+	.visible .func (.param .s32 __cudaretf__Z11ToGlobalRowiii) _Z11ToGlobalRowiii (.param .s32 __cudaparmf1__Z11ToGlobalRowiii, .param .s32 __cudaparmf2__Z11ToGlobalRowiii, .param .s32 __cudaparmf3__Z11ToGlobalRowiii)
+	{
+	.reg .u32 %r<10>;
+	.loc	16	69	0
+$LDWbegin__Z11ToGlobalRowiii:
+	ld.param.u32 	%r1, [__cudaparmf1__Z11ToGlobalRowiii];
+	mov.s32 	%r2, %r1;
+	ld.param.u32 	%r3, [__cudaparmf2__Z11ToGlobalRowiii];
+	mov.s32 	%r4, %r3;
+	ld.param.u32 	%r5, [__cudaparmf3__Z11ToGlobalRowiii];
+	mov.s32 	%r6, %r5;
+	.loc	16	71	0
+	mul.lo.s32 	%r7, %r2, %r4;
+	add.s32 	%r8, %r6, %r7;
+	st.param.s32 	[__cudaretf__Z11ToGlobalRowiii], %r8;
+	ret;
+$LDWend__Z11ToGlobalRowiii:
+	} // _Z11ToGlobalRowiii
+
+	.visible .func (.param .s32 __cudaretf__Z11ToGlobalColiii) _Z11ToGlobalColiii (.param .s32 __cudaparmf1__Z11ToGlobalColiii, .param .s32 __cudaparmf2__Z11ToGlobalColiii, .param .s32 __cudaparmf3__Z11ToGlobalColiii)
+	{
+	.reg .u32 %r<10>;
+	.loc	16	76	0
+$LDWbegin__Z11ToGlobalColiii:
+	ld.param.u32 	%r1, [__cudaparmf1__Z11ToGlobalColiii];
+	mov.s32 	%r2, %r1;
+	ld.param.u32 	%r3, [__cudaparmf2__Z11ToGlobalColiii];
+	mov.s32 	%r4, %r3;
+	ld.param.u32 	%r5, [__cudaparmf3__Z11ToGlobalColiii];
+	mov.s32 	%r6, %r5;
+	.loc	16	78	0
+	mul.lo.s32 	%r7, %r2, %r4;
+	add.s32 	%r8, %r6, %r7;
+	st.param.s32 	[__cudaretf__Z11ToGlobalColiii], %r8;
+	ret;
+$LDWend__Z11ToGlobalColiii:
+	} // _Z11ToGlobalColiii
+
+	.visible .func (.param .s32 __cudaretf__Z9ToFlatIdxiii) _Z9ToFlatIdxiii (.param .s32 __cudaparmf1__Z9ToFlatIdxiii, .param .s32 __cudaparmf2__Z9ToFlatIdxiii, .param .s32 __cudaparmf3__Z9ToFlatIdxiii)
+	{
+	.reg .u32 %r<13>;
+	.loc	16	83	0
+$LDWbegin__Z9ToFlatIdxiii:
+	ld.param.u32 	%r1, [__cudaparmf1__Z9ToFlatIdxiii];
+	mov.s32 	%r2, %r1;
+	ld.param.u32 	%r3, [__cudaparmf2__Z9ToFlatIdxiii];
+	mov.s32 	%r4, %r3;
+	ld.param.u32 	%r5, [__cudaparmf3__Z9ToFlatIdxiii];
+	mov.s32 	%r6, %r5;
+	.loc	16	87	0
+	add.s32 	%r7, %r2, 1;
+	add.s32 	%r8, %r6, 2;
+	mul.lo.s32 	%r9, %r7, %r8;
+	add.s32 	%r10, %r4, %r9;
+	add.s32 	%r11, %r10, 1;
+	st.param.s32 	[__cudaretf__Z9ToFlatIdxiii], %r11;
+	ret;
+$LDWend__Z9ToFlatIdxiii:
+	} // _Z9ToFlatIdxiii
+	.extern	.shared .align 4 .b8 sh_float[];
+
+	.entry _Z13StencilKernelIfEvPT_S1_iiS0_S0_S0_ (
+		.param .u64 __cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__data,
+		.param .u64 __cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__newData,
+		.param .s32 __cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__alignment,
+		.param .s32 __cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__nStripItems,
+		.param .f32 __cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__wCenter,
+		.param .f32 __cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__wCardinal,
+		.param .f32 __cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__wDiagonal)
+	{
+	.reg .u32 %r<64>;
+	.reg .u64 %rd<44>;
+	.reg .f32 %f<26>;
+	.reg .pred %p<11>;
+	.loc	16	101	0
+$LDWbegin__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0_:
+	.loc	16	117	0
+	cvt.s32.u32 	%r1, %ntid.y;
+	cvt.s32.u32 	%r2, %nctaid.y;
+	mul.lo.s32 	%r3, %r2, %r1;
+	add.s32 	%r4, %r3, 2;
+	ld.param.s32 	%r5, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__alignment];
+	rem.s32 	%r6, %r4, %r5;
+	mov.u32 	%r7, 0;
+	setp.eq.s32 	%p1, %r6, %r7;
+	@%p1 bra 	$Lt_3_6914;
+	.loc	16	121	0
+	sub.s32 	%r8, %r5, %r6;
+	add.s32 	%r9, %r3, %r8;
+	add.s32 	%r10, %r9, 2;
+	bra.uni 	$Lt_3_6658;
+$Lt_3_6914:
+	mov.s32 	%r10, %r4;
+$Lt_3_6658:
+	ld.param.s32 	%r11, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__nStripItems];
+	add.s32 	%r12, %r11, 2;
+	mov.s32 	%r13, 0;
+	setp.gt.s32 	%p2, %r12, %r13;
+	cvt.s32.u32 	%r14, %tid.y;
+	@!%p2 bra 	$Lt_3_7170;
+	mov.u64 	%rd1, sh_float;
+	mov.s32 	%r15, %r12;
+	cvt.s32.u32 	%r16, %ctaid.y;
+	mul.lo.s32 	%r17, %r16, %r1;
+	cvt.s32.u32 	%r18, %ctaid.x;
+	mul.lo.s32 	%r19, %r18, %r11;
+	add.s32 	%r20, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	mov.s32 	%r25, %r23;
+	add.s32 	%r26, %r12, %r23;
+	mul.lo.s32 	%r27, %r10, %r23;
+	add.s32 	%r28, %r24, %r14;
+	add.s32 	%r29, %r27, %r21;
+	cvt.s64.s32 	%rd2, %r28;
+	cvt.s64.s32 	%rd3, %r20;
+	cvt.s64.s32 	%rd4, %r29;
+	cvt.s64.s32 	%rd5, %r10;
+	mul.wide.s32 	%rd6, %r28, 4;
+	mul.wide.s32 	%rd7, %r20, 4;
+	mul.wide.s32 	%rd8, %r29, 4;
+	mul.wide.s32 	%rd9, %r10, 4;
+	add.u64 	%rd10, %rd6, %rd1;
+	ld.param.u64 	%rd11, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__data];
+	add.u64 	%rd12, %rd11, %rd8;
+	mov.s32 	%r30, %r15;
+$Lt_3_7682:
+ //<loop> Loop body line 121, nesting depth: 1, estimated iterations: unknown
+	.loc	16	135	0
+	ld.global.f32 	%f1, [%rd12+4];
+	st.shared.f32 	[%rd10+4], %f1;
+	add.s32 	%r25, %r25, 1;
+	add.u64 	%rd12, %rd12, %rd9;
+	add.u64 	%rd10, %rd10, %rd7;
+	setp.ne.s32 	%p3, %r25, %r26;
+	@%p3 bra 	$Lt_3_7682;
+$Lt_3_7170:
+	mov.u64 	%rd1, sh_float;
+	mov.u32 	%r31, 0;
+	setp.ne.s32 	%p4, %r14, %r31;
+	@%p4 bra 	$Lt_3_8450;
+	@!%p2 bra 	$Lt_3_10242;
+	mov.s32 	%r32, %r12;
+	cvt.s32.u32 	%r33, %ctaid.y;
+	mul.lo.s32 	%r17, %r33, %r1;
+	cvt.s32.u32 	%r34, %ctaid.x;
+	mul.lo.s32 	%r19, %r34, %r11;
+	add.s32 	%r20, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	mov.s32 	%r35, %r23;
+	add.s32 	%r26, %r12, %r23;
+	mul.lo.s32 	%r36, %r10, %r23;
+	add.s32 	%r28, %r24, %r14;
+	add.s32 	%r37, %r36, %r21;
+	cvt.s64.s32 	%rd13, %r28;
+	cvt.s64.s32 	%rd14, %r20;
+	cvt.s64.s32 	%rd15, %r37;
+	cvt.s64.s32 	%rd16, %r10;
+	mul.wide.s32 	%rd6, %r28, 4;
+	mul.wide.s32 	%rd7, %r20, 4;
+	mul.wide.s32 	%rd17, %r37, 4;
+	mul.wide.s32 	%rd9, %r10, 4;
+	add.u64 	%rd18, %rd6, %rd1;
+	ld.param.u64 	%rd19, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__data];
+	add.u64 	%rd20, %rd19, %rd17;
+	mov.s32 	%r38, %r32;
+$Lt_3_9218:
+ //<loop> Loop body line 135, nesting depth: 1, estimated iterations: unknown
+	.loc	16	146	0
+	ld.global.f32 	%f2, [%rd20+0];
+	st.shared.f32 	[%rd18+0], %f2;
+	add.s32 	%r35, %r35, 1;
+	add.u64 	%rd20, %rd20, %rd9;
+	add.u64 	%rd18, %rd18, %rd7;
+	setp.ne.s32 	%p5, %r35, %r26;
+	@%p5 bra 	$Lt_3_9218;
+	bra.uni 	$Lt_3_10242;
+$Lt_3_8450:
+	sub.s32 	%r39, %r1, 1;
+	setp.ne.s32 	%p6, %r14, %r39;
+	@%p6 bra 	$Lt_3_10242;
+	@!%p2 bra 	$Lt_3_10242;
+	mov.s32 	%r40, %r12;
+	cvt.s32.u32 	%r41, %ctaid.y;
+	mul.lo.s32 	%r17, %r41, %r1;
+	cvt.s32.u32 	%r42, %ctaid.x;
+	mul.lo.s32 	%r19, %r42, %r11;
+	add.s32 	%r20, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	mov.s32 	%r43, %r23;
+	add.s32 	%r26, %r12, %r23;
+	mul.lo.s32 	%r44, %r10, %r23;
+	add.s32 	%r28, %r24, %r14;
+	add.s32 	%r45, %r44, %r21;
+	cvt.s64.s32 	%rd21, %r28;
+	cvt.s64.s32 	%rd22, %r20;
+	cvt.s64.s32 	%rd23, %r45;
+	cvt.s64.s32 	%rd24, %r10;
+	mul.wide.s32 	%rd6, %r28, 4;
+	mul.wide.s32 	%rd7, %r20, 4;
+	mul.wide.s32 	%rd25, %r45, 4;
+	mul.wide.s32 	%rd9, %r10, 4;
+	add.u64 	%rd26, %rd6, %rd1;
+	ld.param.u64 	%rd27, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__data];
+	add.u64 	%rd28, %rd27, %rd25;
+	mov.s32 	%r46, %r40;
+$Lt_3_10754:
+ //<loop> Loop body line 146, nesting depth: 1, estimated iterations: unknown
+	.loc	16	155	0
+	ld.global.f32 	%f3, [%rd28+8];
+	st.shared.f32 	[%rd26+8], %f3;
+	add.s32 	%r43, %r43, 1;
+	add.u64 	%rd28, %rd28, %rd9;
+	add.u64 	%rd26, %rd26, %rd7;
+	setp.ne.s32 	%p7, %r43, %r26;
+	@%p7 bra 	$Lt_3_10754;
+$Lt_3_10242:
+$Lt_3_9730:
+$Lt_3_8194:
+	.loc	16	160	0
+	bar.sync 	0;
+	mov.u32 	%r47, 0;
+	setp.le.s32 	%p8, %r11, %r47;
+	@%p8 bra 	$Lt_3_11266;
+	mov.s32 	%r48, %r11;
+	cvt.s32.u32 	%r49, %ctaid.y;
+	mul.lo.s32 	%r17, %r49, %r1;
+	cvt.s32.u32 	%r50, %ctaid.x;
+	mul.lo.s32 	%r19, %r50, %r11;
+	add.s32 	%r20, %r1, 2;
+	mul.lo.s32 	%r51, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	add.s32 	%r52, %r51, 4;
+	add.s32 	%r53, %r23, %r11;
+	add.s32 	%r54, %r23, 1;
+	add.s32 	%r55, %r53, 1;
+	add.s32 	%r28, %r24, %r14;
+	cvt.s64.s32 	%rd29, %r28;
+	cvt.s64.s32 	%rd30, %r20;
+	mul.wide.s32 	%rd6, %r28, 4;
+	mul.wide.s32 	%rd7, %r20, 4;
+	cvt.s64.s32 	%rd31, %r10;
+	add.u64 	%rd32, %rd6, %rd1;
+	mul.wide.s32 	%rd9, %r10, 4;
+	add.s32 	%r56, %r24, %r20;
+	add.s32 	%r57, %r14, %r56;
+	cvt.s64.s32 	%rd33, %r57;
+	mul.wide.s32 	%rd34, %r57, 4;
+	add.u64 	%rd35, %rd1, %rd34;
+	add.s32 	%r58, %r52, %r24;
+	add.s32 	%r59, %r14, %r58;
+	cvt.s64.s32 	%rd36, %r59;
+	mul.wide.s32 	%rd37, %r59, 4;
+	add.u64 	%rd38, %rd1, %rd37;
+	ld.param.u64 	%rd39, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__newData];
+	mul.lo.s32 	%r60, %r10, %r54;
+	add.s32 	%r61, %r21, %r60;
+	cvt.s64.s32 	%rd40, %r61;
+	mul.wide.s32 	%rd41, %r61, 4;
+	add.u64 	%rd42, %rd39, %rd41;
+	ld.param.f32 	%f4, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__wDiagonal];
+	ld.param.f32 	%f5, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__wCenter];
+	ld.param.f32 	%f6, [__cudaparm__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0__wCardinal];
+	mov.s32 	%r62, %r48;
+$Lt_3_11778:
+ //<loop> Loop body line 160, nesting depth: 1, estimated iterations: unknown
+	.loc	16	179	0
+	ld.shared.f32 	%f7, [%rd35+0];
+	ld.shared.f32 	%f8, [%rd35+8];
+	ld.shared.f32 	%f9, [%rd32+4];
+	ld.shared.f32 	%f10, [%rd38+4];
+	add.f32 	%f11, %f9, %f10;
+	add.f32 	%f12, %f8, %f11;
+	add.f32 	%f13, %f7, %f12;
+	mul.f32 	%f14, %f6, %f13;
+	ld.shared.f32 	%f15, [%rd35+4];
+	fma.rn.f32 	%f16, %f5, %f15, %f14;
+	ld.shared.f32 	%f17, [%rd38+0];
+	ld.shared.f32 	%f18, [%rd32+0];
+	ld.shared.f32 	%f19, [%rd32+8];
+	ld.shared.f32 	%f20, [%rd38+8];
+	add.f32 	%f21, %f19, %f20;
+	add.f32 	%f22, %f18, %f21;
+	add.f32 	%f23, %f17, %f22;
+	fma.rn.f32 	%f24, %f4, %f23, %f16;
+	st.global.f32 	[%rd42+4], %f24;
+	add.s32 	%r54, %r54, 1;
+	add.u64 	%rd42, %rd42, %rd9;
+	add.u64 	%rd38, %rd38, %rd7;
+	add.u64 	%rd32, %rd32, %rd7;
+	add.u64 	%rd35, %rd35, %rd7;
+	setp.ne.s32 	%p9, %r54, %r55;
+	@%p9 bra 	$Lt_3_11778;
+$Lt_3_11266:
+	.loc	16	183	0
+	exit;
+$LDWend__Z13StencilKernelIfEvPT_S1_iiS0_S0_S0_:
+	} // _Z13StencilKernelIfEvPT_S1_iiS0_S0_S0_
+	.extern	.shared .align 8 .b8 sh_double[];
+
+	.entry _Z13StencilKernelIdEvPT_S1_iiS0_S0_S0_ (
+		.param .u64 __cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__data,
+		.param .u64 __cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__newData,
+		.param .s32 __cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__alignment,
+		.param .s32 __cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__nStripItems,
+		.param .f64 __cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__wCenter,
+		.param .f64 __cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__wCardinal,
+		.param .f64 __cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__wDiagonal)
+	{
+	.reg .u32 %r<64>;
+	.reg .u64 %rd<44>;
+	.reg .f64 %fd<26>;
+	.reg .pred %p<11>;
+	.loc	16	101	0
+$LDWbegin__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0_:
+	.loc	16	117	0
+	cvt.s32.u32 	%r1, %ntid.y;
+	cvt.s32.u32 	%r2, %nctaid.y;
+	mul.lo.s32 	%r3, %r2, %r1;
+	add.s32 	%r4, %r3, 2;
+	ld.param.s32 	%r5, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__alignment];
+	rem.s32 	%r6, %r4, %r5;
+	mov.u32 	%r7, 0;
+	setp.eq.s32 	%p1, %r6, %r7;
+	@%p1 bra 	$Lt_4_6914;
+	.loc	16	121	0
+	sub.s32 	%r8, %r5, %r6;
+	add.s32 	%r9, %r3, %r8;
+	add.s32 	%r10, %r9, 2;
+	bra.uni 	$Lt_4_6658;
+$Lt_4_6914:
+	mov.s32 	%r10, %r4;
+$Lt_4_6658:
+	ld.param.s32 	%r11, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__nStripItems];
+	add.s32 	%r12, %r11, 2;
+	mov.s32 	%r13, 0;
+	setp.gt.s32 	%p2, %r12, %r13;
+	cvt.s32.u32 	%r14, %tid.y;
+	@!%p2 bra 	$Lt_4_7170;
+	mov.u64 	%rd1, sh_double;
+	mov.s32 	%r15, %r12;
+	cvt.s32.u32 	%r16, %ctaid.y;
+	mul.lo.s32 	%r17, %r16, %r1;
+	cvt.s32.u32 	%r18, %ctaid.x;
+	mul.lo.s32 	%r19, %r18, %r11;
+	add.s32 	%r20, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	mov.s32 	%r25, %r23;
+	add.s32 	%r26, %r12, %r23;
+	mul.lo.s32 	%r27, %r10, %r23;
+	add.s32 	%r28, %r24, %r14;
+	add.s32 	%r29, %r27, %r21;
+	cvt.s64.s32 	%rd2, %r28;
+	cvt.s64.s32 	%rd3, %r20;
+	cvt.s64.s32 	%rd4, %r29;
+	cvt.s64.s32 	%rd5, %r10;
+	mul.wide.s32 	%rd6, %r28, 8;
+	mul.wide.s32 	%rd7, %r20, 8;
+	mul.wide.s32 	%rd8, %r29, 8;
+	mul.wide.s32 	%rd9, %r10, 8;
+	add.u64 	%rd10, %rd6, %rd1;
+	ld.param.u64 	%rd11, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__data];
+	add.u64 	%rd12, %rd11, %rd8;
+	mov.s32 	%r30, %r15;
+$Lt_4_7682:
+ //<loop> Loop body line 121, nesting depth: 1, estimated iterations: unknown
+	.loc	16	135	0
+	ld.global.f64 	%fd1, [%rd12+8];
+	st.shared.f64 	[%rd10+8], %fd1;
+	add.s32 	%r25, %r25, 1;
+	add.u64 	%rd12, %rd12, %rd9;
+	add.u64 	%rd10, %rd10, %rd7;
+	setp.ne.s32 	%p3, %r25, %r26;
+	@%p3 bra 	$Lt_4_7682;
+$Lt_4_7170:
+	mov.u64 	%rd1, sh_double;
+	mov.u32 	%r31, 0;
+	setp.ne.s32 	%p4, %r14, %r31;
+	@%p4 bra 	$Lt_4_8450;
+	@!%p2 bra 	$Lt_4_10242;
+	mov.s32 	%r32, %r12;
+	cvt.s32.u32 	%r33, %ctaid.y;
+	mul.lo.s32 	%r17, %r33, %r1;
+	cvt.s32.u32 	%r34, %ctaid.x;
+	mul.lo.s32 	%r19, %r34, %r11;
+	add.s32 	%r20, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	mov.s32 	%r35, %r23;
+	add.s32 	%r26, %r12, %r23;
+	mul.lo.s32 	%r36, %r10, %r23;
+	add.s32 	%r28, %r24, %r14;
+	add.s32 	%r37, %r36, %r21;
+	cvt.s64.s32 	%rd13, %r28;
+	cvt.s64.s32 	%rd14, %r20;
+	cvt.s64.s32 	%rd15, %r37;
+	cvt.s64.s32 	%rd16, %r10;
+	mul.wide.s32 	%rd6, %r28, 8;
+	mul.wide.s32 	%rd7, %r20, 8;
+	mul.wide.s32 	%rd17, %r37, 8;
+	mul.wide.s32 	%rd9, %r10, 8;
+	add.u64 	%rd18, %rd6, %rd1;
+	ld.param.u64 	%rd19, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__data];
+	add.u64 	%rd20, %rd19, %rd17;
+	mov.s32 	%r38, %r32;
+$Lt_4_9218:
+ //<loop> Loop body line 135, nesting depth: 1, estimated iterations: unknown
+	.loc	16	146	0
+	ld.global.f64 	%fd2, [%rd20+0];
+	st.shared.f64 	[%rd18+0], %fd2;
+	add.s32 	%r35, %r35, 1;
+	add.u64 	%rd20, %rd20, %rd9;
+	add.u64 	%rd18, %rd18, %rd7;
+	setp.ne.s32 	%p5, %r35, %r26;
+	@%p5 bra 	$Lt_4_9218;
+	bra.uni 	$Lt_4_10242;
+$Lt_4_8450:
+	sub.s32 	%r39, %r1, 1;
+	setp.ne.s32 	%p6, %r14, %r39;
+	@%p6 bra 	$Lt_4_10242;
+	@!%p2 bra 	$Lt_4_10242;
+	mov.s32 	%r40, %r12;
+	cvt.s32.u32 	%r41, %ctaid.y;
+	mul.lo.s32 	%r17, %r41, %r1;
+	cvt.s32.u32 	%r42, %ctaid.x;
+	mul.lo.s32 	%r19, %r42, %r11;
+	add.s32 	%r20, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	mov.s32 	%r43, %r23;
+	add.s32 	%r26, %r12, %r23;
+	mul.lo.s32 	%r44, %r10, %r23;
+	add.s32 	%r28, %r24, %r14;
+	add.s32 	%r45, %r44, %r21;
+	cvt.s64.s32 	%rd21, %r28;
+	cvt.s64.s32 	%rd22, %r20;
+	cvt.s64.s32 	%rd23, %r45;
+	cvt.s64.s32 	%rd24, %r10;
+	mul.wide.s32 	%rd6, %r28, 8;
+	mul.wide.s32 	%rd7, %r20, 8;
+	mul.wide.s32 	%rd25, %r45, 8;
+	mul.wide.s32 	%rd9, %r10, 8;
+	add.u64 	%rd26, %rd6, %rd1;
+	ld.param.u64 	%rd27, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__data];
+	add.u64 	%rd28, %rd27, %rd25;
+	mov.s32 	%r46, %r40;
+$Lt_4_10754:
+ //<loop> Loop body line 146, nesting depth: 1, estimated iterations: unknown
+	.loc	16	155	0
+	ld.global.f64 	%fd3, [%rd28+16];
+	st.shared.f64 	[%rd26+16], %fd3;
+	add.s32 	%r43, %r43, 1;
+	add.u64 	%rd28, %rd28, %rd9;
+	add.u64 	%rd26, %rd26, %rd7;
+	setp.ne.s32 	%p7, %r43, %r26;
+	@%p7 bra 	$Lt_4_10754;
+$Lt_4_10242:
+$Lt_4_9730:
+$Lt_4_8194:
+	.loc	16	160	0
+	bar.sync 	0;
+	mov.u32 	%r47, 0;
+	setp.le.s32 	%p8, %r11, %r47;
+	@%p8 bra 	$Lt_4_11266;
+	mov.s32 	%r48, %r11;
+	cvt.s32.u32 	%r49, %ctaid.y;
+	mul.lo.s32 	%r17, %r49, %r1;
+	cvt.s32.u32 	%r50, %ctaid.x;
+	mul.lo.s32 	%r19, %r50, %r11;
+	add.s32 	%r20, %r1, 2;
+	mul.lo.s32 	%r51, %r1, 2;
+	add.s32 	%r21, %r17, %r14;
+	cvt.s32.u32 	%r22, %tid.x;
+	add.s32 	%r23, %r19, %r22;
+	mul.lo.s32 	%r24, %r20, %r22;
+	add.s32 	%r52, %r51, 4;
+	add.s32 	%r53, %r23, %r11;
+	add.s32 	%r54, %r23, 1;
+	add.s32 	%r55, %r53, 1;
+	add.s32 	%r28, %r24, %r14;
+	cvt.s64.s32 	%rd29, %r28;
+	cvt.s64.s32 	%rd30, %r20;
+	mul.wide.s32 	%rd6, %r28, 8;
+	mul.wide.s32 	%rd7, %r20, 8;
+	cvt.s64.s32 	%rd31, %r10;
+	add.u64 	%rd32, %rd6, %rd1;
+	mul.wide.s32 	%rd9, %r10, 8;
+	add.s32 	%r56, %r24, %r20;
+	add.s32 	%r57, %r14, %r56;
+	cvt.s64.s32 	%rd33, %r57;
+	mul.wide.s32 	%rd34, %r57, 8;
+	add.u64 	%rd35, %rd1, %rd34;
+	add.s32 	%r58, %r52, %r24;
+	add.s32 	%r59, %r14, %r58;
+	cvt.s64.s32 	%rd36, %r59;
+	mul.wide.s32 	%rd37, %r59, 8;
+	add.u64 	%rd38, %rd1, %rd37;
+	ld.param.u64 	%rd39, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__newData];
+	mul.lo.s32 	%r60, %r10, %r54;
+	add.s32 	%r61, %r21, %r60;
+	cvt.s64.s32 	%rd40, %r61;
+	mul.wide.s32 	%rd41, %r61, 8;
+	add.u64 	%rd42, %rd39, %rd41;
+	ld.param.f64 	%fd4, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__wDiagonal];
+	ld.param.f64 	%fd5, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__wCenter];
+	ld.param.f64 	%fd6, [__cudaparm__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0__wCardinal];
+	mov.s32 	%r62, %r48;
+$Lt_4_11778:
+ //<loop> Loop body line 160, nesting depth: 1, estimated iterations: unknown
+	.loc	16	179	0
+	ld.shared.f64 	%fd7, [%rd35+0];
+	ld.shared.f64 	%fd8, [%rd35+16];
+	ld.shared.f64 	%fd9, [%rd32+8];
+	ld.shared.f64 	%fd10, [%rd38+8];
+	add.f64 	%fd11, %fd9, %fd10;
+	add.f64 	%fd12, %fd8, %fd11;
+	add.f64 	%fd13, %fd7, %fd12;
+	mul.f64 	%fd14, %fd6, %fd13;
+	ld.shared.f64 	%fd15, [%rd35+8];
+	mad.rn.f64 	%fd16, %fd5, %fd15, %fd14;
+	ld.shared.f64 	%fd17, [%rd38+0];
+	ld.shared.f64 	%fd18, [%rd32+0];
+	ld.shared.f64 	%fd19, [%rd32+16];
+	ld.shared.f64 	%fd20, [%rd38+16];
+	add.f64 	%fd21, %fd19, %fd20;
+	add.f64 	%fd22, %fd18, %fd21;
+	add.f64 	%fd23, %fd17, %fd22;
+	mad.rn.f64 	%fd24, %fd4, %fd23, %fd16;
+	st.global.f64 	[%rd42+8], %fd24;
+	add.s32 	%r54, %r54, 1;
+	add.u64 	%rd42, %rd42, %rd9;
+	add.u64 	%rd38, %rd38, %rd7;
+	add.u64 	%rd32, %rd32, %rd7;
+	add.u64 	%rd35, %rd35, %rd7;
+	setp.ne.s32 	%p9, %r54, %r55;
+	@%p9 bra 	$Lt_4_11778;
+$Lt_4_11266:
+	.loc	16	183	0
+	exit;
+$LDWend__Z13StencilKernelIdEvPT_S1_iiS0_S0_S0_:
+	} // _Z13StencilKernelIdEvPT_S1_iiS0_S0_S0_
+
+

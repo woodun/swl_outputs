@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/parboil/mainscript_spmv: line 1: /benchmarks/spmv/build/cuda_default/spmv: No such file or directory

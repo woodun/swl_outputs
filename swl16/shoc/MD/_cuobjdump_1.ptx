@@ -1,0 +1,281 @@
+
+	.version 2.3
+	.target sm_20
+	.address_size 64
+	// compiled with /sciclone/data20/adwait/software/cuda/open64/lib//be
+	// nvopencc 4.0 built on 2011-05-12
+
+	//-----------------------------------------------------------
+	// Compiling /tmp/tmpxft_0000c203_00000000-15_MD.compute_20.cpp3.i (/local/scr/adwait/TMPDIR/ccBI#.9HkFkM)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_20, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"<command-line>"
+	.file	2	"/tmp/tmpxft_0000c203_00000000-14_MD.compute_20.cudafe2.gpu"
+	.file	3	"/usr/lib/gcc/x86_64-redhat-linux/4.4.6/include/stddef.h"
+	.file	4	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/device_runtime.h"
+	.file	5	"/sciclone/data20/adwait/software/cuda/bin/../include/host_defines.h"
+	.file	6	"/sciclone/data20/adwait/software/cuda/bin/../include/builtin_types.h"
+	.file	7	"/sciclone/data20/adwait/software/cuda/bin/../include/device_types.h"
+	.file	8	"/sciclone/data20/adwait/software/cuda/bin/../include/driver_types.h"
+	.file	9	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_types.h"
+	.file	10	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_types.h"
+	.file	11	"/sciclone/data20/adwait/software/cuda/bin/../include/vector_types.h"
+	.file	12	"/sciclone/data20/adwait/software/cuda/bin/../include/device_launch_parameters.h"
+	.file	13	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/storage_class.h"
+	.file	14	"/usr/include/bits/types.h"
+	.file	15	"/usr/include/time.h"
+	.file	16	"MD.cu"
+	.file	17	"/sciclone/data20/adwait/software/cuda/bin/../include/common_functions.h"
+	.file	18	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions.h"
+	.file	19	"/sciclone/data20/adwait/software/cuda/bin/../include/math_constants.h"
+	.file	20	"/sciclone/data20/adwait/software/cuda/bin/../include/device_functions.h"
+	.file	21	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_11_atomic_functions.h"
+	.file	22	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_12_atomic_functions.h"
+	.file	23	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_13_double_functions.h"
+	.file	24	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_atomic_functions.h"
+	.file	25	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_intrinsics.h"
+	.file	26	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_functions.h"
+	.file	27	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_fetch_functions.h"
+	.file	28	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions_dbl_ptx3.h"
+
+	.global .texref posTexture;
+
+	.entry _Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i (
+		.param .u64 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_force3,
+		.param .u64 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_position,
+		.param .s32 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_neighCount,
+		.param .u64 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_neighList,
+		.param .f32 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_cutsq,
+		.param .f32 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_lj1,
+		.param .f32 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_lj2,
+		.param .s32 __cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_inum)
+	{
+	.reg .u32 %r<21>;
+	.reg .u64 %rd<14>;
+	.reg .f32 %f<31>;
+	.reg .pred %p<5>;
+	.loc	16	108	0
+$LDWbegin__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i:
+	.loc	16	114	0
+	mov.u32 	%r1, %tid.x;
+	mov.u32 	%r2, %ctaid.x;
+	mov.u32 	%r3, %ntid.x;
+	mul.lo.u32 	%r4, %r2, %r3;
+	add.u32 	%r5, %r1, %r4;
+	cvt.s64.s32 	%rd1, %r5;
+	ld.param.u64 	%rd2, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_position];
+	mul.wide.s32 	%rd3, %r5, 16;
+	add.u64 	%rd4, %rd2, %rd3;
+	ld.global.v4.f32 	{%f1,%f2,%f3,_}, [%rd4+0];
+	ld.param.s32 	%r6, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_neighCount];
+	mov.u32 	%r7, 0;
+	setp.le.s32 	%p1, %r6, %r7;
+	@%p1 bra 	$Lt_0_4354;
+	mov.s32 	%r8, %r6;
+	ld.param.s32 	%r9, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_inum];
+	cvt.s64.s32 	%rd5, %r9;
+	mul.wide.s32 	%rd6, %r9, 4;
+	ld.param.u64 	%rd7, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_neighList];
+	mul.lo.u64 	%rd8, %rd1, 4;
+	add.u64 	%rd9, %rd7, %rd8;
+	ld.param.f32 	%f4, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_cutsq];
+	mov.s32 	%r10, 0;
+	mov.f32 	%f5, 0f00000000;     	// 0
+	mov.f32 	%f6, 0f00000000;     	// 0
+	mov.f32 	%f7, 0f00000000;     	// 0
+	mov.s32 	%r11, %r8;
+$Lt_0_3330:
+ //<loop> Loop body line 114, nesting depth: 1, estimated iterations: unknown
+	.loc	16	129	0
+	ld.global.s32 	%r12, [%rd9+0];
+	mov.u32 	%r13, %r12;
+	mov.s32 	%r14, 0;
+	mov.u32 	%r15, %r14;
+	mov.s32 	%r16, 0;
+	mov.u32 	%r17, %r16;
+	mov.s32 	%r18, 0;
+	mov.u32 	%r19, %r18;
+	tex.1d.v4.f32.s32 {%f8,%f9,%f10,%f11},[posTexture,{%r13,%r15,%r17,%r19}];
+	mov.f32 	%f12, %f8;
+	mov.f32 	%f13, %f9;
+	mov.f32 	%f14, %f10;
+	sub.f32 	%f15, %f2, %f13;
+	sub.f32 	%f16, %f1, %f12;
+	sub.f32 	%f17, %f3, %f14;
+	mul.f32 	%f18, %f15, %f15;
+	fma.rn.f32 	%f19, %f16, %f16, %f18;
+	fma.rn.f32 	%f20, %f17, %f17, %f19;
+	setp.lt.f32 	%p2, %f20, %f4;
+	@!%p2 bra 	$Lt_0_3586;
+	.loc	16	150	0
+	rcp.rn.f32 	%f21, %f20;
+	mul.f32 	%f22, %f21, %f21;
+	mul.f32 	%f23, %f21, %f22;
+	mul.f32 	%f24, %f21, %f23;
+	ld.param.f32 	%f25, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_lj2];
+	ld.param.f32 	%f26, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_lj1];
+	mul.f32 	%f27, %f26, %f23;
+	sub.f32 	%f28, %f27, %f25;
+	mul.f32 	%f29, %f24, %f28;
+	fma.rn.f32 	%f7, %f16, %f29, %f7;
+	.loc	16	151	0
+	fma.rn.f32 	%f6, %f15, %f29, %f6;
+	.loc	16	152	0
+	fma.rn.f32 	%f5, %f17, %f29, %f5;
+$Lt_0_3586:
+	add.s32 	%r10, %r10, 1;
+	add.u64 	%rd9, %rd6, %rd9;
+	setp.ne.s32 	%p3, %r6, %r10;
+	@%p3 bra 	$Lt_0_3330;
+	bra.uni 	$Lt_0_2818;
+$Lt_0_4354:
+	mov.f32 	%f5, 0f00000000;     	// 0
+	mov.f32 	%f6, 0f00000000;     	// 0
+	mov.f32 	%f7, 0f00000000;     	// 0
+$Lt_0_2818:
+	.loc	16	158	0
+	ld.param.u64 	%rd10, [__cudaparm__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i_force3];
+	mul.lo.u64 	%rd11, %rd1, 12;
+	add.u64 	%rd12, %rd10, %rd11;
+	st.global.f32 	[%rd12+0], %f7;
+	st.global.f32 	[%rd12+4], %f6;
+	st.global.f32 	[%rd12+8], %f5;
+	.loc	16	159	0
+	exit;
+$LDWend__Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i:
+	} // _Z16compute_lj_forceIf6float36float4Lb1E12texReader_spEvPT0_PKT1_iPKiT_SA_SA_i
+	.global .texref posTexture_dp;
+
+	.entry _Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i (
+		.param .u64 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_force3,
+		.param .u64 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_position,
+		.param .s32 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_neighCount,
+		.param .u64 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_neighList,
+		.param .f64 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_cutsq,
+		.param .f64 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_lj1,
+		.param .f64 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_lj2,
+		.param .s32 __cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_inum)
+	{
+	.reg .u32 %r<44>;
+	.reg .u64 %rd<14>;
+	.reg .f64 %fd<27>;
+	.reg .pred %p<5>;
+	.loc	16	108	0
+$LDWbegin__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i:
+	.loc	16	114	0
+	mov.u32 	%r1, %tid.x;
+	mov.u32 	%r2, %ctaid.x;
+	mov.u32 	%r3, %ntid.x;
+	mul.lo.u32 	%r4, %r2, %r3;
+	add.u32 	%r5, %r1, %r4;
+	cvt.s64.s32 	%rd1, %r5;
+	ld.param.u64 	%rd2, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_position];
+	mul.wide.s32 	%rd3, %r5, 32;
+	add.u64 	%rd4, %rd2, %rd3;
+	ld.global.v2.f64 	{%fd1,%fd2}, [%rd4+0];
+	ld.global.f64 	%fd3, [%rd4+16];
+	ld.param.s32 	%r6, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_neighCount];
+	mov.u32 	%r7, 0;
+	setp.le.s32 	%p1, %r6, %r7;
+	@%p1 bra 	$Lt_1_4354;
+	mov.s32 	%r8, %r6;
+	ld.param.s32 	%r9, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_inum];
+	cvt.s64.s32 	%rd5, %r9;
+	mul.wide.s32 	%rd6, %r9, 4;
+	ld.param.u64 	%rd7, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_neighList];
+	mul.lo.u64 	%rd8, %rd1, 4;
+	add.u64 	%rd9, %rd7, %rd8;
+	ld.param.f64 	%fd4, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_cutsq];
+	mov.s32 	%r10, 0;
+	mov.f64 	%fd5, 0d0000000000000000;	// 0
+	mov.f64 	%fd6, 0d0000000000000000;	// 0
+	mov.f64 	%fd7, 0d0000000000000000;	// 0
+	mov.s32 	%r11, %r8;
+$Lt_1_3330:
+ //<loop> Loop body line 114, nesting depth: 1, estimated iterations: unknown
+	.loc	16	124	0
+	ld.global.s32 	%r12, [%rd9+0];
+	.loc	16	129	0
+	mul.lo.s32 	%r13, %r12, 2;
+	mov.u32 	%r14, %r13;
+	mov.s32 	%r15, 0;
+	mov.u32 	%r16, %r15;
+	mov.s32 	%r17, 0;
+	mov.u32 	%r18, %r17;
+	mov.s32 	%r19, 0;
+	mov.u32 	%r20, %r19;
+	tex.1d.v4.s32.s32 {%r21,%r22,%r23,%r24},[posTexture_dp,{%r14,%r16,%r18,%r20}];
+	mov.s32 	%r25, %r21;
+	mov.s32 	%r26, %r22;
+	mov.s32 	%r27, %r23;
+	mov.s32 	%r28, %r24;
+	add.s32 	%r29, %r13, 1;
+	mov.u32 	%r30, %r29;
+	mov.s32 	%r31, 0;
+	mov.u32 	%r32, %r31;
+	mov.s32 	%r33, 0;
+	mov.u32 	%r34, %r33;
+	mov.s32 	%r35, 0;
+	mov.u32 	%r36, %r35;
+	tex.1d.v4.s32.s32 {%r37,%r38,%r39,%r40},[posTexture_dp,{%r30,%r32,%r34,%r36}];
+	mov.s32 	%r41, %r37;
+	mov.s32 	%r42, %r38;
+	mov.b64 	%fd8, {%r27,%r28};
+	mov.b64 	%fd9, {%r25,%r26};
+	mov.b64 	%fd10, {%r41,%r42};
+	sub.f64 	%fd11, %fd2, %fd8;
+	sub.f64 	%fd12, %fd1, %fd9;
+	sub.f64 	%fd13, %fd3, %fd10;
+	mul.f64 	%fd14, %fd11, %fd11;
+	mad.rn.f64 	%fd15, %fd12, %fd12, %fd14;
+	mad.rn.f64 	%fd16, %fd13, %fd13, %fd15;
+	setp.lt.f64 	%p2, %fd16, %fd4;
+	@!%p2 bra 	$Lt_1_3586;
+	.loc	16	150	0
+	rcp.rn.f64 	%fd17, %fd16;
+	mul.f64 	%fd18, %fd17, %fd17;
+	mul.f64 	%fd19, %fd17, %fd18;
+	mul.f64 	%fd20, %fd17, %fd19;
+	ld.param.f64 	%fd21, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_lj2];
+	ld.param.f64 	%fd22, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_lj1];
+	mul.f64 	%fd23, %fd22, %fd19;
+	sub.f64 	%fd24, %fd23, %fd21;
+	mul.f64 	%fd25, %fd20, %fd24;
+	mad.rn.f64 	%fd7, %fd12, %fd25, %fd7;
+	.loc	16	151	0
+	mad.rn.f64 	%fd6, %fd11, %fd25, %fd6;
+	.loc	16	152	0
+	mad.rn.f64 	%fd5, %fd13, %fd25, %fd5;
+$Lt_1_3586:
+	add.s32 	%r10, %r10, 1;
+	add.u64 	%rd9, %rd6, %rd9;
+	setp.ne.s32 	%p3, %r6, %r10;
+	@%p3 bra 	$Lt_1_3330;
+	bra.uni 	$Lt_1_2818;
+$Lt_1_4354:
+	mov.f64 	%fd5, 0d0000000000000000;	// 0
+	mov.f64 	%fd6, 0d0000000000000000;	// 0
+	mov.f64 	%fd7, 0d0000000000000000;	// 0
+$Lt_1_2818:
+	.loc	16	158	0
+	ld.param.u64 	%rd10, [__cudaparm__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i_force3];
+	mul.lo.u64 	%rd11, %rd1, 24;
+	add.u64 	%rd12, %rd10, %rd11;
+	st.global.f64 	[%rd12+0], %fd7;
+	st.global.f64 	[%rd12+8], %fd6;
+	st.global.f64 	[%rd12+16], %fd5;
+	.loc	16	159	0
+	exit;
+$LDWend__Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i:
+	} // _Z16compute_lj_forceId7double37double4Lb1E12texReader_dpEvPT0_PKT1_iPKiT_SA_SA_i
+
+

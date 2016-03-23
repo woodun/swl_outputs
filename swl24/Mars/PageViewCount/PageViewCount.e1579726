@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/mars/mainscript_PageViewCount: line 1: 13964 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__PageViewCount data > output_PVC.txt

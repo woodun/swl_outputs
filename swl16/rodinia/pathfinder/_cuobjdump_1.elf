@@ -1,0 +1,135 @@
+
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             760        3        0      4     .text._Z14dynproc_kerneliPiS_S_iiii
+   7               0               0        3        0      6     .nv.info._Z14dynproc_kerneliPiS_S_iiii
+   8               0               0        3        0      7     .nv.shared._Z14dynproc_kerneliPiS_S_iiii
+   9               0               0        3        0      5     .nv.constant1._Z14dynproc_kerneliPiS_S_iiii
+  10               0               0       12       10      4     _Z14dynproc_kerneliPiS_S_iiii
+
+
+.nv.constant1._Z14dynproc_kerneliPiS_S_iiii	PROGBITS
+0x00000001  0xffffffff  
+
+
+.nv.shared._Z14dynproc_kerneliPiS_S_iiii	NOBITS
+   No data to be dumped. 
+
+
+.text._Z14dynproc_kerneliPiS_S_iiii	PROGBITS
+bar = 1	reg = 9	lmem=0	smem=2112
+0x3001c80d  0xc4300780  0xa0004c05  0x04200780  
+0x3000860d  0x00000013  0x40070411  0x00000780  
+0x60060611  0x00010780  0x30100811  0xc4100780  
+0x60060405  0x00010780  0xa0000011  0x04000780  
+0x3000de05  0x04204780  0x213ff801  0x0fffffff  
+0x20000215  0x04010780  0x300501fd  0x6c0187c8  
+0x307c0bfd  0x6c0182c8  0x30020a0d  0xc4100680  
+0x2000d00d  0x0420c680  0xd00e060d  0x80c00680  
+0x00020805  0xc0000680  0x04002001  0xe420c680  
+0x861ffe03  0x00000000  0x307cc9fd  0x6c20c7c8  
+0x10054003  0x00000280  0x203f8209  0x0000000f  
+0x300201fd  0x6c0047c8  0x307c020d  0x6c004780  
+0x30008209  0x00000003  0x2040d805  0x04204780  
+0x103f8001  0x0000000f  0xd003040d  0x04000780  
+0x21000201  0x04404280  0x203f8809  0x0fffffff  
+0x30040619  0x6c00c780  0x3004001d  0x6c018780  
+0x20018805  0x00000003  0x30030409  0x8c000780  
+0xd0800c0d  0x04400780  0xd0800e19  0x04400780  
+0x30000201  0xac000780  0x00020405  0xc0000780  
+0xd006061d  0x04000780  0x00020009  0xc0000780  
+0x40059003  0x00000000  0x213fe819  0x0fffffff  
+0x1000f809  0x0403c780  0x20018405  0x00000003  
+0x303e840d  0x0000000f  0x30040201  0x6c00c780  
+0x3003080d  0x6c00c780  0xd0030001  0x04000780  
+0xa0000001  0x2c014780  0xd0000ffd  0x040007c8  
+0xa0045003  0x00000000  0x1000f801  0x0403c780  
+0x10045003  0x00000100  0x2102fc0c  0x1100f800  
+0x40070021  0x00000780  0x60060221  0x00020780  
+0x30101021  0xc4100780  0x60060001  0x00020780  
+0x2000000d  0x04014780  0x0002080d  0xc0000780  
+0x1400e001  0x0423c780  0x3002060d  0xc4100780  
+0x3c00e021  0xac200780  0x2000cc01  0x0420c780  
+0xd00e0001  0x80c00780  0x3808e00d  0xac200780  
+0x20000001  0x0400c780  0x0c022001  0xe4200780  
+0x10018001  0x00000003  0xf0000001  0xe0000002  
+0x861ffe03  0x00000000  0x30020dfd  0x6c0087c8  
+0x10057003  0x00000280  0x307c0001  0x6c0147d0  
+0xa00001fd  0x0c0147c8  0x0002080d  0xc0001680  
+0xdc088011  0x20001680  0x1000c001  0x0423d684  
+0x0c002001  0xe4201680  0x861ffe03  0x00000000  
+0x3001c9fd  0x6c2147d8  0x10000209  0x0403c780  
+0x1002b003  0x00001280  0x50000003  0x00000780  
+0xa0000801  0x0c018780  0x307c01fd  0x6c0147c8  
+0x10059003  0x00000780  0x307c01fd  0x6c0147c8  
+0x50000003  0x00000780  0x30000003  0x00000100  
+0x00020805  0xc0000780  0x30020a01  0xc4100780  
+0xd4088005  0x20000780  0x2100f404  0x1500e000  
+0xd00e0201  0xa0c00781  
+
+
+.nv.info._Z14dynproc_kerneliPiS_S_iiii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_SMEM_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 0x24 0x28 0x2c 
+	<0x2>
+	Attribute:	EIATTR_SMEM_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x30
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x7	Offset  : 0x2c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x6	Offset  : 0x28	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x5	Offset  : 0x24	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0xa>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0xb>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x220110 0x20 
+

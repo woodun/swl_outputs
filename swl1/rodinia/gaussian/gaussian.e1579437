@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_gaussian: line 1: ./gpgpu_ptx_sim__gaussian: No such file or directory

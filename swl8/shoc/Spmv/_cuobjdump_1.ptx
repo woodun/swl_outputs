@@ -1,0 +1,707 @@
+
+	.version 2.3
+	.target sm_20
+	.address_size 64
+	// compiled with /sciclone/data20/adwait/software/cuda/open64/lib//be
+	// nvopencc 4.0 built on 2011-05-12
+
+	//-----------------------------------------------------------
+	// Compiling /tmp/tmpxft_0000c73e_00000000-15_Spmv.compute_20.cpp3.i (/local/scr/adwait/TMPDIR/ccBI#.z146EJ)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_20, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"<command-line>"
+	.file	2	"/tmp/tmpxft_0000c73e_00000000-14_Spmv.compute_20.cudafe2.gpu"
+	.file	3	"/usr/lib/gcc/x86_64-redhat-linux/4.4.6/include/stddef.h"
+	.file	4	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/device_runtime.h"
+	.file	5	"/sciclone/data20/adwait/software/cuda/bin/../include/host_defines.h"
+	.file	6	"/sciclone/data20/adwait/software/cuda/bin/../include/builtin_types.h"
+	.file	7	"/sciclone/data20/adwait/software/cuda/bin/../include/device_types.h"
+	.file	8	"/sciclone/data20/adwait/software/cuda/bin/../include/driver_types.h"
+	.file	9	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_types.h"
+	.file	10	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_types.h"
+	.file	11	"/sciclone/data20/adwait/software/cuda/bin/../include/vector_types.h"
+	.file	12	"/sciclone/data20/adwait/software/cuda/bin/../include/device_launch_parameters.h"
+	.file	13	"/sciclone/data20/adwait/software/cuda/bin/../include/crt/storage_class.h"
+	.file	14	"/usr/include/bits/types.h"
+	.file	15	"/usr/include/time.h"
+	.file	16	"Spmv.cu"
+	.file	17	"/sciclone/data20/adwait/software/cuda/bin/../include/common_functions.h"
+	.file	18	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions.h"
+	.file	19	"/sciclone/data20/adwait/software/cuda/bin/../include/math_constants.h"
+	.file	20	"/sciclone/data20/adwait/software/cuda/bin/../include/device_functions.h"
+	.file	21	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_11_atomic_functions.h"
+	.file	22	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_12_atomic_functions.h"
+	.file	23	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_13_double_functions.h"
+	.file	24	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_atomic_functions.h"
+	.file	25	"/sciclone/data20/adwait/software/cuda/bin/../include/sm_20_intrinsics.h"
+	.file	26	"/sciclone/data20/adwait/software/cuda/bin/../include/surface_functions.h"
+	.file	27	"/sciclone/data20/adwait/software/cuda/bin/../include/texture_fetch_functions.h"
+	.file	28	"/sciclone/data20/adwait/software/cuda/bin/../include/math_functions_dbl_ptx3.h"
+
+	.global .texref vecTex;
+
+	.entry _Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_ (
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__val,
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__cols,
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__rowDelimiters,
+		.param .s32 __cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__dim,
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__out)
+	{
+	.reg .u32 %r<21>;
+	.reg .u64 %rd<14>;
+	.reg .f32 %f<9>;
+	.reg .pred %p<5>;
+	.loc	16	673	0
+$LDWbegin__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_:
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.s32 	%r6, [__cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__dim];
+	setp.le.s32 	%p1, %r6, %r5;
+	@%p1 bra 	$Lt_0_2050;
+	.loc	16	681	0
+	cvt.s64.s32 	%rd1, %r5;
+	mul.wide.s32 	%rd2, %r5, 4;
+	ld.param.u64 	%rd3, [__cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__rowDelimiters];
+	add.u64 	%rd4, %rd3, %rd2;
+	ld.global.s32 	%r7, [%rd4+0];
+	.loc	16	682	0
+	ld.global.s32 	%r8, [%rd4+4];
+	.loc	16	683	0
+	mov.s32 	%r9, %r7;
+	setp.ge.s32 	%p2, %r7, %r8;
+	@%p2 bra 	$Lt_0_3586;
+	sub.s32 	%r10, %r8, %r7;
+	cvt.s64.s32 	%rd5, %r7;
+	mul.wide.s32 	%rd6, %r7, 4;
+	ld.param.u64 	%rd7, [__cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__cols];
+	add.u64 	%rd8, %rd7, %rd6;
+	ld.param.u64 	%rd9, [__cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__val];
+	add.u64 	%rd10, %rd9, %rd6;
+	mov.f32 	%f1, 0f00000000;     	// 0
+	mov.s32 	%r11, %r10;
+$Lt_0_3074:
+ //<loop> Loop body line 683, nesting depth: 1, estimated iterations: unknown
+	.loc	16	686	0
+	ld.global.s32 	%r12, [%rd8+0];
+	mov.u32 	%r13, %r12;
+	mov.s32 	%r14, 0;
+	mov.u32 	%r15, %r14;
+	mov.s32 	%r16, 0;
+	mov.u32 	%r17, %r16;
+	mov.s32 	%r18, 0;
+	mov.u32 	%r19, %r18;
+	tex.1d.v4.f32.s32 {%f2,%f3,%f4,%f5},[vecTex,{%r13,%r15,%r17,%r19}];
+	mov.f32 	%f6, %f2;
+	ld.global.f32 	%f7, [%rd10+0];
+	fma.rn.f32 	%f1, %f7, %f6, %f1;
+	add.s32 	%r9, %r9, 1;
+	add.u64 	%rd10, %rd10, 4;
+	add.u64 	%rd8, %rd8, 4;
+	setp.ne.s32 	%p3, %r8, %r9;
+	@%p3 bra 	$Lt_0_3074;
+	bra.uni 	$Lt_0_2562;
+$Lt_0_3586:
+	mov.f32 	%f1, 0f00000000;     	// 0
+$Lt_0_2562:
+	.loc	16	688	0
+	ld.param.u64 	%rd11, [__cudaparm__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__out];
+	add.u64 	%rd12, %rd11, %rd2;
+	st.global.f32 	[%rd12+0], %f1;
+$Lt_0_2050:
+	.loc	16	690	0
+	exit;
+$LDWend__Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_:
+	} // _Z22spmv_csr_scalar_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+
+	.entry _Z4zeroIfEvPT_i (
+		.param .u64 __cudaparm__Z4zeroIfEvPT_i_a,
+		.param .s32 __cudaparm__Z4zeroIfEvPT_i_size)
+	{
+	.reg .u32 %r<8>;
+	.reg .u64 %rd<6>;
+	.reg .f32 %f<3>;
+	.reg .pred %p<3>;
+	.loc	16	814	0
+$LDWbegin__Z4zeroIfEvPT_i:
+	mov.u32 	%r1, %tid.x;
+	mov.u32 	%r2, %ctaid.x;
+	mov.u32 	%r3, %ntid.x;
+	mul.lo.u32 	%r4, %r2, %r3;
+	add.u32 	%r5, %r1, %r4;
+	ld.param.s32 	%r6, [__cudaparm__Z4zeroIfEvPT_i_size];
+	setp.le.s32 	%p1, %r6, %r5;
+	@%p1 bra 	$Lt_1_1026;
+	.loc	16	817	0
+	mov.f32 	%f1, 0f00000000;     	// 0
+	ld.param.u64 	%rd1, [__cudaparm__Z4zeroIfEvPT_i_a];
+	cvt.s64.s32 	%rd2, %r5;
+	mul.wide.s32 	%rd3, %r5, 4;
+	add.u64 	%rd4, %rd1, %rd3;
+	st.global.f32 	[%rd4+0], %f1;
+$Lt_1_1026:
+	.loc	16	818	0
+	exit;
+$LDWend__Z4zeroIfEvPT_i:
+	} // _Z4zeroIfEvPT_i
+
+	.entry _Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_ (
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__val,
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__cols,
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__rowDelimiters,
+		.param .s32 __cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__dim,
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__out)
+	{
+	.reg .u32 %r<31>;
+	.reg .u64 %rd<20>;
+	.reg .f32 %f<25>;
+	.reg .pred %p<11>;
+	.shared .align 4 .b8 __cuda___cuda_local_var_81056_45_non_const_partialSums96[512];
+	.loc	16	723	0
+$LDWbegin__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_:
+	mov.s32 	%r1, WARP_SZ;
+	cvt.s32.u32 	%r2, %tid.x;
+	div.s32 	%r3, %r2, %r1;
+	mov.u32 	%r4, %ntid.x;
+	div.u32 	%r5, %r4, %r1;
+	mov.u32 	%r6, %ctaid.x;
+	mul.lo.u32 	%r7, %r6, %r5;
+	add.u32 	%r8, %r3, %r7;
+	ld.param.s32 	%r9, [__cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__dim];
+	setp.le.s32 	%p1, %r9, %r8;
+	@%p1 bra 	$Lt_2_10754;
+	.loc	16	739	0
+	cvt.s64.s32 	%rd1, %r8;
+	mul.wide.s32 	%rd2, %r8, 4;
+	ld.param.u64 	%rd3, [__cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__rowDelimiters];
+	add.u64 	%rd4, %rd3, %rd2;
+	ld.global.s32 	%r10, [%rd4+0];
+	.loc	16	740	0
+	ld.global.s32 	%r11, [%rd4+4];
+	.loc	16	742	0
+	sub.s32 	%r12, %r1, 1;
+	and.b32 	%r13, %r12, %r2;
+	add.s32 	%r14, %r13, %r10;
+	mov.s32 	%r15, %r14;
+	setp.ge.s32 	%p2, %r14, %r11;
+	@%p2 bra 	$Lt_2_11266;
+	cvt.s64.s32 	%rd5, %r14;
+	mul.wide.s32 	%rd6, %r14, 4;
+	cvt.s64.s32 	%rd7, %r1;
+	mul.wide.s32 	%rd8, %r1, 4;
+	ld.param.u64 	%rd9, [__cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__cols];
+	add.u64 	%rd10, %rd9, %rd6;
+	ld.param.u64 	%rd11, [__cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__val];
+	add.u64 	%rd12, %rd11, %rd6;
+	mov.f32 	%f1, 0f00000000;     	// 0
+$Lt_2_7682:
+ //<loop> Loop body line 742, nesting depth: 1, estimated iterations: unknown
+	.loc	16	745	0
+	ld.global.s32 	%r16, [%rd10+0];
+	mov.u32 	%r17, %r16;
+	mov.s32 	%r18, 0;
+	mov.u32 	%r19, %r18;
+	mov.s32 	%r20, 0;
+	mov.u32 	%r21, %r20;
+	mov.s32 	%r22, 0;
+	mov.u32 	%r23, %r22;
+	tex.1d.v4.f32.s32 {%f2,%f3,%f4,%f5},[vecTex,{%r17,%r19,%r21,%r23}];
+	mov.f32 	%f6, %f2;
+	ld.global.f32 	%f7, [%rd12+0];
+	fma.rn.f32 	%f1, %f7, %f6, %f1;
+	add.s32 	%r15, %r15, %r1;
+	add.u64 	%rd12, %rd8, %rd12;
+	add.u64 	%rd10, %rd8, %rd10;
+	setp.gt.s32 	%p3, %r11, %r15;
+	@%p3 bra 	$Lt_2_7682;
+	bra.uni 	$Lt_2_7170;
+$Lt_2_11266:
+	mov.f32 	%f1, 0f00000000;     	// 0
+$Lt_2_7170:
+	.loc	16	747	0
+	mov.u64 	%rd13, __cuda___cuda_local_var_81056_45_non_const_partialSums96;
+	cvt.s64.s32 	%rd14, %r2;
+	mul.wide.s32 	%rd15, %r2, 4;
+	add.u64 	%rd16, %rd13, %rd15;
+	st.volatile.shared.f32 	[%rd16+0], %f1;
+	mov.u32 	%r24, 15;
+	setp.gt.s32 	%p4, %r13, %r24;
+	@%p4 bra 	$Lt_2_8194;
+	.loc	16	750	0
+	ld.volatile.shared.f32 	%f8, [%rd16+0];
+	ld.volatile.shared.f32 	%f9, [%rd16+64];
+	add.f32 	%f10, %f8, %f9;
+	st.volatile.shared.f32 	[%rd16+0], %f10;
+$Lt_2_8194:
+	mov.u32 	%r25, 7;
+	setp.gt.s32 	%p5, %r13, %r25;
+	@%p5 bra 	$Lt_2_8706;
+	.loc	16	751	0
+	ld.volatile.shared.f32 	%f11, [%rd16+0];
+	ld.volatile.shared.f32 	%f12, [%rd16+32];
+	add.f32 	%f13, %f11, %f12;
+	st.volatile.shared.f32 	[%rd16+0], %f13;
+$Lt_2_8706:
+	mov.u32 	%r26, 3;
+	setp.gt.s32 	%p6, %r13, %r26;
+	@%p6 bra 	$Lt_2_9218;
+	.loc	16	752	0
+	ld.volatile.shared.f32 	%f14, [%rd16+0];
+	ld.volatile.shared.f32 	%f15, [%rd16+16];
+	add.f32 	%f16, %f14, %f15;
+	st.volatile.shared.f32 	[%rd16+0], %f16;
+$Lt_2_9218:
+	mov.u32 	%r27, 1;
+	setp.gt.s32 	%p7, %r13, %r27;
+	@%p7 bra 	$Lt_2_9730;
+	.loc	16	753	0
+	ld.volatile.shared.f32 	%f17, [%rd16+0];
+	ld.volatile.shared.f32 	%f18, [%rd16+8];
+	add.f32 	%f19, %f17, %f18;
+	st.volatile.shared.f32 	[%rd16+0], %f19;
+$Lt_2_9730:
+	mov.u32 	%r28, 0;
+	setp.gt.s32 	%p8, %r13, %r28;
+	@%p8 bra 	$Lt_2_10242;
+	.loc	16	754	0
+	ld.volatile.shared.f32 	%f20, [%rd16+0];
+	ld.volatile.shared.f32 	%f21, [%rd16+4];
+	add.f32 	%f22, %f20, %f21;
+	st.volatile.shared.f32 	[%rd16+0], %f22;
+$Lt_2_10242:
+	mov.u32 	%r29, 0;
+	setp.ne.s32 	%p9, %r13, %r29;
+	@%p9 bra 	$Lt_2_10754;
+	.loc	16	759	0
+	ld.volatile.shared.f32 	%f23, [%rd16+0];
+	ld.param.u64 	%rd17, [__cudaparm__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__out];
+	add.u64 	%rd18, %rd17, %rd2;
+	st.global.f32 	[%rd18+0], %f23;
+$Lt_2_10754:
+$Lt_2_6658:
+	.loc	16	762	0
+	exit;
+$LDWend__Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_:
+	} // _Z22spmv_csr_vector_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+
+	.entry _Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_ (
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__val,
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__cols,
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__rowLengths,
+		.param .s32 __cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__dim,
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__out)
+	{
+	.reg .u32 %r<21>;
+	.reg .u64 %rd<14>;
+	.reg .f32 %f<9>;
+	.reg .pred %p<5>;
+	.loc	16	794	0
+$LDWbegin__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_:
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.s32 	%r6, [__cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__dim];
+	setp.le.s32 	%p1, %r6, %r5;
+	@%p1 bra 	$Lt_3_2050;
+	.loc	16	802	0
+	cvt.s64.s32 	%rd1, %r5;
+	mul.wide.s32 	%rd2, %r5, 4;
+	ld.param.u64 	%rd3, [__cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__rowLengths];
+	add.u64 	%rd4, %rd3, %rd2;
+	ld.global.s32 	%r7, [%rd4+0];
+	mov.u32 	%r8, 0;
+	setp.le.s32 	%p2, %r7, %r8;
+	@%p2 bra 	$Lt_3_3586;
+	mov.s32 	%r9, %r7;
+	cvt.s64.s32 	%rd5, %r6;
+	mul.wide.s32 	%rd6, %r6, 4;
+	ld.param.u64 	%rd7, [__cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__cols];
+	add.u64 	%rd8, %rd7, %rd2;
+	ld.param.u64 	%rd9, [__cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__val];
+	add.u64 	%rd10, %rd9, %rd2;
+	mov.s32 	%r10, 0;
+	mov.f32 	%f1, 0f00000000;     	// 0
+	mov.s32 	%r11, %r9;
+$Lt_3_3074:
+ //<loop> Loop body line 802, nesting depth: 1, estimated iterations: unknown
+	.loc	16	806	0
+	ld.global.s32 	%r12, [%rd8+0];
+	mov.u32 	%r13, %r12;
+	mov.s32 	%r14, 0;
+	mov.u32 	%r15, %r14;
+	mov.s32 	%r16, 0;
+	mov.u32 	%r17, %r16;
+	mov.s32 	%r18, 0;
+	mov.u32 	%r19, %r18;
+	tex.1d.v4.f32.s32 {%f2,%f3,%f4,%f5},[vecTex,{%r13,%r15,%r17,%r19}];
+	mov.f32 	%f6, %f2;
+	ld.global.f32 	%f7, [%rd10+0];
+	fma.rn.f32 	%f1, %f7, %f6, %f1;
+	add.s32 	%r10, %r10, 1;
+	add.u64 	%rd10, %rd6, %rd10;
+	add.u64 	%rd8, %rd6, %rd8;
+	setp.ne.s32 	%p3, %r7, %r10;
+	@%p3 bra 	$Lt_3_3074;
+	bra.uni 	$Lt_3_2562;
+$Lt_3_3586:
+	mov.f32 	%f1, 0f00000000;     	// 0
+$Lt_3_2562:
+	.loc	16	808	0
+	ld.param.u64 	%rd11, [__cudaparm__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1__out];
+	add.u64 	%rd12, %rd11, %rd2;
+	st.global.f32 	[%rd12+0], %f1;
+$Lt_3_2050:
+	.loc	16	810	0
+	exit;
+$LDWend__Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_:
+	} // _Z20spmv_ellpackr_kernelIf11texReaderSPEvPKT_PKiS5_iPS1_
+	.global .texref vecTexD;
+
+	.entry _Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_ (
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__val,
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__cols,
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__rowDelimiters,
+		.param .s32 __cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__dim,
+		.param .u64 __cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__out)
+	{
+	.reg .u32 %r<27>;
+	.reg .u64 %rd<16>;
+	.reg .f64 %fd<5>;
+	.reg .pred %p<5>;
+	.loc	16	673	0
+$LDWbegin__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_:
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.s32 	%r6, [__cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__dim];
+	setp.le.s32 	%p1, %r6, %r5;
+	@%p1 bra 	$Lt_4_2050;
+	.loc	16	681	0
+	cvt.s64.s32 	%rd1, %r5;
+	ld.param.u64 	%rd2, [__cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__rowDelimiters];
+	mul.wide.s32 	%rd3, %r5, 4;
+	add.u64 	%rd4, %rd2, %rd3;
+	ld.global.s32 	%r7, [%rd4+0];
+	.loc	16	682	0
+	ld.global.s32 	%r8, [%rd4+4];
+	.loc	16	683	0
+	mov.s32 	%r9, %r7;
+	setp.ge.s32 	%p2, %r7, %r8;
+	@%p2 bra 	$Lt_4_3586;
+	sub.s32 	%r10, %r8, %r7;
+	cvt.s64.s32 	%rd5, %r7;
+	ld.param.u64 	%rd6, [__cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__cols];
+	mul.wide.s32 	%rd7, %r7, 4;
+	add.u64 	%rd8, %rd6, %rd7;
+	ld.param.u64 	%rd9, [__cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__val];
+	mul.wide.s32 	%rd10, %r7, 8;
+	add.u64 	%rd11, %rd9, %rd10;
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+	mov.s32 	%r11, %r10;
+$Lt_4_3074:
+ //<loop> Loop body line 683, nesting depth: 1, estimated iterations: unknown
+	.loc	16	686	0
+	ld.global.s32 	%r12, [%rd8+0];
+	mov.u32 	%r13, %r12;
+	mov.s32 	%r14, 0;
+	mov.u32 	%r15, %r14;
+	mov.s32 	%r16, 0;
+	mov.u32 	%r17, %r16;
+	mov.s32 	%r18, 0;
+	mov.u32 	%r19, %r18;
+	tex.1d.v4.s32.s32 {%r20,%r21,%r22,%r23},[vecTexD,{%r13,%r15,%r17,%r19}];
+	mov.s32 	%r24, %r20;
+	mov.s32 	%r25, %r21;
+	ld.global.f64 	%fd2, [%rd11+0];
+	mov.b64 	%fd3, {%r24,%r25};
+	mad.rn.f64 	%fd1, %fd2, %fd3, %fd1;
+	add.s32 	%r9, %r9, 1;
+	add.u64 	%rd11, %rd11, 8;
+	add.u64 	%rd8, %rd8, 4;
+	setp.ne.s32 	%p3, %r8, %r9;
+	@%p3 bra 	$Lt_4_3074;
+	bra.uni 	$Lt_4_2562;
+$Lt_4_3586:
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+$Lt_4_2562:
+	.loc	16	688	0
+	ld.param.u64 	%rd12, [__cudaparm__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1__out];
+	mul.lo.u64 	%rd13, %rd1, 8;
+	add.u64 	%rd14, %rd12, %rd13;
+	st.global.f64 	[%rd14+0], %fd1;
+$Lt_4_2050:
+	.loc	16	690	0
+	exit;
+$LDWend__Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_:
+	} // _Z22spmv_csr_scalar_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+
+	.entry _Z4zeroIdEvPT_i (
+		.param .u64 __cudaparm__Z4zeroIdEvPT_i_a,
+		.param .s32 __cudaparm__Z4zeroIdEvPT_i_size)
+	{
+	.reg .u32 %r<8>;
+	.reg .u64 %rd<6>;
+	.reg .f64 %fd<3>;
+	.reg .pred %p<3>;
+	.loc	16	814	0
+$LDWbegin__Z4zeroIdEvPT_i:
+	mov.u32 	%r1, %tid.x;
+	mov.u32 	%r2, %ctaid.x;
+	mov.u32 	%r3, %ntid.x;
+	mul.lo.u32 	%r4, %r2, %r3;
+	add.u32 	%r5, %r1, %r4;
+	ld.param.s32 	%r6, [__cudaparm__Z4zeroIdEvPT_i_size];
+	setp.le.s32 	%p1, %r6, %r5;
+	@%p1 bra 	$Lt_5_1026;
+	.loc	16	817	0
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+	ld.param.u64 	%rd1, [__cudaparm__Z4zeroIdEvPT_i_a];
+	cvt.s64.s32 	%rd2, %r5;
+	mul.wide.s32 	%rd3, %r5, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	st.global.f64 	[%rd4+0], %fd1;
+$Lt_5_1026:
+	.loc	16	818	0
+	exit;
+$LDWend__Z4zeroIdEvPT_i:
+	} // _Z4zeroIdEvPT_i
+
+	.entry _Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_ (
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__val,
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__cols,
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__rowDelimiters,
+		.param .s32 __cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__dim,
+		.param .u64 __cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__out)
+	{
+	.reg .u32 %r<37>;
+	.reg .u64 %rd<23>;
+	.reg .f64 %fd<21>;
+	.reg .pred %p<11>;
+	.shared .align 8 .b8 __cuda___cuda_local_var_81056_45_non_const_partialSums744[1024];
+	.loc	16	723	0
+$LDWbegin__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_:
+	mov.s32 	%r1, WARP_SZ;
+	cvt.s32.u32 	%r2, %tid.x;
+	div.s32 	%r3, %r2, %r1;
+	mov.u32 	%r4, %ntid.x;
+	div.u32 	%r5, %r4, %r1;
+	mov.u32 	%r6, %ctaid.x;
+	mul.lo.u32 	%r7, %r6, %r5;
+	add.u32 	%r8, %r3, %r7;
+	ld.param.s32 	%r9, [__cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__dim];
+	setp.le.s32 	%p1, %r9, %r8;
+	@%p1 bra 	$Lt_6_10754;
+	.loc	16	739	0
+	cvt.s64.s32 	%rd1, %r8;
+	ld.param.u64 	%rd2, [__cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__rowDelimiters];
+	mul.wide.s32 	%rd3, %r8, 4;
+	add.u64 	%rd4, %rd2, %rd3;
+	ld.global.s32 	%r10, [%rd4+0];
+	.loc	16	740	0
+	ld.global.s32 	%r11, [%rd4+4];
+	.loc	16	742	0
+	sub.s32 	%r12, %r1, 1;
+	and.b32 	%r13, %r12, %r2;
+	add.s32 	%r14, %r13, %r10;
+	mov.s32 	%r15, %r14;
+	setp.ge.s32 	%p2, %r14, %r11;
+	@%p2 bra 	$Lt_6_11266;
+	cvt.s64.s32 	%rd5, %r14;
+	cvt.s64.s32 	%rd6, %r1;
+	mul.wide.s32 	%rd7, %r1, 4;
+	mul.wide.s32 	%rd8, %r1, 8;
+	ld.param.u64 	%rd9, [__cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__cols];
+	mul.wide.s32 	%rd10, %r14, 4;
+	add.u64 	%rd11, %rd9, %rd10;
+	ld.param.u64 	%rd12, [__cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__val];
+	mul.wide.s32 	%rd13, %r14, 8;
+	add.u64 	%rd14, %rd12, %rd13;
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+$Lt_6_7682:
+ //<loop> Loop body line 742, nesting depth: 1, estimated iterations: unknown
+	.loc	16	745	0
+	ld.global.s32 	%r16, [%rd11+0];
+	mov.u32 	%r17, %r16;
+	mov.s32 	%r18, 0;
+	mov.u32 	%r19, %r18;
+	mov.s32 	%r20, 0;
+	mov.u32 	%r21, %r20;
+	mov.s32 	%r22, 0;
+	mov.u32 	%r23, %r22;
+	tex.1d.v4.s32.s32 {%r24,%r25,%r26,%r27},[vecTexD,{%r17,%r19,%r21,%r23}];
+	mov.s32 	%r28, %r24;
+	mov.s32 	%r29, %r25;
+	ld.global.f64 	%fd2, [%rd14+0];
+	mov.b64 	%fd3, {%r28,%r29};
+	mad.rn.f64 	%fd1, %fd2, %fd3, %fd1;
+	add.s32 	%r15, %r15, %r1;
+	add.u64 	%rd14, %rd8, %rd14;
+	add.u64 	%rd11, %rd7, %rd11;
+	setp.gt.s32 	%p3, %r11, %r15;
+	@%p3 bra 	$Lt_6_7682;
+	bra.uni 	$Lt_6_7170;
+$Lt_6_11266:
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+$Lt_6_7170:
+	.loc	16	747	0
+	mov.u64 	%rd15, __cuda___cuda_local_var_81056_45_non_const_partialSums744;
+	cvt.s64.s32 	%rd16, %r2;
+	mul.wide.s32 	%rd17, %r2, 8;
+	add.u64 	%rd18, %rd15, %rd17;
+	st.volatile.shared.f64 	[%rd18+0], %fd1;
+	mov.u32 	%r30, 15;
+	setp.gt.s32 	%p4, %r13, %r30;
+	@%p4 bra 	$Lt_6_8194;
+	.loc	16	750	0
+	ld.volatile.shared.f64 	%fd4, [%rd18+0];
+	ld.volatile.shared.f64 	%fd5, [%rd18+128];
+	add.f64 	%fd6, %fd4, %fd5;
+	st.volatile.shared.f64 	[%rd18+0], %fd6;
+$Lt_6_8194:
+	mov.u32 	%r31, 7;
+	setp.gt.s32 	%p5, %r13, %r31;
+	@%p5 bra 	$Lt_6_8706;
+	.loc	16	751	0
+	ld.volatile.shared.f64 	%fd7, [%rd18+0];
+	ld.volatile.shared.f64 	%fd8, [%rd18+64];
+	add.f64 	%fd9, %fd7, %fd8;
+	st.volatile.shared.f64 	[%rd18+0], %fd9;
+$Lt_6_8706:
+	mov.u32 	%r32, 3;
+	setp.gt.s32 	%p6, %r13, %r32;
+	@%p6 bra 	$Lt_6_9218;
+	.loc	16	752	0
+	ld.volatile.shared.f64 	%fd10, [%rd18+0];
+	ld.volatile.shared.f64 	%fd11, [%rd18+32];
+	add.f64 	%fd12, %fd10, %fd11;
+	st.volatile.shared.f64 	[%rd18+0], %fd12;
+$Lt_6_9218:
+	mov.u32 	%r33, 1;
+	setp.gt.s32 	%p7, %r13, %r33;
+	@%p7 bra 	$Lt_6_9730;
+	.loc	16	753	0
+	ld.volatile.shared.f64 	%fd13, [%rd18+0];
+	ld.volatile.shared.f64 	%fd14, [%rd18+16];
+	add.f64 	%fd15, %fd13, %fd14;
+	st.volatile.shared.f64 	[%rd18+0], %fd15;
+$Lt_6_9730:
+	mov.u32 	%r34, 0;
+	setp.gt.s32 	%p8, %r13, %r34;
+	@%p8 bra 	$Lt_6_10242;
+	.loc	16	754	0
+	ld.volatile.shared.f64 	%fd16, [%rd18+0];
+	ld.volatile.shared.f64 	%fd17, [%rd18+8];
+	add.f64 	%fd18, %fd16, %fd17;
+	st.volatile.shared.f64 	[%rd18+0], %fd18;
+$Lt_6_10242:
+	mov.u32 	%r35, 0;
+	setp.ne.s32 	%p9, %r13, %r35;
+	@%p9 bra 	$Lt_6_10754;
+	.loc	16	759	0
+	ld.volatile.shared.f64 	%fd19, [%rd18+0];
+	ld.param.u64 	%rd19, [__cudaparm__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1__out];
+	mul.lo.u64 	%rd20, %rd1, 8;
+	add.u64 	%rd21, %rd19, %rd20;
+	st.global.f64 	[%rd21+0], %fd19;
+$Lt_6_10754:
+$Lt_6_6658:
+	.loc	16	762	0
+	exit;
+$LDWend__Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_:
+	} // _Z22spmv_csr_vector_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+
+	.entry _Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_ (
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__val,
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__cols,
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__rowLengths,
+		.param .s32 __cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__dim,
+		.param .u64 __cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__out)
+	{
+	.reg .u32 %r<27>;
+	.reg .u64 %rd<17>;
+	.reg .f64 %fd<5>;
+	.reg .pred %p<5>;
+	.loc	16	794	0
+$LDWbegin__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_:
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.s32 	%r6, [__cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__dim];
+	setp.le.s32 	%p1, %r6, %r5;
+	@%p1 bra 	$Lt_7_2050;
+	.loc	16	802	0
+	cvt.s64.s32 	%rd1, %r5;
+	mul.wide.s32 	%rd2, %r5, 4;
+	ld.param.u64 	%rd3, [__cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__rowLengths];
+	add.u64 	%rd4, %rd3, %rd2;
+	ld.global.s32 	%r7, [%rd4+0];
+	mov.u32 	%r8, 0;
+	setp.le.s32 	%p2, %r7, %r8;
+	@%p2 bra 	$Lt_7_3586;
+	mov.s32 	%r9, %r7;
+	cvt.s64.s32 	%rd5, %r6;
+	mul.wide.s32 	%rd6, %r6, 4;
+	mul.lo.u64 	%rd7, %rd1, 8;
+	mul.wide.s32 	%rd8, %r6, 8;
+	ld.param.u64 	%rd9, [__cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__cols];
+	add.u64 	%rd10, %rd9, %rd2;
+	ld.param.u64 	%rd11, [__cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__val];
+	add.u64 	%rd12, %rd11, %rd7;
+	mov.s32 	%r10, 0;
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+	mov.s32 	%r11, %r9;
+$Lt_7_3074:
+ //<loop> Loop body line 802, nesting depth: 1, estimated iterations: unknown
+	.loc	16	806	0
+	ld.global.s32 	%r12, [%rd10+0];
+	mov.u32 	%r13, %r12;
+	mov.s32 	%r14, 0;
+	mov.u32 	%r15, %r14;
+	mov.s32 	%r16, 0;
+	mov.u32 	%r17, %r16;
+	mov.s32 	%r18, 0;
+	mov.u32 	%r19, %r18;
+	tex.1d.v4.s32.s32 {%r20,%r21,%r22,%r23},[vecTexD,{%r13,%r15,%r17,%r19}];
+	mov.s32 	%r24, %r20;
+	mov.s32 	%r25, %r21;
+	ld.global.f64 	%fd2, [%rd12+0];
+	mov.b64 	%fd3, {%r24,%r25};
+	mad.rn.f64 	%fd1, %fd2, %fd3, %fd1;
+	add.s32 	%r10, %r10, 1;
+	add.u64 	%rd12, %rd8, %rd12;
+	add.u64 	%rd10, %rd6, %rd10;
+	setp.ne.s32 	%p3, %r7, %r10;
+	@%p3 bra 	$Lt_7_3074;
+	bra.uni 	$Lt_7_2562;
+$Lt_7_3586:
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+$Lt_7_2562:
+	.loc	16	808	0
+	ld.param.u64 	%rd13, [__cudaparm__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1__out];
+	mul.lo.u64 	%rd14, %rd1, 8;
+	add.u64 	%rd15, %rd13, %rd14;
+	st.global.f64 	[%rd15+0], %fd1;
+$Lt_7_2050:
+	.loc	16	810	0
+	exit;
+$LDWend__Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_:
+	} // _Z20spmv_ellpackr_kernelId11texReaderDPEvPKT_PKiS5_iPS1_
+
+

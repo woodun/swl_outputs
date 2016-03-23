@@ -1,0 +1,2 @@
+tput: No value for $TERM and no -T specified
+/sciclone/data10/hwang07/adwait/applications/bash-scripts/run_scripts/rodinia/mainscript_cfd: line 1: 24583 Segmentation fault      (core dumped) ./gpgpu_ptx_sim__cfd ../data/cfd/fvcorr.domn.193K > output_cfd.txt

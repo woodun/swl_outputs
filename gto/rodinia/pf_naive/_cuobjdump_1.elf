@@ -1,0 +1,103 @@
+
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             328        3        0      4     .text._Z6kernelPdS_S_S_S_S_i
+   7               0               0        3        0      6     .nv.info._Z6kernelPdS_S_S_S_S_i
+   8               0               0        3        0      7     .nv.shared._Z6kernelPdS_S_S_S_S_i
+   9               0               0        3        0      5     .nv.constant1._Z6kernelPdS_S_S_S_S_i
+  10               0               0       12       10      4     _Z6kernelPdS_S_S_S_S_i
+
+
+.nv.constant1._Z6kernelPdS_S_S_S_S_i	PROGBITS
+0xffffffff  
+
+
+.nv.shared._Z6kernelPdS_S_S_S_S_i	NOBITS
+   No data to be dumped. 
+
+
+.text._Z6kernelPdS_S_S_S_S_i	PROGBITS
+bar = 0	reg = 8	lmem=0	smem=68
+0x10000205  0x40004780  0xa0000005  0x04000780  
+0x60014c01  0x00204780  0x3000e1fd  0x6c20c7c8  
+0x30000003  0x00000280  0x307ce1fd  0x6c20c7c8  
+0x1001d003  0x00000280  0x30030005  0xc4100780  
+0x2000d40d  0x04204780  0x1000f809  0x0603c780  
+0x1000f801  0x0403c780  0xd00e0611  0x80800780  
+0x40017003  0x00000000  0x3003000d  0xc4100780  
+0x2000d00d  0x0420c780  0xd00e0619  0x80800780  
+0xe0040dfd  0xe00187c8  0x10015003  0x00000680  
+0x50000003  0x00000780  0x1001f003  0x00000780  
+0x10013003  0x00000780  0x10018009  0x00000003  
+0x50000003  0x00000780  0x307c05fd  0x6c0147c8  
+0x10014003  0x00000280  0x20018001  0x00000003  
+0x3000e1fd  0x6c2147c8  0x1000c003  0x00000280  
+0x1001e003  0x00000780  0x30030005  0xc4100780  
+0x103f8001  0x0fffffff  0x308001fd  0x6c4087c8  
+0x2100e009  0x04600780  0x10000009  0x0403c500  
+0x30030411  0xc4100780  0x2104e808  0x2101f800  
+0xd00e0409  0x80800780  0xd00e0009  0xa0800780  
+0x2104ec00  0x2101fc08  0xd00e0001  0x80800780  
+0xd00e0401  0xa0800781  
+
+
+.nv.info._Z6kernelPdS_S_S_S_S_i	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_SMEM_PARAM_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x0 0x8 0x10 0x18 0x20 0x28 0x30 
+	<0x2>
+	Attribute:	EIATTR_SMEM_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x34
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x6	Offset  : 0x30	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x5	Offset  : 0x28	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x4	Offset  : 0x20	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x3	Offset  : 0x18	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0xffffffff	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0xa>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x210108 0x20 
+
